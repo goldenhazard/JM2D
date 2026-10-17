@@ -1,0 +1,36 @@
+{
+  "schema": "jm2d_toy/sample_result/v1",
+  "task": "donut_constrained",
+  "sampler": "projection",
+  "run_id": "seed0",
+  "seed": 0,
+  "n": 64,
+  "n_valid": 64,
+  "n_ood": 31,
+  "n_compatible": null,
+  "objective_mean": 0.0,
+  "objective_min": 0.0,
+  "objective_max": 0.0,
+  "global_optimum": 0.0,
+  "use_constraints": true,
+  "config": {
+    "class": "ProjectionSampler",
+    "t_start_guidance": null,
+    "constraint_mode": "rejection",
+    "solver": "trust-constr",
+    "max_iter": 100,
+    "tol": 1e-05
+  },
+  "ckpt": "donut_constrained.pth",
+  "ckpt_md5": "fc689e89f98078588800adacbfa7663e",
+  "time_s": 118.26,
+  "versions": {
+    "python": "3.8.18",
+    "torch": "2.1.2",
+    "cuda": "11.8",
+    "numpy": "1.24.4",
+    "scipy": "1.10.1",
+    "diffusers": "0.31.0"
+  },
+  "source": "jm2d_toy"
+}

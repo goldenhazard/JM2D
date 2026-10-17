@@ -1,0 +1,38 @@
+{
+  "schema": "jm2d_toy/sample_result/v1",
+  "task": "donut_joint",
+  "sampler": "gibbs",
+  "run_id": "seed1",
+  "seed": 1,
+  "n": 16,
+  "n_valid": 10,
+  "n_ood": 2,
+  "n_compatible": 10,
+  "objective_mean": -3.064443349838257,
+  "objective_min": -3.610072612762451,
+  "objective_max": -2.4867122173309326,
+  "global_optimum": -4.545442581176758,
+  "use_constraints": true,
+  "config": {
+    "class": "GibbsSampler",
+    "t_start_guidance": null,
+    "constraint_mode": "rejection",
+    "param_schedule": "linear",
+    "param_schedule_timestep": 100,
+    "num_mc_samples": 128,
+    "num_param_samples": 16384,
+    "temperature": 0.1
+  },
+  "ckpt": "donut_joint.pth",
+  "ckpt_md5": "2de6c4c0522364137c959eb2d8b7b4eb",
+  "time_s": 5.65,
+  "versions": {
+    "python": "3.8.18",
+    "torch": "2.1.2",
+    "cuda": "11.8",
+    "numpy": "1.24.4",
+    "scipy": "1.10.1",
+    "diffusers": "0.31.0"
+  },
+  "source": "jm2d_toy"
+}

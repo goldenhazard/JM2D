@@ -1,0 +1,22 @@
+{
+  "paper": "Jung et al., arXiv 2509.08775v2",
+  "fig2": {
+    "title": "Fig. 2: joint sampling of (x, k) on the donut, 4 circular obstacles",
+    "n": 16,
+    "metric": "n_compatible",
+    "values": {"sequential": 2, "gibbs": 7, "jm2d": 15},
+    "note": "Each paper panel is a single unseeded draw (stored runs in results/paper/donut_joint). Expected ordering: jm2d > gibbs > sequential."
+  },
+  "fig9": {
+    "title": "Fig. 9: constrained generation on the donut, scenario great_wall_rectangle",
+    "n": 64,
+    "values": {
+      "projection": {"n_valid": 64, "n_ood": 31},
+      "jm2d": {"n_valid": 60, "n_ood": 0}
+    },
+    "notes": {
+      "projection": "Stored paper run results/paper/donut_constrained/projection reproduces 64/64 valid, 31/64 OOD exactly.",
+      "jm2d": "The paper panel (60/64 valid, 0 OOD) was produced by the SCGDPExact sampler, which is not part of this release (legacy run dev/results/donut2d/scg_exact/20250409_173335). JM2DSampler gives about 53-58/64 valid with 0 OOD (legacy stored runs 58/64 and 57/64)."
+    }
+  }
+}

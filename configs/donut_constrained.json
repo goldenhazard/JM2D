@@ -1,0 +1,15 @@
+{
+  "task": "donut_constrained",
+  "description": "Constrained generation on the donut, scenario great_wall_rectangle (paper Fig. 9): Projection vs JM2D (legacy dev/exps/base_guide_config.json)",
+  "checkpoint": "checkpoints/donut_constrained.pth",
+  "n": 64,
+  "use_constraints": true,
+  "base": {
+    "t_start_guidance": null,
+    "constraint_mode": "rejection"
+  },
+  "samplers": {
+    "projection": {"solver": "trust-constr", "max_iter": 100, "tol": 1e-05},
+    "jm2d": {"num_mc_samples": 512, "temperature": 0.1}
+  }
+}

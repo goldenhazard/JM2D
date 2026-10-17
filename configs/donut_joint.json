@@ -1,0 +1,18 @@
+{
+  "task": "donut_joint",
+  "description": "Joint sampling on the donut (paper Fig. 2): Sequential / Gibbs / JM2D (legacy dev/paper_scripts/configs/02_joint_guide_config.json)",
+  "checkpoint": "checkpoints/donut_joint.pth",
+  "n": 16,
+  "use_constraints": true,
+  "base": {
+    "t_start_guidance": null,
+    "constraint_mode": "rejection",
+    "param_schedule": "linear",
+    "param_schedule_timestep": 100
+  },
+  "samplers": {
+    "sequential": {"temperature": 0.1},
+    "gibbs": {"num_mc_samples": 128, "num_param_samples": 16384, "temperature": 0.1},
+    "jm2d": {"num_mc_samples": 128, "num_param_samples": 128, "temperature": 0.1}
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "jm2d_toy/sample_result/v1",
+  "task": "donut_joint",
+  "sampler": "jm2d",
+  "run_id": "paper",
+  "seed": null,
+  "n": 16,
+  "n_valid": 15,
+  "n_ood": 1,
+  "n_compatible": 15,
+  "objective_mean": -3.024085521697998,
+  "objective_min": -3.361201047897339,
+  "objective_max": -2.5622267723083496,
+  "global_optimum": -4.54595947265625,
+  "use_constraints": true,
+  "config": {
+    "class": "YongxinExactGDP",
+    "legacy_section": "yongxin",
+    "legacy_base": {
+      "t_start_guidance": null,
+      "use_ood_penalty": false,
+      "ood_regularization_coeff": 1.0,
+      "constraint_mode": "rejection",
+      "param_schedule": "linear",
+      "param_schedule_timestep": 100
+    },
+    "legacy_params": {
+      "N_sample_action": 128,
+      "N_sample_param": 128,
+      "temp_mppi": 0.1
+    }
+  },
+  "ckpt": "donut_joint.pth",
+  "ckpt_md5": "2de6c4c0522364137c959eb2d8b7b4eb",
+  "time_s": 0.0,
+  "versions": {
+    "python": "3.8.18",
+    "torch": "2.1.2",
+    "cuda": "11.8",
+    "numpy": "1.24.4",
+    "scipy": "1.10.1",
+    "diffusers": "0.31.0"
+  },
+  "source": "stored legacy run SafeRobomimic/dev/results/donut_joint/yongxin/20250427_005601 (unseeded; code YongxinExactGDP)"
+}

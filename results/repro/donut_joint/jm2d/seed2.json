@@ -1,0 +1,38 @@
+{
+  "schema": "jm2d_toy/sample_result/v1",
+  "task": "donut_joint",
+  "sampler": "jm2d",
+  "run_id": "seed2",
+  "seed": 2,
+  "n": 16,
+  "n_valid": 12,
+  "n_ood": 0,
+  "n_compatible": 12,
+  "objective_mean": -2.9261012077331543,
+  "objective_min": -3.349226236343384,
+  "objective_max": -2.5051798820495605,
+  "global_optimum": -4.545442581176758,
+  "use_constraints": true,
+  "config": {
+    "class": "JM2DJointSampler",
+    "t_start_guidance": null,
+    "constraint_mode": "rejection",
+    "param_schedule": "linear",
+    "param_schedule_timestep": 100,
+    "num_mc_samples": 128,
+    "num_param_samples": 128,
+    "temperature": 0.1
+  },
+  "ckpt": "donut_joint.pth",
+  "ckpt_md5": "2de6c4c0522364137c959eb2d8b7b4eb",
+  "time_s": 6.46,
+  "versions": {
+    "python": "3.8.18",
+    "torch": "2.1.2",
+    "cuda": "11.8",
+    "numpy": "1.24.4",
+    "scipy": "1.10.1",
+    "diffusers": "0.31.0"
+  },
+  "source": "jm2d_toy"
+}

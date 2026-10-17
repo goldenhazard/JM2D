@@ -1,0 +1,36 @@
+JM2D toy domain (public_toy)
+Copyright (c) 2025 The JM2D authors. Licensed under the MIT License (see LICENSE).
+
+This repository contains code adapted from the third-party projects below. Their
+licenses apply to the adapted portions. No third-party package is vendored; the
+packages listed under "Runtime dependencies" are installed separately.
+
+------------------------------------------------------------------------------
+diffusers (Hugging Face), https://github.com/huggingface/diffusers
+Copyright 2024 The HuggingFace Team. Licensed under the Apache License, Version 2.0
+(https://www.apache.org/licenses/LICENSE-2.0).
+
+Adapted portions (modified: inverted to recover the noise, or re-used inline):
+  - jm2d_toy/models/denoiser.py, DenoiserMLP.get_noise: adapted from
+    diffusers.schedulers.scheduling_ddpm.DDPMScheduler.add_noise (diffusers 0.31.0);
+    the device/dtype handling and the sqrt(alpha_prod) broadcasting are copied, the
+    final line solves x_t = sqrt(a) x_0 + sqrt(1 - a) eps for eps instead.
+  - jm2d_toy/models/denoiser.py, ScoreNet.forward: timestep broadcasting lines
+    ("broadcast to batch dimension in a way that's compatible with ONNX/Core ML"),
+    as in diffusers.models.unets.unet_2d_condition.UNet2DConditionModel.forward.
+Used as a library (not copied): DDPMScheduler (incl. its private _get_variance),
+EMAModel, randn_tensor.
+
+------------------------------------------------------------------------------
+Diffusion Policy (Chi et al.), https://github.com/real-stanford/diffusion_policy
+Copyright (c) 2023 Columbia Artificial Intelligence and Robotics Lab. MIT License.
+
+Adapted portions:
+  - jm2d_toy/models/denoiser.py, SinusoidalPosEmb (timestep embedding) follows the
+    implementation in diffusion_policy/model/diffusion/positional_embedding.py.
+
+------------------------------------------------------------------------------
+Runtime dependencies (not included in this repository)
+  torch (BSD-3-Clause), numpy (BSD-3-Clause), scipy (BSD-3-Clause),
+  diffusers (Apache-2.0), huggingface_hub (Apache-2.0), einops (MIT),
+  tqdm (MPL-2.0 and MIT), matplotlib (Matplotlib License, PSF-based).

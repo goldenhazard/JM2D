@@ -1,0 +1,354 @@
+{
+  "legacy_repo": "SafeRobomimic",
+  "legacy_ref": "origin/toy_domain",
+  "legacy_commit": "b649add025d53fb41c53f552251d3a0f72e5c020",
+  "legacy_package": "dev",
+  "checkpoints": {
+    "fig2": {
+      "file": "checkpoints/donut.pth",
+      "md5": "2de6c4c0522364137c959eb2d8b7b4eb"
+    },
+    "fig9": {
+      "file": "checkpoints/donut2d.pth",
+      "md5": "fc689e89f98078588800adacbfa7663e"
+    }
+  },
+  "protocol": "build problem -> seed_everything(seed) -> build sampler (loads ckpt) -> get_action(batch_size=N, use_constraints=True, return_histories=H) -> save x (and k)",
+  "seed_everything": "random.seed, np.random.seed, torch.manual_seed, torch.cuda.manual_seed_all",
+  "determinism": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "cudnn.deterministic": true,
+    "cudnn.benchmark": false,
+    "use_deterministic_algorithms": "True (warn_only=True)"
+  },
+  "fig2_problem": {
+    "class": "DonutJointProblem",
+    "obs_centers": [
+      [
+        -0.5,
+        0.5
+      ],
+      [
+        -0.5,
+        -0.5
+      ],
+      [
+        0.5,
+        -0.5
+      ],
+      [
+        0.5,
+        0.5
+      ]
+    ],
+    "obs_radius": [
+      0.3,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "fig9_problem": {
+    "class": "Donut2DProblem",
+    "scenario": "great_wall_rectangle"
+  },
+  "history_layout": "hist_* arrays are (B, T, ...); legacy joint histories (T, B, ...) were transposed",
+  "versions": {
+    "python": "3.8.18",
+    "torch": "2.1.2",
+    "cuda": "11.8",
+    "cudnn": 8700,
+    "numpy": "1.24.4",
+    "scipy": "1.10.1",
+    "diffusers": "0.31.0",
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "captured_at": "2026-10-15 20:40:40",
+  "cases": {
+    "fig2_sequential_seed0": {
+      "task": "fig2",
+      "legacy_class": "SequentialGDPExact",
+      "legacy_section": "sequential",
+      "seed": 0,
+      "n": 16,
+      "return_histories": false,
+      "use_constraints": true,
+      "n_valid": 1,
+      "n_ood": 5,
+      "sample_time_s": 0.25,
+      "legacy_config": {
+        "base": {
+          "t_start_guidance": null,
+          "use_ood_penalty": false,
+          "ood_regularization_coeff": 1.0,
+          "constraint_mode": "rejection",
+          "param_schedule": "linear",
+          "param_schedule_timestep": 100
+        },
+        "sequential": {
+          "enabled": true,
+          "N_sample_action": 256,
+          "N_sample_param": 256,
+          "temp_mppi": 0.1
+        },
+        "gibbs_exact": {
+          "enabled": false,
+          "N_sample_action": 128,
+          "N_sample_param": 16384,
+          "temp_mppi": 0.1
+        }
+      }
+    },
+    "fig2_sequential_seed1": {
+      "task": "fig2",
+      "legacy_class": "SequentialGDPExact",
+      "legacy_section": "sequential",
+      "seed": 1,
+      "n": 16,
+      "return_histories": false,
+      "use_constraints": true,
+      "n_valid": 0,
+      "n_ood": 0,
+      "sample_time_s": 0.12,
+      "legacy_config": {
+        "base": {
+          "t_start_guidance": null,
+          "use_ood_penalty": false,
+          "ood_regularization_coeff": 1.0,
+          "constraint_mode": "rejection",
+          "param_schedule": "linear",
+          "param_schedule_timestep": 100
+        },
+        "sequential": {
+          "enabled": true,
+          "N_sample_action": 256,
+          "N_sample_param": 256,
+          "temp_mppi": 0.1
+        },
+        "gibbs_exact": {
+          "enabled": false,
+          "N_sample_action": 128,
+          "N_sample_param": 16384,
+          "temp_mppi": 0.1
+        }
+      }
+    },
+    "fig2_gibbs_seed0": {
+      "task": "fig2",
+      "legacy_class": "GibbsAlternatingGDPExact",
+      "legacy_section": "gibbs_exact",
+      "seed": 0,
+      "n": 16,
+      "return_histories": false,
+      "use_constraints": true,
+      "n_valid": 8,
+      "n_ood": 2,
+      "sample_time_s": 5.81,
+      "legacy_config": {
+        "base": {
+          "t_start_guidance": null,
+          "use_ood_penalty": false,
+          "ood_regularization_coeff": 1.0,
+          "constraint_mode": "rejection",
+          "param_schedule": "linear",
+          "param_schedule_timestep": 100
+        },
+        "gibbs_exact": {
+          "enabled": true,
+          "N_sample_action": 128,
+          "N_sample_param": 16384,
+          "temp_mppi": 0.1
+        }
+      }
+    },
+    "fig2_gibbs_seed1": {
+      "task": "fig2",
+      "legacy_class": "GibbsAlternatingGDPExact",
+      "legacy_section": "gibbs_exact",
+      "seed": 1,
+      "n": 16,
+      "return_histories": false,
+      "use_constraints": true,
+      "n_valid": 10,
+      "n_ood": 2,
+      "sample_time_s": 5.78,
+      "legacy_config": {
+        "base": {
+          "t_start_guidance": null,
+          "use_ood_penalty": false,
+          "ood_regularization_coeff": 1.0,
+          "constraint_mode": "rejection",
+          "param_schedule": "linear",
+          "param_schedule_timestep": 100
+        },
+        "gibbs_exact": {
+          "enabled": true,
+          "N_sample_action": 128,
+          "N_sample_param": 16384,
+          "temp_mppi": 0.1
+        }
+      }
+    },
+    "fig2_jm2d_seed0": {
+      "task": "fig2",
+      "legacy_class": "YongxinExactGDP",
+      "legacy_section": "yongxin",
+      "seed": 0,
+      "n": 16,
+      "return_histories": false,
+      "use_constraints": true,
+      "n_valid": 15,
+      "n_ood": 2,
+      "sample_time_s": 5.51,
+      "legacy_config": {
+        "base": {
+          "t_start_guidance": null,
+          "use_ood_penalty": false,
+          "ood_regularization_coeff": 1.0,
+          "constraint_mode": "rejection",
+          "param_schedule": "linear",
+          "param_schedule_timestep": 100
+        },
+        "yongxin": {
+          "enabled": true,
+          "N_sample_action": 128,
+          "N_sample_param": 128,
+          "temp_mppi": 0.1
+        }
+      }
+    },
+    "fig2_jm2d_seed1": {
+      "task": "fig2",
+      "legacy_class": "YongxinExactGDP",
+      "legacy_section": "yongxin",
+      "seed": 1,
+      "n": 16,
+      "return_histories": false,
+      "use_constraints": true,
+      "n_valid": 14,
+      "n_ood": 2,
+      "sample_time_s": 5.47,
+      "legacy_config": {
+        "base": {
+          "t_start_guidance": null,
+          "use_ood_penalty": false,
+          "ood_regularization_coeff": 1.0,
+          "constraint_mode": "rejection",
+          "param_schedule": "linear",
+          "param_schedule_timestep": 100
+        },
+        "yongxin": {
+          "enabled": true,
+          "N_sample_action": 128,
+          "N_sample_param": 128,
+          "temp_mppi": 0.1
+        }
+      }
+    },
+    "fig2_jm2d_hist_seed0": {
+      "task": "fig2",
+      "legacy_class": "YongxinExactGDP",
+      "legacy_section": "yongxin",
+      "seed": 0,
+      "n": 16,
+      "return_histories": true,
+      "use_constraints": true,
+      "n_valid": 8,
+      "n_ood": 2,
+      "sample_time_s": 5.77,
+      "legacy_config": {
+        "base": {
+          "t_start_guidance": null,
+          "use_ood_penalty": false,
+          "ood_regularization_coeff": 1.0,
+          "constraint_mode": "rejection",
+          "param_schedule": "linear",
+          "param_schedule_timestep": 100
+        },
+        "yongxin": {
+          "enabled": true,
+          "N_sample_action": 128,
+          "N_sample_param": 128,
+          "temp_mppi": 0.1
+        }
+      }
+    },
+    "fig9_jm2d_seed0": {
+      "task": "fig9",
+      "legacy_class": "YongxinMethod",
+      "legacy_section": "yongxin",
+      "seed": 0,
+      "n": 64,
+      "return_histories": false,
+      "use_constraints": true,
+      "n_valid": 56,
+      "n_ood": 0,
+      "sample_time_s": 10.05,
+      "legacy_config": {
+        "base": {
+          "t_start_guidance": null,
+          "use_ood_penalty": false,
+          "ood_regularization_coeff": 1.0,
+          "constraint_mode": "rejection"
+        },
+        "yongxin": {
+          "enabled": true,
+          "N_sample_action": 512,
+          "temp_mppi": 0.1
+        }
+      }
+    },
+    "fig9_jm2d_hist_seed0": {
+      "task": "fig9",
+      "legacy_class": "YongxinMethod",
+      "legacy_section": "yongxin",
+      "seed": 0,
+      "n": 64,
+      "return_histories": true,
+      "use_constraints": true,
+      "n_valid": 54,
+      "n_ood": 0,
+      "sample_time_s": 10.72,
+      "legacy_config": {
+        "base": {
+          "t_start_guidance": null,
+          "use_ood_penalty": false,
+          "ood_regularization_coeff": 1.0,
+          "constraint_mode": "rejection"
+        },
+        "yongxin": {
+          "enabled": true,
+          "N_sample_action": 512,
+          "temp_mppi": 0.1
+        }
+      }
+    },
+    "fig9_projection_seed0": {
+      "task": "fig9",
+      "legacy_class": "ProjectionDP",
+      "legacy_section": "projection",
+      "seed": 0,
+      "n": 64,
+      "return_histories": false,
+      "use_constraints": true,
+      "n_valid": 64,
+      "n_ood": 31,
+      "sample_time_s": 102.95,
+      "legacy_config": {
+        "base": {
+          "t_start_guidance": null,
+          "use_ood_penalty": false,
+          "ood_regularization_coeff": 1.0,
+          "constraint_mode": "rejection"
+        },
+        "projection": {
+          "enabled": true,
+          "method": "classic",
+          "solver": "trust-constr",
+          "max_iter": 100,
+          "tol": 1e-05
+        }
+      }
+    }
+  }
+}
