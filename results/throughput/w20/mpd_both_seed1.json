@@ -1,0 +1,26 @@
+{
+ "label": "mpd",
+ "scenario": "both",
+ "seed": 1,
+ "n_trials": 1,
+ "setup_s": 2.5,
+ "wall_s": 212.5,
+ "policy_calls": [
+  62.0
+ ],
+ "s_per_step": 3.428,
+ "per_trial": {
+  "0": {
+   "n_success": 1.0,
+   "n_success_and_constraints": 0.0,
+   "n_steps": 61.0,
+   "n_violations": 23.0,
+   "total_violations": 2.1395116183056557,
+   "avg_time": 3.4460425298722064,
+   "collision_free_completed": 0.0
+  }
+ },
+ "torch_max_reserved_mib": 350,
+ "torch_max_allocated_mib": 222,
+ "nvidia_smi_peak_mib": 900
+}

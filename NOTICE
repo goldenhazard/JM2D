@@ -1,0 +1,44 @@
+Third-party code and data in this branch
+========================================
+
+The JM2D code in this repository is released under the MIT License (LICENSE). Parts of it derive from the projects
+below, which keep their own copyright and license. Licenses were checked on GitHub on 2026-10-15.
+
+diffuser/  (package name kept so that the released checkpoint pickles load)
+  * DPCC, Ralf Römer et al., "Diffusion Predictive Control with Constraints" (L4DC 2025),
+    https://github.com/ralfroemer99/dpcc
+    The D3IL code base was forked from DPCC in Oct-Dec 2024; the fork carried NO LICENSE file.
+    Upstream has since added an MIT License ("Copyright (c) 2025 Learning Systems and Robotics Lab (LSY)", commit
+    "Add license", 2026-08-15).
+    OPEN ITEM FOR THE AUTHORS: confirm with the DPCC authors that the MIT license covers the forked code (or obtain
+    permission), and copy their copyright notice here before the public release.
+    Files: diffuser/{datasets,models,sampling,utils}/* except the JM2D additions listed below. The `dpcc` planner runs
+    the DPCC sampling loop of that code base (diffuser/models/dpcc_diffusion.py, per-step projection).
+  * Diffuser, Michael Janner et al., https://github.com/jannerm/diffuser, MIT License
+    (its LICENSE: "Copyright (c) 2020 Phil Wang"). DPCC builds on Diffuser's temporal U-Net, diffusion model and
+    training utilities (diffuser/models/{helpers,unet1d_temporal_cond,diffusion}.py, diffuser/utils/*,
+    diffuser/datasets/*).
+  * Decision Diffuser, Anurag Ajay et al., https://github.com/anuragajay/decision-diffuser: the return-conditioned
+    U-Net / classifier-free guidance options (`returns_condition`, `condition_guidance_w`, `calc_energy`,
+    `GaussianInvDynDiffusion` hooks) in the files above appear to follow its code. That repository shows no license on
+    GitHub. OPEN ITEM: confirm the provenance / attribution of these parts.
+
+diffuser/models/invariance.py
+  SafeDiffuser invariance (RoS / ReS / TVS) modules, "largely adapted from" https://github.com/Weixy21/SafeDiffuser
+  (Wei Xiao et al.), MIT License ("Copyright (c) 2025 Wei Xiao").
+
+diffuser/models/diffusion.py  (MPD guidance in GaussianDiffusion.p_mean_variance)
+  Cost-gradient guidance in the style of Motion Planning Diffusion (Carvalho et al.), implemented for this code base
+  (no code copied).
+
+third_party/d3il.patch
+  Patch to D3IL, https://github.com/ALRhub/d3il, MIT License ("Copyright (c) 2024 Autonomous Learning Robots Lab @
+  KIT"): imports rewritten to the `d3il.environments...` package path and
+  `ObstacleAvoidanceEnv.start(override_init_pos=None)`. The D3IL code and the Avoiding demonstrations are not
+  redistributed here (README: clone + patch + data download).
+
+Python dependencies (installed, not vendored), e.g. torch (BSD-3), diffusers (Apache-2.0), qpth (Apache-2.0),
+cvxpy (Apache-2.0), scipy / numpy (BSD-3), mujoco (Apache-2.0), pinocchio (BSD-2), keep their own licenses.
+
+JM2D additions (this work, MIT): diffuser/models/jm2d.py, the JM2D branch of diffuser/models/dpcc_diffusion.py,
+diffuser/sampling/policies.py (DPCCPolicy use_jm2d), jm2d_d3il/, configs/, scripts/, tests/, paper/.

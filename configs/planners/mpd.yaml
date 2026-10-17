@@ -1,0 +1,15 @@
+# MPD (Carvalho et al.): cost-gradient guidance of the noisy mean (constraint cost evaluated on x_t).
+# Legacy: SafeRobomimic@origin/mpd-improved, variant 'mpd-gradient' (mpd-gradient-improved is not included).
+planner: mpd
+legacy_variant: mpd-gradient
+batch_size: 2
+constraint_padding: 0.0
+dynamics_constraints: false
+trajectory_selection: minimum_projection_cost
+diffusion_timestep_threshold: 1.0
+gradient_weights: {projection: 0, equality: 2, inequality: 4, total: 1.0}
+n_guide_steps: 5
+clip_grad: true
+clip_grad_rule: norm
+start_guiding_steps: 100            # guide at every diffusion step (t < 100)
+repeat_last: 5                      # 5 extra denoising steps at t = 0

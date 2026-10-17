@@ -1,0 +1,12 @@
+{"trial": 0, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 57.0, "n_violations": 19.0, "total_violations": 3.0478418270259535, "avg_time": 34.69856247567294, "collision_free_completed": 0.0}
+{"trial": 1, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 69.0, "n_violations": 17.0, "total_violations": 3.50724534144848, "avg_time": 32.60563332447107, "collision_free_completed": 0.0}
+{"trial": 2, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 65.0, "n_violations": 23.0, "total_violations": 3.204494898384863, "avg_time": 33.07032518753638, "collision_free_completed": 0.0}
+{"trial": 3, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 76.0, "n_violations": 24.0, "total_violations": 3.4022474508504446, "avg_time": 32.721667073274915, "collision_free_completed": 0.0}
+{"trial": 4, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 87.0, "n_violations": 17.0, "total_violations": 2.8060732294362256, "avg_time": 32.545054742659644, "collision_free_completed": 0.0}
+{"trial": 5, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 90.0, "n_violations": 14.0, "total_violations": 3.108707563082375, "avg_time": 32.30613303979238, "collision_free_completed": 0.0}
+{"trial": 6, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 79.0, "n_violations": 19.0, "total_violations": 3.6935052114538727, "avg_time": 32.506272337104704, "collision_free_completed": 0.0}
+{"trial": 7, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 65.0, "n_violations": 24.0, "total_violations": 3.485234125349172, "avg_time": 28.966738744882438, "collision_free_completed": 0.0}
+{"trial": 8, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 74.0, "n_violations": 21.0, "total_violations": 3.832576555577148, "avg_time": 28.25261473011326, "collision_free_completed": 0.0}
+{"trial": 9, "n_success": 0.0, "n_success_and_constraints": 0.0, "n_steps": 76.0, "n_violations": 9.0, "total_violations": 0.12393480974572124, "avg_time": 27.983379257352727, "collision_free_completed": 0.0}
+{"trial": 10, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 61.0, "n_violations": 20.0, "total_violations": 3.308691281341398, "avg_time": 28.520977094525197, "collision_free_completed": 0.0}
+{"trial": 11, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 72.0, "n_violations": 18.0, "total_violations": 3.1511439599838518, "avg_time": 28.113460060622955, "collision_free_completed": 0.0}

@@ -1,0 +1,1447 @@
+diff --git a/environments/d3il/d3il_sim/controllers/Controller.py b/environments/d3il/d3il_sim/controllers/Controller.py
+index 1fe677b..b418f6e 100644
+--- a/environments/d3il/d3il_sim/controllers/Controller.py
++++ b/environments/d3il/d3il_sim/controllers/Controller.py
+@@ -3,7 +3,7 @@ from abc import abstractmethod
+ 
+ import numpy as np
+ 
+-import environments.d3il.d3il_sim.controllers.GainsInterface as gains
++import d3il.environments.d3il.d3il_sim.controllers.GainsInterface as gains
+ 
+ 
+ class ControllerBase:
+diff --git a/environments/d3il/d3il_sim/controllers/IKControllers.py b/environments/d3il/d3il_sim/controllers/IKControllers.py
+index 1a494b1..37ddcc9 100644
+--- a/environments/d3il/d3il_sim/controllers/IKControllers.py
++++ b/environments/d3il/d3il_sim/controllers/IKControllers.py
+@@ -7,9 +7,9 @@ import logging
+ 
+ import numpy as np
+ 
+-import environments.d3il.d3il_sim.controllers.GainsInterface as gains
+-import environments.d3il.d3il_sim.utils as utils
+-from environments.d3il.d3il_sim.controllers.Controller import TrackingController
++import d3il.environments.d3il.d3il_sim.controllers.GainsInterface as gains
++import d3il.environments.d3il.d3il_sim.utils as utils
++from d3il.environments.d3il.d3il_sim.controllers.Controller import TrackingController
+ 
+ 
+ class CartPosImpedenceController(TrackingController, gains.CartPosControllerConfig):
+diff --git a/environments/d3il/d3il_sim/controllers/TrajectoryTracking.py b/environments/d3il/d3il_sim/controllers/TrajectoryTracking.py
+index d8cd4f0..09ae062 100644
+--- a/environments/d3il/d3il_sim/controllers/TrajectoryTracking.py
++++ b/environments/d3il/d3il_sim/controllers/TrajectoryTracking.py
+@@ -6,8 +6,8 @@ import logging
+ import numpy as np
+ from scipy.interpolate import make_interp_spline
+ 
+-import environments.d3il.d3il_sim.utils as utils
+-from environments.d3il.d3il_sim.controllers import ControllerBase
++import d3il.environments.d3il.d3il_sim.utils as utils
++from d3il.environments.d3il.d3il_sim.controllers import ControllerBase
+ 
+ 
+ class TrajectoryGenerator:
+diff --git a/environments/d3il/d3il_sim/core/Camera.py b/environments/d3il/d3il_sim/core/Camera.py
+index cbf0aac..02a019d 100644
+--- a/environments/d3il/d3il_sim/core/Camera.py
++++ b/environments/d3il/d3il_sim/core/Camera.py
+@@ -4,7 +4,7 @@ from typing import Optional, Tuple
+ import cv2
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.core.sim_object.sim_object import IntelligentSimObject
++from d3il.environments.d3il.d3il_sim.core.sim_object.sim_object import IntelligentSimObject
+ 
+ 
+ class Camera(IntelligentSimObject, ABC):
+diff --git a/environments/d3il/d3il_sim/core/Model.py b/environments/d3il/d3il_sim/core/Model.py
+index bc5a628..36bcb78 100644
+--- a/environments/d3il/d3il_sim/core/Model.py
++++ b/environments/d3il/d3il_sim/core/Model.py
+@@ -1,7 +1,7 @@
+ import numpy as np
+ import pinocchio
+ 
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ 
+ class RobotKinematicsInterface:
+diff --git a/environments/d3il/d3il_sim/core/Robots.py b/environments/d3il/d3il_sim/core/Robots.py
+index a823a07..249b927 100644
+--- a/environments/d3il/d3il_sim/core/Robots.py
++++ b/environments/d3il/d3il_sim/core/Robots.py
+@@ -2,11 +2,11 @@ from enum import Enum, auto
+ 
+ import numpy as np
+ 
+-import environments.d3il.d3il_sim.controllers as ctrl
+-import environments.d3il.d3il_sim.core.logger as logger
+-import environments.d3il.d3il_sim.core.Model as model
+-import environments.d3il.d3il_sim.core.time_keeper as time_keeper
+-import environments.d3il.d3il_sim.utils.geometric_transformation as geom_trans
++import d3il.environments.d3il.d3il_sim.controllers as ctrl
++import d3il.environments.d3il.d3il_sim.core.logger as logger
++import d3il.environments.d3il.d3il_sim.core.Model as model
++import d3il.environments.d3il.d3il_sim.core.time_keeper as time_keeper
++import d3il.environments.d3il.d3il_sim.utils.geometric_transformation as geom_trans
+ 
+ 
+ class RobotControlInterface(Enum):
+diff --git a/environments/d3il/d3il_sim/core/Scene.py b/environments/d3il/d3il_sim/core/Scene.py
+index b2d9f25..f508f3c 100644
+--- a/environments/d3il/d3il_sim/core/Scene.py
++++ b/environments/d3il/d3il_sim/core/Scene.py
+@@ -4,10 +4,10 @@ from typing import List
+ 
+ import numpy as np
+ 
+-import environments.d3il.d3il_sim.core.sim_object as sim_object
+-import environments.d3il.d3il_sim.core.time_keeper as time_keeper
+-import environments.d3il.d3il_sim.utils.geometric_transformation as geom_trans
+-from environments.d3il.d3il_sim.core import Camera, Robots
++import d3il.environments.d3il.d3il_sim.core.sim_object as sim_object
++import d3il.environments.d3il.d3il_sim.core.time_keeper as time_keeper
++import d3il.environments.d3il.d3il_sim.utils.geometric_transformation as geom_trans
++from d3il.environments.d3il.d3il_sim.core import Camera, Robots
+ 
+ 
+ class Scene(ABC):
+diff --git a/environments/d3il/d3il_sim/core/sim_object/sim_obj_repo.py b/environments/d3il/d3il_sim/core/sim_object/sim_obj_repo.py
+index 90ff971..77685db 100644
+--- a/environments/d3il/d3il_sim/core/sim_object/sim_obj_repo.py
++++ b/environments/d3il/d3il_sim/core/sim_object/sim_obj_repo.py
+@@ -1,6 +1,6 @@
+ from typing import List
+ 
+-from environments.d3il.d3il_sim.utils.unique_dict import UniqueDict
++from d3il.environments.d3il.d3il_sim.utils.unique_dict import UniqueDict
+ 
+ from .sim_object import SimObject
+ 
+diff --git a/environments/d3il/d3il_sim/gyms/gym_controllers.py b/environments/d3il/d3il_sim/gyms/gym_controllers.py
+index 35b4c1e..845f797 100644
+--- a/environments/d3il/d3il_sim/gyms/gym_controllers.py
++++ b/environments/d3il/d3il_sim/gyms/gym_controllers.py
+@@ -3,9 +3,9 @@ import abc
+ import gym
+ import numpy as np
+ 
+-import environments.d3il.d3il_sim.controllers.Controller as ctrl
+-from environments.d3il.d3il_sim.controllers import CartPosQuatImpedenceController
+-from environments.d3il.d3il_sim.controllers.TrajectoryTracking import (
++import d3il.environments.d3il.d3il_sim.controllers.Controller as ctrl
++from d3il.environments.d3il.d3il_sim.controllers import CartPosQuatImpedenceController
++from d3il.environments.d3il.d3il_sim.controllers.TrajectoryTracking import (
+     CartPosQuatTrajectoryTracker,
+     GotoCartPosQuatImpedanceController,
+     GotoTrajectoryLinear,
+diff --git a/environments/d3il/d3il_sim/gyms/gym_env_wrapper.py b/environments/d3il/d3il_sim/gyms/gym_env_wrapper.py
+index 454116d..315670f 100644
+--- a/environments/d3il/d3il_sim/gyms/gym_env_wrapper.py
++++ b/environments/d3il/d3il_sim/gyms/gym_env_wrapper.py
+@@ -4,8 +4,8 @@ import gym
+ from gym.utils import seeding
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.controllers.Controller import ControllerBase
+-from environments.d3il.d3il_sim.core import Scene
++from d3il.environments.d3il.d3il_sim.controllers.Controller import ControllerBase
++from d3il.environments.d3il.d3il_sim.core import Scene
+ 
+ 
+ class GymEnvWrapper(gym.Env, ABC):
+diff --git a/environments/d3il/d3il_sim/gyms/gym_utils/multiprocessing/parallel_sampling.py b/environments/d3il/d3il_sim/gyms/gym_utils/multiprocessing/parallel_sampling.py
+index 0f35f7f..ce86fc4 100644
+--- a/environments/d3il/d3il_sim/gyms/gym_utils/multiprocessing/parallel_sampling.py
++++ b/environments/d3il/d3il_sim/gyms/gym_utils/multiprocessing/parallel_sampling.py
+@@ -5,7 +5,7 @@ from multiprocessing import Pipe, Process
+ 
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim import gym
++from d3il.environments.d3il.d3il_sim import gym
+ 
+ 
+ def _subprocess_sampling(pipe, policy, env: gym.Env, n_steps: int):
+diff --git a/environments/d3il/d3il_sim/gyms/gym_utils/multiprocessing/parallel_sampling_tests.py b/environments/d3il/d3il_sim/gyms/gym_utils/multiprocessing/parallel_sampling_tests.py
+index 979afe5..776e19a 100644
+--- a/environments/d3il/d3il_sim/gyms/gym_utils/multiprocessing/parallel_sampling_tests.py
++++ b/environments/d3il/d3il_sim/gyms/gym_utils/multiprocessing/parallel_sampling_tests.py
+@@ -6,8 +6,8 @@ import time
+ import matplotlib.pyplot as plt
+ import pandas as pd
+ 
+-from environments.d3il.d3il_sim.gym.gym_controllers import CartPosQuatCartesianRobotController
+-from environments.d3il.d3il_sim.gym.gym_utils.multiprocessing.parallel_sampling import (
++from d3il.environments.d3il.d3il_sim.gym.gym_controllers import CartPosQuatCartesianRobotController
++from d3il.environments.d3il.d3il_sim.gym.gym_utils.multiprocessing.parallel_sampling import (
+     GenericPolicy,
+     ParallelSampler,
+ )
+diff --git a/environments/d3il/d3il_sim/sims/SimFactory.py b/environments/d3il/d3il_sim/sims/SimFactory.py
+index f20cb71..c81fe30 100644
+--- a/environments/d3il/d3il_sim/sims/SimFactory.py
++++ b/environments/d3il/d3il_sim/sims/SimFactory.py
+@@ -1,8 +1,8 @@
+ import abc
+ from functools import wraps
+ 
+-from environments.d3il.d3il_sim.core import Camera, RobotBase, Scene
+-from environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import PrimitiveObject
++from d3il.environments.d3il.d3il_sim.core import Camera, RobotBase, Scene
++from d3il.environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import PrimitiveObject
+ 
+ 
+ def _register_function_on_class(cls, fn):
+diff --git a/environments/d3il/d3il_sim/sims/mj_beta/MjCamera.py b/environments/d3il/d3il_sim/sims/mj_beta/MjCamera.py
+index d5f5abb..e60e00f 100644
+--- a/environments/d3il/d3il_sim/sims/mj_beta/MjCamera.py
++++ b/environments/d3il/d3il_sim/sims/mj_beta/MjCamera.py
+@@ -4,11 +4,11 @@ from xml.etree import ElementTree as Et
+ import numpy as np
+ from mujoco import MjData, MjModel, mj_name2id, mjtObj
+ 
+-from environments.d3il.d3il_sim.core.Camera import Camera
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import IncludeType
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_render_singleton import render
+-from environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import MjLoadable
+-from environments.d3il.d3il_sim.utils.geometric_transformation import (
++from d3il.environments.d3il.d3il_sim.core.Camera import Camera
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import IncludeType
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_render_singleton import render
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import MjLoadable
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import (
+     mat2posQuat,
+     posRotMat2TFMat,
+     quat2mat,
+diff --git a/environments/d3il/d3il_sim/sims/mj_beta/MjFactory.py b/environments/d3il/d3il_sim/sims/mj_beta/MjFactory.py
+index 69049d8..7418724 100644
+--- a/environments/d3il/d3il_sim/sims/mj_beta/MjFactory.py
++++ b/environments/d3il/d3il_sim/sims/mj_beta/MjFactory.py
+@@ -1,8 +1,8 @@
+ import gin
+ 
+-import environments.d3il.d3il_sim.sims.SimFactory as Sims
+-from environments.d3il.d3il_sim.core import Camera, RobotBase, Scene
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++import d3il.environments.d3il.d3il_sim.sims.SimFactory as Sims
++from d3il.environments.d3il.d3il_sim.core import Camera, RobotBase, Scene
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ from .MjCamera import MjCamera
+ from .MjPrimLoader import mj_load
+diff --git a/environments/d3il/d3il_sim/sims/mj_beta/MjLoadable.py b/environments/d3il/d3il_sim/sims/mj_beta/MjLoadable.py
+index 95f874c..66c6f79 100644
+--- a/environments/d3il/d3il_sim/sims/mj_beta/MjLoadable.py
++++ b/environments/d3il/d3il_sim/sims/mj_beta/MjLoadable.py
+@@ -3,7 +3,7 @@ import os
+ import xml.etree.ElementTree as Et
+ from typing import Tuple
+ 
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import IncludeType
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import IncludeType
+ 
+ 
+ class MjLoadable(abc.ABC):
+diff --git a/environments/d3il/d3il_sim/sims/mj_beta/MjPrimLoader.py b/environments/d3il/d3il_sim/sims/mj_beta/MjPrimLoader.py
+index fe00d5b..639605a 100644
+--- a/environments/d3il/d3il_sim/sims/mj_beta/MjPrimLoader.py
++++ b/environments/d3il/d3il_sim/sims/mj_beta/MjPrimLoader.py
+@@ -1,6 +1,6 @@
+ import xml.etree.ElementTree as Et
+ 
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import IncludeType
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import IncludeType
+ 
+ 
+ def mj_load(prim_obj, *args, **kwargs):
+diff --git a/environments/d3il/d3il_sim/sims/mj_beta/MjRobot.py b/environments/d3il/d3il_sim/sims/mj_beta/MjRobot.py
+index 5b040f5..24fcd28 100644
+--- a/environments/d3il/d3il_sim/sims/mj_beta/MjRobot.py
++++ b/environments/d3il/d3il_sim/sims/mj_beta/MjRobot.py
+@@ -5,19 +5,19 @@ from typing import Tuple
+ import mujoco
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.controllers.Controller import ModelBasedFeedforwardController
+-from environments.d3il.d3il_sim.core import RobotBase
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import (
++from d3il.environments.d3il.d3il_sim.controllers.Controller import ModelBasedFeedforwardController
++from d3il.environments.d3il.d3il_sim.core import RobotBase
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import (
+     IncludeType,
+     get_body_xvelp,
+     get_body_xvelr,
+ )
+-from environments.d3il.d3il_sim.sims.mj_beta.MjCamera import MjInhandCamera
+-from environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import (
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjCamera import MjInhandCamera
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import (
+     MjIncludeTemplate,
+     MjXmlLoadable,
+ )
+-from environments.d3il.d3il_sim.utils import sim_path
++from d3il.environments.d3il.d3il_sim.utils import sim_path
+ 
+ 
+ class MjRobot(RobotBase, MjIncludeTemplate):
+diff --git a/environments/d3il/d3il_sim/sims/mj_beta/MjScene.py b/environments/d3il/d3il_sim/sims/mj_beta/MjScene.py
+index 309bb36..50f1478 100644
+--- a/environments/d3il/d3il_sim/sims/mj_beta/MjScene.py
++++ b/environments/d3il/d3il_sim/sims/mj_beta/MjScene.py
+@@ -7,17 +7,17 @@ import mujoco
+ import numpy as np
+ from mujoco import MjData, MjModel, mj_name2id, mjtObj
+ 
+-from environments.d3il.d3il_sim.core.Scene import Scene
+-from environments.d3il.d3il_sim.core.sim_object.sim_object import IntelligentSimObject, SimObject
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_render_singleton import (
++from d3il.environments.d3il.d3il_sim.core.Scene import Scene
++from d3il.environments.d3il.d3il_sim.core.sim_object.sim_object import IntelligentSimObject, SimObject
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_render_singleton import (
+     reset_singleton as reset_render_singleton,
+ )
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_renderer import Viewer
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_scene_object import MjSurrounding
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_scene_parser import MjSceneParser
+-from environments.d3il.d3il_sim.sims.mj_beta.MjCamera import MjCageCam, MjCamera
+-from environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import MjFreezable, MjXmlLoadable
+-from environments.d3il.d3il_sim.utils import sim_path
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_renderer import Viewer
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_scene_object import MjSurrounding
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_scene_parser import MjSceneParser
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjCamera import MjCageCam, MjCamera
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import MjFreezable, MjXmlLoadable
++from d3il.environments.d3il.d3il_sim.utils import sim_path
+ 
+ 
+ class MjScene(Scene):
+diff --git a/environments/d3il/d3il_sim/sims/mj_beta/mj_utils/mj_render_singleton.py b/environments/d3il/d3il_sim/sims/mj_beta/mj_utils/mj_render_singleton.py
+index 39215c7..2a3153d 100644
+--- a/environments/d3il/d3il_sim/sims/mj_beta/mj_utils/mj_render_singleton.py
++++ b/environments/d3il/d3il_sim/sims/mj_beta/mj_utils/mj_render_singleton.py
+@@ -2,7 +2,7 @@ import os
+ 
+ from mujoco import MjData, MjModel, mj_name2id, mjtObj
+ 
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_renderer import (
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_renderer import (
+     RenderContext,
+     RenderContextOffscreen,
+ )
+diff --git a/environments/d3il/d3il_sim/sims/mj_beta/mj_utils/mj_scene_object.py b/environments/d3il/d3il_sim/sims/mj_beta/mj_utils/mj_scene_object.py
+index dc7de1f..0087f03 100644
+--- a/environments/d3il/d3il_sim/sims/mj_beta/mj_utils/mj_scene_object.py
++++ b/environments/d3il/d3il_sim/sims/mj_beta/mj_utils/mj_scene_object.py
+@@ -5,9 +5,9 @@ from typing import Tuple
+ import numpy as np
+ import yaml
+ 
+-import environments.d3il.d3il_sim.sims.mj_beta.MjLoadable as mj_load
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import IncludeType
+-from environments.d3il.d3il_sim.utils import sim_path
++import d3il.environments.d3il.d3il_sim.sims.mj_beta.MjLoadable as mj_load
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import IncludeType
++from d3il.environments.d3il.d3il_sim.utils import sim_path
+ 
+ 
+ class MujocoObject(mj_load.MjXmlLoadable):
+diff --git a/environments/d3il/d3il_sim/sims/mj_beta/mj_utils/mj_scene_parser.py b/environments/d3il/d3il_sim/sims/mj_beta/mj_utils/mj_scene_parser.py
+index b0b19cb..6ff0067 100644
+--- a/environments/d3il/d3il_sim/sims/mj_beta/mj_utils/mj_scene_parser.py
++++ b/environments/d3il/d3il_sim/sims/mj_beta/mj_utils/mj_scene_parser.py
+@@ -4,10 +4,10 @@ from xml.etree.ElementTree import Element
+ 
+ import mujoco
+ 
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import IncludeType
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_scene_object import MjSurrounding
+-from environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import MjLoadable, MjIncludeTemplate
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import IncludeType
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_scene_object import MjSurrounding
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import MjLoadable, MjIncludeTemplate
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ 
+ class MjSceneParser:
+diff --git a/environments/d3il/d3il_sim/sims/mujoco/MujocoCamera.py b/environments/d3il/d3il_sim/sims/mujoco/MujocoCamera.py
+index 76eb7dc..9cbdab7 100644
+--- a/environments/d3il/d3il_sim/sims/mujoco/MujocoCamera.py
++++ b/environments/d3il/d3il_sim/sims/mujoco/MujocoCamera.py
+@@ -3,10 +3,10 @@ from xml.etree import ElementTree as Et
+ 
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.core.Camera import Camera
+-from environments.d3il.d3il_sim.sims.mujoco.mj_utils import mujoco_render_singleton as mj_render
+-from environments.d3il.d3il_sim.sims.mujoco.MujocoLoadable import MujocoLoadable
+-from environments.d3il.d3il_sim.utils.geometric_transformation import (
++from d3il.environments.d3il.d3il_sim.core.Camera import Camera
++from d3il.environments.d3il.d3il_sim.sims.mujoco.mj_utils import mujoco_render_singleton as mj_render
++from d3il.environments.d3il.d3il_sim.sims.mujoco.MujocoLoadable import MujocoLoadable
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import (
+     mat2posQuat,
+     mat2quat,
+     posRotMat2TFMat,
+diff --git a/environments/d3il/d3il_sim/sims/mujoco/MujocoFactory.py b/environments/d3il/d3il_sim/sims/mujoco/MujocoFactory.py
+index 89225a9..56a0eec 100644
+--- a/environments/d3il/d3il_sim/sims/mujoco/MujocoFactory.py
++++ b/environments/d3il/d3il_sim/sims/mujoco/MujocoFactory.py
+@@ -1,8 +1,8 @@
+ import gin
+ 
+-import environments.d3il.d3il_sim.sims.SimFactory as Sims
+-from environments.d3il.d3il_sim.core import Camera, RobotBase, Scene
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++import d3il.environments.d3il.d3il_sim.sims.SimFactory as Sims
++from d3il.environments.d3il.d3il_sim.core import Camera, RobotBase, Scene
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ from .MujocoCamera import MujocoCamera
+ from .MujocoPrimLoader import to_mj_xml
+diff --git a/environments/d3il/d3il_sim/sims/mujoco/MujocoRobot.py b/environments/d3il/d3il_sim/sims/mujoco/MujocoRobot.py
+index 70d46b9..8a11242 100644
+--- a/environments/d3il/d3il_sim/sims/mujoco/MujocoRobot.py
++++ b/environments/d3il/d3il_sim/sims/mujoco/MujocoRobot.py
+@@ -4,17 +4,17 @@ import xml.etree.ElementTree as Et
+ import mujoco_py
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.controllers import (
++from d3il.environments.d3il.d3il_sim.controllers import (
+     GotoCartPosCartesianRobotController,
+     GotoCartPosQuatCartesianRobotController,
+ )
+-from environments.d3il.d3il_sim.controllers.Controller import ModelBasedFeedforwardController
+-from environments.d3il.d3il_sim.controllers.IKControllers import CartPosQuatCartesianRobotController
+-from environments.d3il.d3il_sim.core import RobotBase, RobotControlInterface
+-from environments.d3il.d3il_sim.sims.mujoco.mj_utils.mujoco_helpers import reset_mocap2body_xpos
+-from environments.d3il.d3il_sim.sims.mujoco.MujocoCamera import MjInhandCamera
+-from environments.d3il.d3il_sim.sims.mujoco.MujocoLoadable import MujocoIncludeTemplate
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.controllers.Controller import ModelBasedFeedforwardController
++from d3il.environments.d3il.d3il_sim.controllers.IKControllers import CartPosQuatCartesianRobotController
++from d3il.environments.d3il.d3il_sim.core import RobotBase, RobotControlInterface
++from d3il.environments.d3il.d3il_sim.sims.mujoco.mj_utils.mujoco_helpers import reset_mocap2body_xpos
++from d3il.environments.d3il.d3il_sim.sims.mujoco.MujocoCamera import MjInhandCamera
++from d3il.environments.d3il.d3il_sim.sims.mujoco.MujocoLoadable import MujocoIncludeTemplate
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ 
+ class MujocoRobot(RobotBase, MujocoIncludeTemplate):
+diff --git a/environments/d3il/d3il_sim/sims/mujoco/MujocoScene.py b/environments/d3il/d3il_sim/sims/mujoco/MujocoScene.py
+index a4b3680..9a8755a 100644
+--- a/environments/d3il/d3il_sim/sims/mujoco/MujocoScene.py
++++ b/environments/d3il/d3il_sim/sims/mujoco/MujocoScene.py
+@@ -4,13 +4,13 @@ from typing import List
+ import numpy as np
+ from mujoco_py import MjSim, MjSimState
+ 
+-from environments.d3il.d3il_sim.core.Scene import Scene
+-from environments.d3il.d3il_sim.core.sim_object.sim_object import IntelligentSimObject, SimObject
+-from environments.d3il.d3il_sim.sims.mujoco.mj_utils.mujoco_scene_object import MujocoSurrounding
+-from environments.d3il.d3il_sim.sims.mujoco.mj_utils.mujoco_scene_parser import MujocoSceneParser
+-from environments.d3il.d3il_sim.sims.mujoco.mj_utils.mujoco_viewer import MujocoViewer
+-from environments.d3il.d3il_sim.sims.mujoco.MujocoCamera import MjCageCam
+-from environments.d3il.d3il_sim.utils import sim_path
++from d3il.environments.d3il.d3il_sim.core.Scene import Scene
++from d3il.environments.d3il.d3il_sim.core.sim_object.sim_object import IntelligentSimObject, SimObject
++from d3il.environments.d3il.d3il_sim.sims.mujoco.mj_utils.mujoco_scene_object import MujocoSurrounding
++from d3il.environments.d3il.d3il_sim.sims.mujoco.mj_utils.mujoco_scene_parser import MujocoSceneParser
++from d3il.environments.d3il.d3il_sim.sims.mujoco.mj_utils.mujoco_viewer import MujocoViewer
++from d3il.environments.d3il.d3il_sim.sims.mujoco.MujocoCamera import MjCageCam
++from d3il.environments.d3il.d3il_sim.utils import sim_path
+ 
+ 
+ class MujocoScene(Scene):
+diff --git a/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_objects/grasping_object.py b/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_objects/grasping_object.py
+index 10e55a0..bc09ccd 100644
+--- a/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_objects/grasping_object.py
++++ b/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_objects/grasping_object.py
+@@ -1,8 +1,8 @@
+ from typing import Tuple
+ from xml.etree import ElementTree as Et
+ 
+-from environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
+-from environments.d3il.d3il_sim.sims.mujoco.MujocoLoadable import MujocoLoadable
++from d3il.environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
++from d3il.environments.d3il.d3il_sim.sims.mujoco.MujocoLoadable import MujocoLoadable
+ 
+ 
+ class VirtualGraspObject(SimObject, MujocoLoadable):
+diff --git a/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_objects/pushing_object.py b/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_objects/pushing_object.py
+index aa5ae56..d2a250e 100644
+--- a/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_objects/pushing_object.py
++++ b/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_objects/pushing_object.py
+@@ -1,8 +1,8 @@
+ from typing import Tuple
+ from xml.etree import ElementTree as Et
+ 
+-from environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
+-from environments.d3il.d3il_sim.sims.mujoco.MujocoLoadable import MujocoLoadable
++from d3il.environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
++from d3il.environments.d3il.d3il_sim.sims.mujoco.MujocoLoadable import MujocoLoadable
+ 
+ 
+ class VirtualPushObject(SimObject, MujocoLoadable):
+diff --git a/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_robots/ia_mujoco_robot.py b/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_robots/ia_mujoco_robot.py
+index 18ed2d2..f757d4e 100644
+--- a/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_robots/ia_mujoco_robot.py
++++ b/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_robots/ia_mujoco_robot.py
+@@ -2,10 +2,10 @@ import time
+ 
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.core import logger
+-from environments.d3il.d3il_sim.sims.mujoco.MujocoRobot import MujocoRobot
+-from environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Box
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.core import logger
++from d3il.environments.d3il.d3il_sim.sims.mujoco.MujocoRobot import MujocoRobot
++from d3il.environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Box
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ 
+ class InteractiveMujocoRobot(MujocoRobot):
+diff --git a/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_robots/mj_push_robot.py b/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_robots/mj_push_robot.py
+index 9c2e874..e3a03ae 100644
+--- a/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_robots/mj_push_robot.py
++++ b/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/ia_robots/mj_push_robot.py
+@@ -1,5 +1,5 @@
+-from environments.d3il.d3il_sim.sims.mujoco.MujocoRobot import MujocoRobot
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.sims.mujoco.MujocoRobot import MujocoRobot
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ 
+ class MjPushRobot(MujocoRobot):
+diff --git a/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/interactive_factory.py b/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/interactive_factory.py
+index bd0d51e..f706d2e 100644
+--- a/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/interactive_factory.py
++++ b/environments/d3il/d3il_sim/sims/mujoco/mj_interactive/interactive_factory.py
+@@ -1,9 +1,9 @@
+-import environments.d3il.d3il_sim.sims.SimFactory as Sims
+-from environments.d3il.d3il_sim.core.Robots import RobotBase
+-from environments.d3il.d3il_sim.sims.mujoco.mj_interactive.ia_robots.ia_mujoco_robot import (
++import d3il.environments.d3il.d3il_sim.sims.SimFactory as Sims
++from d3il.environments.d3il.d3il_sim.core.Robots import RobotBase
++from d3il.environments.d3il.d3il_sim.sims.mujoco.mj_interactive.ia_robots.ia_mujoco_robot import (
+     InteractiveMujocoRobot,
+ )
+-from environments.d3il.d3il_sim.sims.mujoco.MujocoFactory import MujocoFactory
++from d3il.environments.d3il.d3il_sim.sims.mujoco.MujocoFactory import MujocoFactory
+ 
+ 
+ class InteractiveMujocoFactory(MujocoFactory):
+diff --git a/environments/d3il/d3il_sim/sims/mujoco/mj_utils/mujoco_scene_object.py b/environments/d3il/d3il_sim/sims/mujoco/mj_utils/mujoco_scene_object.py
+index be36d32..f7edc09 100644
+--- a/environments/d3il/d3il_sim/sims/mujoco/mj_utils/mujoco_scene_object.py
++++ b/environments/d3il/d3il_sim/sims/mujoco/mj_utils/mujoco_scene_object.py
+@@ -2,8 +2,8 @@ import os
+ import xml.etree.ElementTree as Et
+ from typing import Tuple
+ 
+-from environments.d3il.d3il_sim.sims.mujoco import MujocoLoadable as mj_load
+-from environments.d3il.d3il_sim.utils import sim_path
++from d3il.environments.d3il.d3il_sim.sims.mujoco import MujocoLoadable as mj_load
++from d3il.environments.d3il.d3il_sim.utils import sim_path
+ 
+ 
+ class MujocoObject(mj_load.MujocoLoadable):
+diff --git a/environments/d3il/d3il_sim/sims/mujoco/mj_utils/mujoco_scene_parser.py b/environments/d3il/d3il_sim/sims/mujoco/mj_utils/mujoco_scene_parser.py
+index 3877529..d45be9e 100644
+--- a/environments/d3il/d3il_sim/sims/mujoco/mj_utils/mujoco_scene_parser.py
++++ b/environments/d3il/d3il_sim/sims/mujoco/mj_utils/mujoco_scene_parser.py
+@@ -5,9 +5,9 @@ from xml.etree.ElementTree import Element
+ 
+ from mujoco_py import MjSim, load_model_from_path
+ 
+-from environments.d3il.d3il_sim.sims.mujoco.mj_utils.mujoco_scene_object import MujocoSurrounding
+-from environments.d3il.d3il_sim.sims.mujoco.MujocoLoadable import MujocoIncludeTemplate, MujocoLoadable
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.sims.mujoco.mj_utils.mujoco_scene_object import MujocoSurrounding
++from d3il.environments.d3il.d3il_sim.sims.mujoco.MujocoLoadable import MujocoIncludeTemplate, MujocoLoadable
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ 
+ class MujocoSceneParser:
+diff --git a/environments/d3il/d3il_sim/sims/mujoco/mj_utils/mujoco_viewer.py b/environments/d3il/d3il_sim/sims/mujoco/mj_utils/mujoco_viewer.py
+index 800583c..2317d68 100644
+--- a/environments/d3il/d3il_sim/sims/mujoco/mj_utils/mujoco_viewer.py
++++ b/environments/d3il/d3il_sim/sims/mujoco/mj_utils/mujoco_viewer.py
+@@ -3,7 +3,7 @@ import os.path
+ import imageio
+ import mujoco_py
+ 
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ 
+ class MujocoViewer:
+diff --git a/environments/d3il/d3il_sim/sims/pybullet/PyBulletRobot.py b/environments/d3il/d3il_sim/sims/pybullet/PyBulletRobot.py
+index fa01bc8..17b074b 100644
+--- a/environments/d3il/d3il_sim/sims/pybullet/PyBulletRobot.py
++++ b/environments/d3il/d3il_sim/sims/pybullet/PyBulletRobot.py
+@@ -3,10 +3,10 @@ import logging
+ import numpy as np
+ import pybullet
+ 
+-from environments.d3il.d3il_sim.core import RobotBase
+-from environments.d3il.d3il_sim.sims.pybullet.PybulletCamera import PbInHandCamera
+-from environments.d3il.d3il_sim.utils.geometric_transformation import wxyz_to_xyzw
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.core import RobotBase
++from d3il.environments.d3il.d3il_sim.sims.pybullet.PybulletCamera import PbInHandCamera
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import wxyz_to_xyzw
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ 
+ class PyBulletRobot(RobotBase):
+diff --git a/environments/d3il/d3il_sim/sims/pybullet/PyBulletScene.py b/environments/d3il/d3il_sim/sims/pybullet/PyBulletScene.py
+index a685729..10a043a 100644
+--- a/environments/d3il/d3il_sim/sims/pybullet/PyBulletScene.py
++++ b/environments/d3il/d3il_sim/sims/pybullet/PyBulletScene.py
+@@ -6,12 +6,12 @@ import numpy as np
+ import pybullet as p
+ from pybullet_utils.bullet_client import BulletClient
+ 
+-from environments.d3il.d3il_sim.core import Scene
+-from environments.d3il.d3il_sim.core.sim_object import IntelligentSimObject, SimObject
+-from environments.d3il.d3il_sim.sims.pybullet.PybulletCamera import PbCageCam
+-from environments.d3il.d3il_sim.sims.pybullet.PybulletLoadable import PybulletLoadable
+-from environments.d3il.d3il_sim.utils.geometric_transformation import wxyz_to_xyzw, xyzw_to_wxyz
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.core import Scene
++from d3il.environments.d3il.d3il_sim.core.sim_object import IntelligentSimObject, SimObject
++from d3il.environments.d3il.d3il_sim.sims.pybullet.PybulletCamera import PbCageCam
++from d3il.environments.d3il.d3il_sim.sims.pybullet.PybulletLoadable import PybulletLoadable
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import wxyz_to_xyzw, xyzw_to_wxyz
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ PYBULLET = "pybullet"
+ 
+diff --git a/environments/d3il/d3il_sim/sims/pybullet/PybulletCamera.py b/environments/d3il/d3il_sim/sims/pybullet/PybulletCamera.py
+index c740d47..42ae257 100644
+--- a/environments/d3il/d3il_sim/sims/pybullet/PybulletCamera.py
++++ b/environments/d3il/d3il_sim/sims/pybullet/PybulletCamera.py
+@@ -3,9 +3,9 @@ import warnings
+ import numpy as np
+ import pybullet as p
+ 
+-from environments.d3il.d3il_sim.core.Camera import Camera
+-from environments.d3il.d3il_sim.sims.pybullet.PybulletLoadable import PybulletLoadable
+-from environments.d3il.d3il_sim.utils.geometric_transformation import wxyz_to_xyzw, xyzw_to_wxyz
++from d3il.environments.d3il.d3il_sim.core.Camera import Camera
++from d3il.environments.d3il.d3il_sim.sims.pybullet.PybulletLoadable import PybulletLoadable
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import wxyz_to_xyzw, xyzw_to_wxyz
+ 
+ 
+ class PybulletCamera(Camera, PybulletLoadable):
+diff --git a/environments/d3il/d3il_sim/sims/pybullet/PybulletFactory.py b/environments/d3il/d3il_sim/sims/pybullet/PybulletFactory.py
+index 719d81e..cbb7d51 100644
+--- a/environments/d3il/d3il_sim/sims/pybullet/PybulletFactory.py
++++ b/environments/d3il/d3il_sim/sims/pybullet/PybulletFactory.py
+@@ -1,8 +1,8 @@
+ import gin
+ 
+-import environments.d3il.d3il_sim.sims.SimFactory as Sims
+-from environments.d3il.d3il_sim.core import Camera, RobotBase, Scene
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++import d3il.environments.d3il.d3il_sim.sims.SimFactory as Sims
++from d3il.environments.d3il.d3il_sim.core import Camera, RobotBase, Scene
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ from .PybulletCamera import PybulletCamera
+ from .PybulletPrimLoader import pb_load
+diff --git a/environments/d3il/d3il_sim/sims/pybullet/PybulletPrimLoader.py b/environments/d3il/d3il_sim/sims/pybullet/PybulletPrimLoader.py
+index 817ea6c..2957800 100644
+--- a/environments/d3il/d3il_sim/sims/pybullet/PybulletPrimLoader.py
++++ b/environments/d3il/d3il_sim/sims/pybullet/PybulletPrimLoader.py
+@@ -1,6 +1,6 @@
+ import pybullet as p
+ 
+-from environments.d3il.d3il_sim.utils.geometric_transformation import wxyz_to_xyzw
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import wxyz_to_xyzw
+ 
+ 
+ def pb_load(prim_obj, *args, **kwargs) -> int:
+diff --git a/environments/d3il/d3il_sim/sims/pybullet/pb_utils/pybullet_scene_object.py b/environments/d3il/d3il_sim/sims/pybullet/pb_utils/pybullet_scene_object.py
+index 0389b13..4823b6a 100644
+--- a/environments/d3il/d3il_sim/sims/pybullet/pb_utils/pybullet_scene_object.py
++++ b/environments/d3il/d3il_sim/sims/pybullet/pb_utils/pybullet_scene_object.py
+@@ -3,10 +3,10 @@ import os
+ 
+ import pybullet as p
+ 
+-from environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
+-from environments.d3il.d3il_sim.sims.pybullet.PybulletLoadable import PybulletLoadable
+-from environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat, wxyz_to_xyzw
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
++from d3il.environments.d3il.d3il_sim.sims.pybullet.PybulletLoadable import PybulletLoadable
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat, wxyz_to_xyzw
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ 
+ class PyBulletURDFObject(SimObject, PybulletLoadable):
+diff --git a/environments/d3il/d3il_sim/sims/sl/SlCamera.py b/environments/d3il/d3il_sim/sims/sl/SlCamera.py
+index 1c73028..b58f896 100644
+--- a/environments/d3il/d3il_sim/sims/sl/SlCamera.py
++++ b/environments/d3il/d3il_sim/sims/sl/SlCamera.py
+@@ -2,7 +2,7 @@ from typing import Tuple
+ 
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.core.Camera import Camera
++from d3il.environments.d3il.d3il_sim.core.Camera import Camera
+ 
+ 
+ class SlCamera(Camera):
+diff --git a/environments/d3il/d3il_sim/sims/sl/SlFactory.py b/environments/d3il/d3il_sim/sims/sl/SlFactory.py
+index ebec9c1..2b8e62a 100644
+--- a/environments/d3il/d3il_sim/sims/sl/SlFactory.py
++++ b/environments/d3il/d3il_sim/sims/sl/SlFactory.py
+@@ -1,11 +1,11 @@
+ import gin
+ 
+-import environments.d3il.d3il_sim.sims.SimFactory as Sims
+-from environments.d3il.d3il_sim.core import Camera, RobotBase, Scene
+-from environments.d3il.d3il_sim.sims.sl.SlCamera import SlCamera
+-from environments.d3il.d3il_sim.sims.sl.SlRobot import SlRobot
+-from environments.d3il.d3il_sim.sims.sl.SlScene import SlScene
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++import d3il.environments.d3il.d3il_sim.sims.SimFactory as Sims
++from d3il.environments.d3il.d3il_sim.core import Camera, RobotBase, Scene
++from d3il.environments.d3il.d3il_sim.sims.sl.SlCamera import SlCamera
++from d3il.environments.d3il.d3il_sim.sims.sl.SlRobot import SlRobot
++from d3il.environments.d3il.d3il_sim.sims.sl.SlScene import SlScene
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ 
+ class SlFactory(Sims.SimFactory):
+diff --git a/environments/d3il/d3il_sim/sims/sl/SlRobot.py b/environments/d3il/d3il_sim/sims/sl/SlRobot.py
+index 806fc9f..c648905 100644
+--- a/environments/d3il/d3il_sim/sims/sl/SlRobot.py
++++ b/environments/d3il/d3il_sim/sims/sl/SlRobot.py
+@@ -5,7 +5,7 @@ import time
+ import numpy as np
+ import py_at_broker as pab
+ 
+-from environments.d3il.d3il_sim.core import RobotBase, RobotDynamicsInterface
++from d3il.environments.d3il.d3il_sim.core import RobotBase, RobotDynamicsInterface
+ 
+ 
+ class SLDynamics(RobotDynamicsInterface):
+diff --git a/environments/d3il/d3il_sim/sims/sl/SlScene.py b/environments/d3il/d3il_sim/sims/sl/SlScene.py
+index 7a13ea1..ed0b13c 100644
+--- a/environments/d3il/d3il_sim/sims/sl/SlScene.py
++++ b/environments/d3il/d3il_sim/sims/sl/SlScene.py
+@@ -2,9 +2,9 @@ from typing import List
+ 
+ import numpy as np
+ 
+-import environments.d3il.d3il_sim.core.sim_object as sim_object
+-from environments.d3il.d3il_sim.core.Scene import Scene
+-from environments.d3il.d3il_sim.sims.sl.SlCamera import SlCamera
++import d3il.environments.d3il.d3il_sim.core.sim_object as sim_object
++from d3il.environments.d3il.d3il_sim.core.Scene import Scene
++from d3il.environments.d3il.d3il_sim.sims.sl.SlCamera import SlCamera
+ 
+ 
+ class SlScene(Scene):
+diff --git a/environments/d3il/d3il_sim/sims/sl/demo/basicTeleop.py b/environments/d3il/d3il_sim/sims/sl/demo/basicTeleop.py
+index ff1d127..d789e88 100644
+--- a/environments/d3il/d3il_sim/sims/sl/demo/basicTeleop.py
++++ b/environments/d3il/d3il_sim/sims/sl/demo/basicTeleop.py
+@@ -2,7 +2,7 @@ import time
+ 
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.sims.sl.SlRobot import SlRobot
++from d3il.environments.d3il.d3il_sim.sims.sl.SlRobot import SlRobot
+ 
+ if __name__ == "__main__":
+     """
+diff --git a/environments/d3il/d3il_sim/sims/sl/demo/gotoControllerCart_test.py b/environments/d3il/d3il_sim/sims/sl/demo/gotoControllerCart_test.py
+index 52577e8..fb112dd 100644
+--- a/environments/d3il/d3il_sim/sims/sl/demo/gotoControllerCart_test.py
++++ b/environments/d3il/d3il_sim/sims/sl/demo/gotoControllerCart_test.py
+@@ -1,8 +1,8 @@
+ import matplotlib.pyplot as plt
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.core.logger import RobotPlotFlags
+-from environments.d3il.d3il_sim.sims.SimFactory import SimRepository
++from d3il.environments.d3il.d3il_sim.core.logger import RobotPlotFlags
++from d3il.environments.d3il.d3il_sim.sims.SimFactory import SimRepository
+ 
+ if __name__ == "__main__":
+     sim_factory = SimRepository.get_factory("sl")
+diff --git a/environments/d3il/d3il_sim/sims/sl/demo/gotoControllerJoints_test.py b/environments/d3il/d3il_sim/sims/sl/demo/gotoControllerJoints_test.py
+index 26a4fa3..9e00e01 100644
+--- a/environments/d3il/d3il_sim/sims/sl/demo/gotoControllerJoints_test.py
++++ b/environments/d3il/d3il_sim/sims/sl/demo/gotoControllerJoints_test.py
+@@ -1,7 +1,7 @@
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.core.logger import RobotPlotFlags
+-from environments.d3il.d3il_sim.sims.SimFactory import SimRepository
++from d3il.environments.d3il.d3il_sim.core.logger import RobotPlotFlags
++from d3il.environments.d3il.d3il_sim.sims.SimFactory import SimRepository
+ 
+ if __name__ == "__main__":
+     sim_factory = SimRepository.get_factory("sl")
+diff --git a/environments/d3il/d3il_sim/sims/sl/demo/testGripper.py b/environments/d3il/d3il_sim/sims/sl/demo/testGripper.py
+index 44099a8..b1f9a68 100644
+--- a/environments/d3il/d3il_sim/sims/sl/demo/testGripper.py
++++ b/environments/d3il/d3il_sim/sims/sl/demo/testGripper.py
+@@ -2,8 +2,8 @@ import time
+ 
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.core.logger import RobotPlotFlags
+-from environments.d3il.d3il_sim.sims.SimFactory import SimRepository
++from d3il.environments.d3il.d3il_sim.core.logger import RobotPlotFlags
++from d3il.environments.d3il.d3il_sim.sims.SimFactory import SimRepository
+ 
+ if __name__ == "__main__":
+     # Control gains
+diff --git a/environments/d3il/d3il_sim/sims/sl/demo/trajectoryFollowing.py b/environments/d3il/d3il_sim/sims/sl/demo/trajectoryFollowing.py
+index cebf67d..82ed092 100644
+--- a/environments/d3il/d3il_sim/sims/sl/demo/trajectoryFollowing.py
++++ b/environments/d3il/d3il_sim/sims/sl/demo/trajectoryFollowing.py
+@@ -1,7 +1,7 @@
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.controllers import JointTrajectoryTracker
+-from environments.d3il.d3il_sim.sims.SimFactory import SimRepository
++from d3il.environments.d3il.d3il_sim.controllers import JointTrajectoryTracker
++from d3il.environments.d3il.d3il_sim.sims.SimFactory import SimRepository
+ 
+ if __name__ == "__main__":
+     sim_factory = SimRepository.get_factory("sl")
+diff --git a/environments/d3il/d3il_sim/sims/sl/demo/zeroTorque.py b/environments/d3il/d3il_sim/sims/sl/demo/zeroTorque.py
+index f1db550..23ca74b 100644
+--- a/environments/d3il/d3il_sim/sims/sl/demo/zeroTorque.py
++++ b/environments/d3il/d3il_sim/sims/sl/demo/zeroTorque.py
+@@ -2,7 +2,7 @@ import time
+ 
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.sims.SimFactory import SimRepository
++from d3il.environments.d3il.d3il_sim.sims.SimFactory import SimRepository
+ 
+ if __name__ == "__main__":
+ 
+diff --git a/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/force_feedback_controller.py b/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/force_feedback_controller.py
+index 60faafc..f0b786d 100644
+--- a/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/force_feedback_controller.py
++++ b/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/force_feedback_controller.py
+@@ -1,7 +1,7 @@
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.sims.sl.multibot_teleop.src.human_controller import HumanController
+-from environments.d3il.d3il_sim.sims.sl.multibot_teleop.src.kalman_filter import KalmanFilter
++from d3il.environments.d3il.d3il_sim.sims.sl.multibot_teleop.src.human_controller import HumanController
++from d3il.environments.d3il.d3il_sim.sims.sl.multibot_teleop.src.kalman_filter import KalmanFilter
+ 
+ 
+ def total_force_clip(replica_load, max_force=8.0, a=6.0, b=4.0):
+diff --git a/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/human_controller.py b/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/human_controller.py
+index 000cdb4..beef331 100644
+--- a/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/human_controller.py
++++ b/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/human_controller.py
+@@ -1,8 +1,8 @@
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.controllers.Controller import ControllerBase
+-from environments.d3il.d3il_sim.sims.sl.multibot_teleop.src.kalman_filter import KalmanFilter
+-from environments.d3il.d3il_sim.sims.sl.SlRobot import SlRobot
++from d3il.environments.d3il.d3il_sim.controllers.Controller import ControllerBase
++from d3il.environments.d3il.d3il_sim.sims.sl.multibot_teleop.src.kalman_filter import KalmanFilter
++from d3il.environments.d3il.d3il_sim.sims.sl.SlRobot import SlRobot
+ 
+ 
+ class HumanController(ControllerBase):
+diff --git a/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/teleop_controller.py b/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/teleop_controller.py
+index 40f6653..3c45004 100644
+--- a/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/teleop_controller.py
++++ b/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/teleop_controller.py
+@@ -1,7 +1,7 @@
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.controllers.Controller import JointPDController
+-from environments.d3il.d3il_sim.controllers.IKControllers import CartPosQuatImpedenceController
++from d3il.environments.d3il.d3il_sim.controllers.Controller import JointPDController
++from d3il.environments.d3il.d3il_sim.controllers.IKControllers import CartPosQuatImpedenceController
+ 
+ 
+ class TeleopController(JointPDController):
+diff --git a/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/ui/cli.py b/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/ui/cli.py
+index 55190bd..33a5abb 100644
+--- a/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/ui/cli.py
++++ b/environments/d3il/d3il_sim/sims/sl/multibot_teleop/src/ui/cli.py
+@@ -3,7 +3,7 @@ import threading
+ 
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.sims.sl.multibot_teleop.src.force_feedback_controller import (
++from d3il.environments.d3il.d3il_sim.sims.sl.multibot_teleop.src.force_feedback_controller import (
+     ForceFeedbackController,
+ )
+ 
+diff --git a/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_teacher.py b/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_teacher.py
+index a17eb81..f8dacb2 100644
+--- a/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_teacher.py
++++ b/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_teacher.py
+@@ -1,12 +1,12 @@
+-import environments.d3il.d3il_sim.sims.SimFactory as sims
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller.human_controller import (
++import d3il.environments.d3il.d3il_sim.sims.SimFactory as sims
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller.human_controller import (
+     HumanController,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.human_scheduler import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.human_scheduler import (
+     HumanControlScheduler,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.ui.cli_prompts import HumanTeacherCliMap
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.teaching_log import TeachingLog
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.ui.cli_prompts import HumanTeacherCliMap
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.teaching_log import TeachingLog
+ 
+ 
+ def connect_sl_robot(*args, **kwargs):
+diff --git a/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_teleoperation.py b/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_teleoperation.py
+index e3c559c..7c96401 100644
+--- a/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_teleoperation.py
++++ b/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_teleoperation.py
+@@ -1,10 +1,10 @@
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller import teleop_controller as tele_ctrl
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.teleop_scheduler import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller import teleop_controller as tele_ctrl
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.teleop_scheduler import (
+     TeleopMetaScheduler,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.ui.cli_prompts import TeleopCliMap
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.teaching_log import TeleopMetaLogger
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.ui.cli_prompts import TeleopCliMap
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.teaching_log import TeleopMetaLogger
+ 
+ if __name__ == "__main__":
+     primary_robot = connect_sl_robot(
+diff --git a/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_virtualtwin.py b/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_virtualtwin.py
+index 92219db..12bfd9d 100644
+--- a/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_virtualtwin.py
++++ b/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_virtualtwin.py
+@@ -2,22 +2,22 @@ import sys
+ 
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.sims.mujoco.mj_interactive.ia_objects.pushing_object import (
++from d3il.environments.d3il.d3il_sim.sims.mujoco.mj_interactive.ia_objects.pushing_object import (
+     VirtualPushObject,
+ )
+-from environments.d3il.d3il_sim.sims.mujoco.mj_interactive.ia_robots.mj_push_robot import MjPushRobot
+-from environments.d3il.d3il_sim.sims.SimFactory import SimRepository
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller import teleop_controller as tele_ctrl
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller.virtualtwin_controller import (
++from d3il.environments.d3il.d3il_sim.sims.mujoco.mj_interactive.ia_robots.mj_push_robot import MjPushRobot
++from d3il.environments.d3il.d3il_sim.sims.SimFactory import SimRepository
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller import teleop_controller as tele_ctrl
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller.virtualtwin_controller import (
+     VirtualTwinController,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.virtualtwin_scheduler import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.virtualtwin_scheduler import (
+     VirtualTwinMetaScheduler,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.ui.cli_prompts import HumanTeacherCliMap
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.teaching_log import TeleopMetaLogger
+-from environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat, quat2euler
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.ui.cli_prompts import HumanTeacherCliMap
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.teaching_log import TeleopMetaLogger
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat, quat2euler
+ 
+ 
+ def virtual_twin(seed=0, render=True, proc_id="", hint_alpha=0.3):
+diff --git a/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_virtualtwin_reacher.py b/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_virtualtwin_reacher.py
+index fa3f975..8975fce 100644
+--- a/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_virtualtwin_reacher.py
++++ b/environments/d3il/d3il_sim/sims/sl/teleoperation/demo_virtualtwin_reacher.py
+@@ -7,20 +7,20 @@ from tokenize import Number
+ 
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.sims.mujoco.mj_interactive.ia_robots.mj_push_robot import MjPushRobot
+-from environments.d3il.d3il_sim.sims.SimFactory import SimRepository
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller import teleop_controller as tele_ctrl
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller.virtualtwin_controller import (
++from d3il.environments.d3il.d3il_sim.sims.mujoco.mj_interactive.ia_robots.mj_push_robot import MjPushRobot
++from d3il.environments.d3il.d3il_sim.sims.SimFactory import SimRepository
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller import teleop_controller as tele_ctrl
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller.virtualtwin_controller import (
+     VirtualTwinController,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.virtualtwin_scheduler import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.virtualtwin_scheduler import (
+     VirtualTwinMetaScheduler,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.ui.cli_prompts import HumanTeacherReacherCliMap
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.reacher_log import ReacherMetaLogger
+-from environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Sphere
+-from environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.ui.cli_prompts import HumanTeacherReacherCliMap
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.reacher_log import ReacherMetaLogger
++from d3il.environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Sphere
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat
+ 
+ goal_positions = [[0.5, 0.2, 0.6], [0.3, -0.1, 0.3]]
+ 
+diff --git a/environments/d3il/d3il_sim/sims/sl/teleoperation/mockup_tests/demo_follow_trajectory.py b/environments/d3il/d3il_sim/sims/sl/teleoperation/mockup_tests/demo_follow_trajectory.py
+index 475b8d7..93f2103 100644
+--- a/environments/d3il/d3il_sim/sims/sl/teleoperation/mockup_tests/demo_follow_trajectory.py
++++ b/environments/d3il/d3il_sim/sims/sl/teleoperation/mockup_tests/demo_follow_trajectory.py
+@@ -1,19 +1,19 @@
+ import os
+ import time
+ 
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.mockup_tests.follow_trajectory.trajectory_controller import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.mockup_tests.follow_trajectory.trajectory_controller import (
+     TrajectoryController,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.mockup_tests.follow_trajectory.trajectory_robot import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.mockup_tests.follow_trajectory.trajectory_robot import (
+     TrajectoryMockupRobot,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.mockup_tests.follow_trajectory.trajectory_scheduler import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.mockup_tests.follow_trajectory.trajectory_scheduler import (
+     MetaTrajectoryScheduler,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller import teleop_controller as tele_ctrl
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.ui.cli_prompts import TrajectoryCliMap
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.teaching_log import TeleopMetaLogger
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller import teleop_controller as tele_ctrl
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.ui.cli_prompts import TrajectoryCliMap
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.teaching_log import TeleopMetaLogger
+ 
+ """
+ Demo script for the Follow trajectory test: The primary robot follows a predefined trajectory; the replica robot follows
+diff --git a/environments/d3il/d3il_sim/sims/sl/teleoperation/mockup_tests/follow_trajectory/trajectory_scheduler.py b/environments/d3il/d3il_sim/sims/sl/teleoperation/mockup_tests/follow_trajectory/trajectory_scheduler.py
+index 187f6b1..ac95c7a 100644
+--- a/environments/d3il/d3il_sim/sims/sl/teleoperation/mockup_tests/follow_trajectory/trajectory_scheduler.py
++++ b/environments/d3il/d3il_sim/sims/sl/teleoperation/mockup_tests/follow_trajectory/trajectory_scheduler.py
+@@ -3,23 +3,23 @@ import time
+ 
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.mockup_tests.follow_trajectory.trajectory_controller import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.mockup_tests.follow_trajectory.trajectory_controller import (
+     TrajectoryController,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.mockup_tests.follow_trajectory.trajectory_robot import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.mockup_tests.follow_trajectory.trajectory_robot import (
+     TrajectoryMockupRobot,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller.teleop_controller import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller.teleop_controller import (
+     TeleopReplicaController,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.human_scheduler import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.human_scheduler import (
+     HumanControlScheduler,
+     SchedulerInterface,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.teleop_scheduler import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.teleop_scheduler import (
+     TeleopReplicaScheduler,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.teaching_log import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.teaching_log import (
+     TeachingLog,
+     TeleopMetaLogger,
+ )
+diff --git a/environments/d3il/d3il_sim/sims/sl/teleoperation/src/ui/cli_prompts.py b/environments/d3il/d3il_sim/sims/sl/teleoperation/src/ui/cli_prompts.py
+index 96e79c8..c3d4bb5 100644
+--- a/environments/d3il/d3il_sim/sims/sl/teleoperation/src/ui/cli_prompts.py
++++ b/environments/d3il/d3il_sim/sims/sl/teleoperation/src/ui/cli_prompts.py
+@@ -1,6 +1,6 @@
+ import sched
+ 
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.mockup_tests.follow_trajectory.trajectory_scheduler import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.mockup_tests.follow_trajectory.trajectory_scheduler import (
+     MetaTrajectoryScheduler,
+ )
+ 
+diff --git a/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_demo.py b/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_demo.py
+index 4bd8662..f66df90 100644
+--- a/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_demo.py
++++ b/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_demo.py
+@@ -2,17 +2,17 @@ import os
+ 
+ import pandas as pd
+ 
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller import teleop_controller as tele_ctrl
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller.virtualtwin_controller import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller import teleop_controller as tele_ctrl
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.controller.virtualtwin_controller import (
+     VirtualTwinController,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.virtualtwin_scheduler import (
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.schedulers.virtualtwin_scheduler import (
+     VirtualTwinMetaScheduler,
+ )
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.ui.cli_prompts import HumanTeacherCliMap
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.teaching_log import TeleopMetaLogger
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.virt_obst_sim import remix_goal, virtual_obst_setup
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.ui.cli_prompts import HumanTeacherCliMap
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.src.util.teaching_log import TeleopMetaLogger
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.virt_obst_sim import remix_goal, virtual_obst_setup
+ 
+ DIRNAME = os.path.dirname(__file__)
+ DATA_DIR = os.path.join(DIRNAME, "..", "data")
+diff --git a/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_showcase.py b/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_showcase.py
+index 9a55846..a92c612 100644
+--- a/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_showcase.py
++++ b/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_showcase.py
+@@ -5,8 +5,8 @@ import numpy as np
+ import pandas as pd
+ from scipy.interpolate import make_interp_spline
+ 
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.virt_obst_sim import set_context, virtual_obst_setup
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.virt_obst_sim import set_context, virtual_obst_setup
+ 
+ 
+ def play_scene(n, algo, seed):
+diff --git a/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_showcase_virt.py b/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_showcase_virt.py
+index 3638cd7..a2f6b4d 100644
+--- a/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_showcase_virt.py
++++ b/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_showcase_virt.py
+@@ -5,8 +5,8 @@ import numpy as np
+ import pandas as pd
+ from scipy.interpolate import make_interp_spline
+ 
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
+-from environments.d3il.d3il_sim.sims.sl.teleoperation.virt_obst_sim import set_context, virtual_obst_setup
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.demo_teacher import connect_sl_robot
++from d3il.environments.d3il.d3il_sim.sims.sl.teleoperation.virt_obst_sim import set_context, virtual_obst_setup
+ 
+ 
+ def play_scene(n, algo, seed):
+diff --git a/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_sim.py b/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_sim.py
+index 646c995..97c096e 100644
+--- a/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_sim.py
++++ b/environments/d3il/d3il_sim/sims/sl/teleoperation/virt_obst_sim.py
+@@ -1,13 +1,13 @@
+ import numpy as np
+ import pandas as pd
+ 
+-from environments.d3il.d3il_sim.sims.mujoco.mj_interactive.ia_objects.pushing_object import (
++from d3il.environments.d3il.d3il_sim.sims.mujoco.mj_interactive.ia_objects.pushing_object import (
+     VirtualPushObject,
+ )
+-from environments.d3il.d3il_sim.sims.mujoco.mj_interactive.ia_robots.mj_push_robot import MjPushRobot
+-from environments.d3il.d3il_sim.sims.SimFactory import SimRepository
+-from environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Cylinder, Sphere
+-from environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat
++from d3il.environments.d3il.d3il_sim.sims.mujoco.mj_interactive.ia_robots.mj_push_robot import MjPushRobot
++from d3il.environments.d3il.d3il_sim.sims.SimFactory import SimRepository
++from d3il.environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Cylinder, Sphere
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat
+ 
+ GOAL_Y = 0.5
+ GOAL_X_BOUNDS = [0.25, 0.7]
+diff --git a/environments/d3il/d3il_sim/sims/universal_sim/PrimitiveObjects.py b/environments/d3il/d3il_sim/sims/universal_sim/PrimitiveObjects.py
+index 1e9d724..1ea68b4 100644
+--- a/environments/d3il/d3il_sim/sims/universal_sim/PrimitiveObjects.py
++++ b/environments/d3il/d3il_sim/sims/universal_sim/PrimitiveObjects.py
+@@ -1,7 +1,7 @@
+ from enum import Enum
+ from typing import List, Tuple
+ 
+-from environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
++from d3il.environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
+ 
+ 
+ class PrimitiveObject(SimObject):
+diff --git a/environments/d3il/d3il_sim/utils/tcp_transform.py b/environments/d3il/d3il_sim/utils/tcp_transform.py
+index 3b7d697..59777ff 100644
+--- a/environments/d3il/d3il_sim/utils/tcp_transform.py
++++ b/environments/d3il/d3il_sim/utils/tcp_transform.py
+@@ -4,8 +4,8 @@ due to the 3D printed plate for inhand cameras.
+ """
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.core import RobotBase
+-from environments.d3il.d3il_sim.utils import geometric_transformation as geom
++from d3il.environments.d3il.d3il_sim.core import RobotBase
++from d3il.environments.d3il.d3il_sim.utils import geometric_transformation as geom
+ 
+ # TCP is shifted by 5mm in global Z axis
+ OFFSET_POS = np.array([0.0, 0.0, 0.005])
+diff --git a/environments/d3il/envs/gym_aligning_env/gym_aligning/envs/aligning.py b/environments/d3il/envs/gym_aligning_env/gym_aligning/envs/aligning.py
+index df0aeaf..b2feb0c 100644
+--- a/environments/d3il/envs/gym_aligning_env/gym_aligning/envs/aligning.py
++++ b/environments/d3il/envs/gym_aligning_env/gym_aligning/envs/aligning.py
+@@ -4,15 +4,15 @@ import copy
+ 
+ from gym.spaces import Box
+ 
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
+-from environments.d3il.d3il_sim.core import Scene
+-from environments.d3il.d3il_sim.core.logger import ObjectLogger, CamLogger
+-from environments.d3il.d3il_sim.gyms.gym_env_wrapper import GymEnvWrapper
+-from environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat
+-
+-from environments.d3il.d3il_sim.sims.mj_beta.MjRobot import MjRobot
+-from environments.d3il.d3il_sim.sims.mj_beta.MjFactory import MjFactory
+-from environments.d3il.d3il_sim.sims import MjCamera
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.core import Scene
++from d3il.environments.d3il.d3il_sim.core.logger import ObjectLogger, CamLogger
++from d3il.environments.d3il.d3il_sim.gyms.gym_env_wrapper import GymEnvWrapper
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat
++
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjRobot import MjRobot
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjFactory import MjFactory
++from d3il.environments.d3il.d3il_sim.sims import MjCamera
+ 
+ from .objects.aligning_objects import get_obj_list, init_end_eff_pos
+ 
+diff --git a/environments/d3il/envs/gym_aligning_env/gym_aligning/envs/objects/aligning_objects.py b/environments/d3il/envs/gym_aligning_env/gym_aligning/envs/objects/aligning_objects.py
+index c5ce49d..caa899e 100644
+--- a/environments/d3il/envs/gym_aligning_env/gym_aligning/envs/objects/aligning_objects.py
++++ b/environments/d3il/envs/gym_aligning_env/gym_aligning/envs/objects/aligning_objects.py
+@@ -4,11 +4,11 @@ import numpy as np
+ import xml.etree.ElementTree as Et
+ from typing import Tuple
+ 
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import IncludeType
+-from environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Box, Sphere
+-from environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
+-from environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import MjXmlLoadable
+-from environments.d3il.d3il_sim.utils import sim_path
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import IncludeType
++from d3il.environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Box, Sphere
++from d3il.environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import MjXmlLoadable
++from d3il.environments.d3il.d3il_sim.utils import sim_path
+ 
+ init_end_eff_pos = [0.525, -0.35, 0.25]
+ 
+diff --git a/environments/d3il/envs/gym_avoiding_env/gym_avoiding/envs/avoiding.py b/environments/d3il/envs/gym_avoiding_env/gym_avoiding/envs/avoiding.py
+index 8cb0a21..42b91b9 100644
+--- a/environments/d3il/envs/gym_avoiding_env/gym_avoiding/envs/avoiding.py
++++ b/environments/d3il/envs/gym_avoiding_env/gym_avoiding/envs/avoiding.py
+@@ -1,14 +1,14 @@
+ import numpy as np
+ import copy
+-from environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import has_collision
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.mj_utils.mj_helper import has_collision
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+-from environments.d3il.d3il_sim.core import Scene
+-from environments.d3il.d3il_sim.gyms.gym_env_wrapper import GymEnvWrapper
+-from environments.d3il.d3il_sim.core.logger import ObjectLogger, CamLogger
+-from environments.d3il.d3il_sim.sims.mj_beta.MjRobot import MjRobot
+-from environments.d3il.d3il_sim.sims.mj_beta.MjFactory import MjFactory
+-from environments.d3il.d3il_sim.sims import MjCamera
++from d3il.environments.d3il.d3il_sim.core import Scene
++from d3il.environments.d3il.d3il_sim.gyms.gym_env_wrapper import GymEnvWrapper
++from d3il.environments.d3il.d3il_sim.core.logger import ObjectLogger, CamLogger
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjRobot import MjRobot
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjFactory import MjFactory
++from d3il.environments.d3il.d3il_sim.sims import MjCamera
+ 
+ from .objects.avoiding_objects import get_obj_list, \
+     init_end_eff_pos, \
+@@ -118,7 +118,7 @@ class ObstacleAvoidanceEnv(GymEnvWrapper):
+         robot_c_pos = self.robot_state()[:2]
+         return robot_c_pos.astype(np.float32)
+ 
+-    def start(self):
++    def start(self, override_init_pos=None):
+         self.scene.start()
+ 
+         # reset view of the camera
+@@ -140,7 +140,10 @@ class ObstacleAvoidanceEnv(GymEnvWrapper):
+             pass
+ 
+         # reset the initial state of the robot
+-        initial_cart_position = copy.deepcopy(init_end_eff_pos)
++        if override_init_pos is None:
++            initial_cart_position = copy.deepcopy(init_end_eff_pos)
++        else:
++            initial_cart_position = copy.deepcopy(override_init_pos)
+         # initial_cart_position[2] = 0.12
+         self.robot.gotoCartPosQuatController.setDesiredPos(
+             [
+diff --git a/environments/d3il/envs/gym_avoiding_env/gym_avoiding/envs/objects/avoiding_objects.py b/environments/d3il/envs/gym_avoiding_env/gym_avoiding/envs/objects/avoiding_objects.py
+index 26dfa77..5cb403a 100644
+--- a/environments/d3il/envs/gym_avoiding_env/gym_avoiding/envs/objects/avoiding_objects.py
++++ b/environments/d3il/envs/gym_avoiding_env/gym_avoiding/envs/objects/avoiding_objects.py
+@@ -1,6 +1,6 @@
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Box, Sphere, Cylinder
++from d3il.environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Box, Sphere, Cylinder
+ 
+ init_end_eff_pos = [0.525, -0.28, 0.12]
+ 
+diff --git a/environments/d3il/envs/gym_pushing_env/gym_pushing/envs/objects/pushing_objects.py b/environments/d3il/envs/gym_pushing_env/gym_pushing/envs/objects/pushing_objects.py
+index 264ff88..feab918 100644
+--- a/environments/d3il/envs/gym_pushing_env/gym_pushing/envs/objects/pushing_objects.py
++++ b/environments/d3il/envs/gym_pushing_env/gym_pushing/envs/objects/pushing_objects.py
+@@ -1,6 +1,6 @@
+ import numpy as np
+ 
+-from environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Box, Sphere
++from d3il.environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Box, Sphere
+ 
+ init_end_eff_pos = [0.525, -0.28, 0.12]
+ # init_end_eff_pos = [0.4, -0.5, 0.12]
+diff --git a/environments/d3il/envs/gym_pushing_env/gym_pushing/envs/pushing.py b/environments/d3il/envs/gym_pushing_env/gym_pushing/envs/pushing.py
+index 6f948b7..8f9e962 100644
+--- a/environments/d3il/envs/gym_pushing_env/gym_pushing/envs/pushing.py
++++ b/environments/d3il/envs/gym_pushing_env/gym_pushing/envs/pushing.py
+@@ -6,16 +6,16 @@ import sys
+ 
+ from gym.spaces import Box
+ 
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
+-from environments.d3il.d3il_sim.core import Scene
+-from environments.d3il.d3il_sim.core.logger import ObjectLogger, CamLogger
+-from environments.d3il.d3il_sim.gyms.gym_env_wrapper import GymEnvWrapper
+-from environments.d3il.d3il_sim.gyms.gym_utils.helpers import obj_distance
+-from environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat, quat2euler
+-
+-from environments.d3il.d3il_sim.sims.mj_beta.MjRobot import MjRobot
+-from environments.d3il.d3il_sim.sims.mj_beta.MjFactory import MjFactory
+-from environments.d3il.d3il_sim.sims import MjCamera
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.core import Scene
++from d3il.environments.d3il.d3il_sim.core.logger import ObjectLogger, CamLogger
++from d3il.environments.d3il.d3il_sim.gyms.gym_env_wrapper import GymEnvWrapper
++from d3il.environments.d3il.d3il_sim.gyms.gym_utils.helpers import obj_distance
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat, quat2euler
++
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjRobot import MjRobot
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjFactory import MjFactory
++from d3il.environments.d3il.d3il_sim.sims import MjCamera
+ 
+ from .objects.pushing_objects import get_obj_list, init_end_eff_pos
+ 
+diff --git a/environments/d3il/envs/gym_sorting_env/gym_sorting/envs/objects/sorting_objects.py b/environments/d3il/envs/gym_sorting_env/gym_sorting/envs/objects/sorting_objects.py
+index 17e6dfb..49d7435 100644
+--- a/environments/d3il/envs/gym_sorting_env/gym_sorting/envs/objects/sorting_objects.py
++++ b/environments/d3il/envs/gym_sorting_env/gym_sorting/envs/objects/sorting_objects.py
+@@ -3,10 +3,10 @@ import os
+ import xml.etree.ElementTree as Et
+ from typing import Tuple
+ 
+-from environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Box, Sphere, Box
+-from environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
+-from environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import MjXmlLoadable
+-from environments.d3il.d3il_sim.utils import sim_path
++from d3il.environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Box, Sphere, Box
++from d3il.environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import MjXmlLoadable
++from d3il.environments.d3il.d3il_sim.utils import sim_path
+ 
+ init_end_eff_pos = [0.525, -0.3, 0.25]
+ #init_end_eff_pos = [0.4, -0.5, 0.12]
+diff --git a/environments/d3il/envs/gym_sorting_env/gym_sorting/envs/sorting.py b/environments/d3il/envs/gym_sorting_env/gym_sorting/envs/sorting.py
+index 98c97cd..58c99a2 100644
+--- a/environments/d3il/envs/gym_sorting_env/gym_sorting/envs/sorting.py
++++ b/environments/d3il/envs/gym_sorting_env/gym_sorting/envs/sorting.py
+@@ -6,15 +6,15 @@ import copy
+ 
+ from gym.spaces import Box
+ 
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
+-from environments.d3il.d3il_sim.core import Scene
+-from environments.d3il.d3il_sim.core.logger import ObjectLogger, CamLogger
+-from environments.d3il.d3il_sim.gyms.gym_env_wrapper import GymEnvWrapper
+-from environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat, quat2euler
+-
+-from environments.d3il.d3il_sim.sims.mj_beta.MjRobot import MjRobot
+-from environments.d3il.d3il_sim.sims.mj_beta.MjFactory import MjFactory
+-from environments.d3il.d3il_sim.sims import MjCamera
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.core import Scene
++from d3il.environments.d3il.d3il_sim.core.logger import ObjectLogger, CamLogger
++from d3il.environments.d3il.d3il_sim.gyms.gym_env_wrapper import GymEnvWrapper
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import euler2quat, quat2euler
++
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjRobot import MjRobot
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjFactory import MjFactory
++from d3il.environments.d3il.d3il_sim.sims import MjCamera
+ 
+ from .objects.sorting_objects import get_obj_list, init_end_eff_pos
+ 
+diff --git a/environments/d3il/envs/gym_stacking_env/gym_stacking/envs/objects/stacking_objects.py b/environments/d3il/envs/gym_stacking_env/gym_stacking/envs/objects/stacking_objects.py
+index 10c50d9..3c0314b 100644
+--- a/environments/d3il/envs/gym_stacking_env/gym_stacking/envs/objects/stacking_objects.py
++++ b/environments/d3il/envs/gym_stacking_env/gym_stacking/envs/objects/stacking_objects.py
+@@ -3,10 +3,10 @@ import os
+ import xml.etree.ElementTree as Et
+ from typing import Tuple
+ 
+-from environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Box, Sphere, Box
+-from environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
+-from environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import MjXmlLoadable
+-from environments.d3il.d3il_sim.utils import sim_path
++from d3il.environments.d3il.d3il_sim.sims.universal_sim.PrimitiveObjects import Box, Sphere, Box
++from d3il.environments.d3il.d3il_sim.core.sim_object.sim_object import SimObject
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjLoadable import MjXmlLoadable
++from d3il.environments.d3il.d3il_sim.utils import sim_path
+ 
+ init_end_eff_pos = [0.525, 0.0, 0.3]
+ 
+diff --git a/environments/d3il/envs/gym_stacking_env/gym_stacking/envs/stacking.py b/environments/d3il/envs/gym_stacking_env/gym_stacking/envs/stacking.py
+index b0dd055..ca5b2b1 100644
+--- a/environments/d3il/envs/gym_stacking_env/gym_stacking/envs/stacking.py
++++ b/environments/d3il/envs/gym_stacking_env/gym_stacking/envs/stacking.py
+@@ -5,16 +5,16 @@ import cv2
+ import numpy as np
+ from gym.spaces import Box
+ 
+-from environments.d3il.d3il_sim.core import Scene
+-from environments.d3il.d3il_sim.core.logger import CamLogger, ObjectLogger
+-from environments.d3il.d3il_sim.gyms.gym_env_wrapper import GymEnvWrapper
+-from environments.d3il.d3il_sim.gyms.gym_utils.helpers import obj_distance
+-from environments.d3il.d3il_sim.sims import MjCamera
+-from environments.d3il.d3il_sim.sims.mj_beta.MjFactory import MjFactory
+-from environments.d3il.d3il_sim.sims.mj_beta.MjRobot import MjRobot
+-from environments.d3il.d3il_sim.utils.geometric_transformation import (
++from d3il.environments.d3il.d3il_sim.core import Scene
++from d3il.environments.d3il.d3il_sim.core.logger import CamLogger, ObjectLogger
++from d3il.environments.d3il.d3il_sim.gyms.gym_env_wrapper import GymEnvWrapper
++from d3il.environments.d3il.d3il_sim.gyms.gym_utils.helpers import obj_distance
++from d3il.environments.d3il.d3il_sim.sims import MjCamera
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjFactory import MjFactory
++from d3il.environments.d3il.d3il_sim.sims.mj_beta.MjRobot import MjRobot
++from d3il.environments.d3il.d3il_sim.utils.geometric_transformation import (
+     euler2quat, quat2euler)
+-from environments.d3il.d3il_sim.utils.sim_path import d3il_path
++from d3il.environments.d3il.d3il_sim.utils.sim_path import d3il_path
+ 
+ from .objects.stacking_objects import get_obj_list, init_end_eff_pos
+ 

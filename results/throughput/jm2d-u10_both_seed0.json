@@ -1,0 +1,26 @@
+{
+ "label": "jm2d-u10",
+ "scenario": "both",
+ "seed": 0,
+ "n_trials": 1,
+ "setup_s": 1.3,
+ "wall_s": 154.5,
+ "policy_calls": [
+  63.0
+ ],
+ "s_per_step": 2.452,
+ "per_trial": {
+  "0": {
+   "n_success": 1.0,
+   "n_success_and_constraints": 1.0,
+   "n_steps": 62.0,
+   "n_violations": 0.0,
+   "total_violations": 0.0,
+   "avg_time": 2.46278106012652,
+   "collision_free_completed": 1.0
+  }
+ },
+ "torch_max_reserved_mib": 222,
+ "torch_max_allocated_mib": 194,
+ "nvidia_smi_peak_mib": 742
+}

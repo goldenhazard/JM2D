@@ -1,0 +1,26 @@
+{
+ "label": "dpcc",
+ "scenario": "both",
+ "seed": 2,
+ "n_trials": 1,
+ "setup_s": 2.7,
+ "wall_s": 70.5,
+ "policy_calls": [
+  58.0
+ ],
+ "s_per_step": 1.216,
+ "per_trial": {
+  "0": {
+   "n_success": 1.0,
+   "n_success_and_constraints": 1.0,
+   "n_steps": 57.0,
+   "n_violations": 0.0,
+   "total_violations": 0.0,
+   "avg_time": 1.2049766883515476,
+   "collision_free_completed": 1.0
+  }
+ },
+ "torch_max_reserved_mib": 222,
+ "torch_max_allocated_mib": 190,
+ "nvidia_smi_peak_mib": 740
+}

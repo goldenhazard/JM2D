@@ -1,0 +1,26 @@
+{
+ "label": "jm2d-u0",
+ "scenario": "both",
+ "seed": 0,
+ "n_trials": 1,
+ "setup_s": 1.4,
+ "wall_s": 54.4,
+ "policy_calls": [
+  24.0
+ ],
+ "s_per_step": 2.265,
+ "per_trial": {
+  "0": {
+   "n_success": 0.0,
+   "n_success_and_constraints": 0.0,
+   "n_steps": 23.0,
+   "n_violations": 5.0,
+   "total_violations": 0.11065675113749987,
+   "avg_time": 2.319901922474737,
+   "collision_free_completed": 0.0
+  }
+ },
+ "torch_max_reserved_mib": 222,
+ "torch_max_allocated_mib": 194,
+ "nvidia_smi_peak_mib": 742
+}

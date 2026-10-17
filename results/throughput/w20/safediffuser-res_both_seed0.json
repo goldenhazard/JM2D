@@ -1,0 +1,26 @@
+{
+ "label": "safediffuser-res",
+ "scenario": "both",
+ "seed": 0,
+ "n_trials": 1,
+ "setup_s": 1.6,
+ "wall_s": 420.8,
+ "policy_calls": [
+  24.0
+ ],
+ "s_per_step": 17.532,
+ "per_trial": {
+  "0": {
+   "n_success": 0.0,
+   "n_success_and_constraints": 0.0,
+   "n_steps": 23.0,
+   "n_violations": 5.0,
+   "total_violations": 0.10890404237580907,
+   "avg_time": 18.262569106143452,
+   "collision_free_completed": 0.0
+  }
+ },
+ "torch_max_reserved_mib": 222,
+ "torch_max_allocated_mib": 195,
+ "nvidia_smi_peak_mib": 870
+}

@@ -1,0 +1,2 @@
+{"trial": 0, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 55.0, "n_violations": 9.0, "total_violations": 0.15942811947995222, "avg_time": 2.8360366864637894, "collision_free_completed": 0.0}
+{"trial": 1, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 65.0, "n_violations": 44.0, "total_violations": 10.597815197892487, "avg_time": 2.6997637051802417, "collision_free_completed": 0.0}

@@ -1,0 +1,13 @@
+# SafeDiffuser (Xiao et al.): CBF-based invariance QP (qpth) after every denoising step.
+# Legacy: SafeRobomimic@origin/mpd-improved, variants 'invariance-ReS-dpcc-c' / 'invariance-TVS-dpcc-c'.
+# Table 2 reports the better of ReS / TVS per scenario; both are run.
+planner: safediffuser
+variant: res                        # res | tvs   (--variant)
+legacy_variant: {res: invariance-ReS-dpcc-c, tvs: invariance-TVS-dpcc-c}
+batch_size: 2
+constraint_padding: 0.0             # no 'tightened' in the variant name -> nominal constraints
+dynamics_constraints: false
+trajectory_selection: minimum_projection_cost
+diffusion_timestep_threshold: 1.0
+# invariance module settings (GaussianDiffusion.set_invariance_module): ReS robust_term 0.005, t_relax 5, sign 100;
+# TVS robust_term 0.005, t_bias 5; invariance_index = range(4, 6) (the (x, y) entries of a transition)

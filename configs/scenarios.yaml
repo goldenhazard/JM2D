@@ -1,0 +1,58 @@
+# D3IL-Avoiding constraint scenarios (paper Table 2 / Table 3 / Fig. 10).
+#
+# Geometry copied from the original evaluation configs (SafeRobomimic@origin/um_dpcc config/projection_eval_dev.yaml,
+# identical to origin/mpd-improved config/projection_eval_paper_*.yaml except for Cluttered obstacle #6).
+# Each scenario lists its halfspaces and obstacles in the order used by the original code
+# (get_poly_obs_constraints: top-left = hs[0] + obs[3]; top-right = hs[1] + obs[4]; both = hs[2, 3] + obs[5];
+# cluttered = hs[4, 5] + obs[2, 3, 4, 6]). The order matters: it fixes the order of the constraints in the projector.
+#
+# Cluttered obstacle #6 = center (0.5, 0.20), r = 0.02 (the definition behind the stored Table 2
+# DPCC / Ours numbers, Table 3 and Fig. 11). The per-seed MPD / SafeDiffuser configs of origin/mpd-improved used
+# (0.5, 0.26), r = 0.05 instead; that variant is not used in this release.
+#
+# A halfspace is [[x1, y1], [x2, y2], side]: the line through the two points; side = 'below' keeps the region
+# below the line (y <= m x + b) feasible. Obstacles are discs in (x, y) that the end effector must stay out of.
+
+common:
+  experiment: avoiding-d3il
+  constraint_types: [halfspace, obstacles, dynamics]
+  init_end_eff_pos: [0.525, -0.28, 0.12]
+  dt: 1                     # a = [delta_x, delta_y] (not a velocity)
+  observation_indices: {x_des: 0, y_des: 1, x: 2, y: 3}
+  action_indices: {vx: 0, vy: 1}
+  bounds:                   # not active ('bounds' is not in constraint_types); kept from the original config
+    - {type: lower, dimensions: [vx, vy], values: [-0.012, 0]}
+    - {type: upper, dimensions: [vx, vy], values: [0.012, 0.012]}
+  ax_limits: [[0.2, 0.8], [-0.3, 0.4]]
+  max_episode_length: 200
+
+scenarios:
+  top_left:
+    legacy_name: top-left-hard
+    halfspaces:
+      - [[0.8, -0.5], [0.4, 0.5], below]       # hard (\ shape)
+    obstacles:
+      - {type: sphere_outside, dimensions: [x, y], center: [0.4, 0.08], radius: 0.08}
+  top_right:
+    legacy_name: top-right-hard
+    halfspaces:
+      - [[0.2, -0.5], [0.6, 0.5], below]       # hard (/ shape)
+    obstacles:
+      - {type: sphere_outside, dimensions: [x, y], center: [0.6, 0.08], radius: 0.08}
+  both:
+    legacy_name: both-hard
+    halfspaces:
+      - [[0.8, -0.3], [0.575, 0.5], below]     # easier (\ shape)
+      - [[0.2, -0.3], [0.425, 0.5], below]     # easier (/ shape)
+    obstacles:
+      - {type: sphere_outside, dimensions: [x, y], center: [0.5, -0.09], radius: 0.08}
+  cluttered:
+    legacy_name: cluttered
+    halfspaces:
+      - [[0.58, -0.3], [0.57, 0.5], below]
+      - [[0.42, -0.3], [0.43, 0.5], below]
+    obstacles:
+      - {type: sphere_outside, dimensions: [x, y], center: [0.5, -0.1], radius: 0.06}
+      - {type: sphere_outside, dimensions: [x, y], center: [0.4, 0.08], radius: 0.08}
+      - {type: sphere_outside, dimensions: [x, y], center: [0.6, 0.08], radius: 0.08}
+      - {type: sphere_outside, dimensions: [x, y], center: [0.5, 0.2], radius: 0.02}

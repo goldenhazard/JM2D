@@ -1,0 +1,3191 @@
+{
+ "lineage": "mi",
+ "ref": "origin/mpd-improved",
+ "commit": "0d99e9f08968bdecb2207eb996272dd795918b19",
+ "script": "scripts/eval_paper.py",
+ "base_config": "config/SafeDiffuser_configs/avoiding_{scenario}__seed_{seed}.yaml",
+ "mode": "steps",
+ "n": 3,
+ "module_paths": {
+  "diffuser": "<LEGACY_ROOT>/diffuser/__init__.py",
+  "avoiding_env": "<repo>/third_party/d3il/environments/d3il/envs/gym_avoiding_env/gym_avoiding/envs/avoiding.py",
+  "legacy_script": "<LEGACY_ROOT>/scripts/eval_paper.py",
+  "config_module": "<LEGACY_ROOT>/config/avoiding-d3il.py"
+ },
+ "versions": {
+  "python": "3.10.14",
+  "torch": "2.2.2+cu121",
+  "cuda": "12.1",
+  "cudnn": 8907,
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "diffusers": "0.31.0",
+  "mujoco": "2.3.7",
+  "gpu": "NVIDIA GeForce RTX 4090"
+ },
+ "cases": {
+  "mi_safediffuser-res_top-left-hard_seed0_steps": {
+   "case": {
+    "planner": "safediffuser-res",
+    "scenario": "top-left-hard",
+    "seed": 0,
+    "u_steps": null,
+    "lineage": "mi"
+   },
+   "legacy_variant": "invariance-ReS-dpcc-c",
+   "legacy_base_config": "config/SafeDiffuser_configs/avoiding_top-left-hard__seed_0.yaml",
+   "n_policy_calls": 3,
+   "per_trial": null,
+   "time_s": 25.0,
+   "npz_md5": "aacb59a9751e977f717c9c2e527df6b3",
+   "legacy_config": {
+    "write_to_file": true,
+    "exps": [
+     "avoiding-d3il"
+    ],
+    "seeds": [
+     0
+    ],
+    "avoiding_halfspace_variants": [
+     "top-left-hard"
+    ],
+    "n_trials": 1,
+    "dt": {
+     "avoiding": 1
+    },
+    "observation_indices": {
+     "avoiding": {
+      "x_des": 0,
+      "y_des": 1,
+      "x": 2,
+      "y": 3
+     }
+    },
+    "action_indices": {
+     "avoiding": {
+      "vx": 0,
+      "vy": 1
+     }
+    },
+    "diffusion_timestep_threshold": 1.0,
+    "projection_variants": [
+     "invariance-ReS-dpcc-c"
+    ],
+    "projection_cost": "pos_vel",
+    "constraint_types": [
+     "halfspace",
+     "obstacles",
+     "dynamics"
+    ],
+    "init_end_eff_pos": [
+     0.525,
+     -0.28,
+     0.12
+    ],
+    "enlarge_constraints": {
+     "avoiding": 0.025
+    },
+    "enlarge_constraints_ndgs": {
+     "avoiding": 0.012
+    },
+    "halfspace_constraints": {
+     "avoiding-d3il": [
+      [
+       [
+        0.8,
+        -0.5
+       ],
+       [
+        0.4,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.5
+       ],
+       [
+        0.6,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.8,
+        -0.3
+       ],
+       [
+        0.575,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.3
+       ],
+       [
+        0.425,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.58,
+        -0.3
+       ],
+       [
+        0.57,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.42,
+        -0.3
+       ],
+       [
+        0.43,
+        0.5
+       ],
+       "below"
+      ]
+     ]
+    },
+    "obstacle_constraints": {
+     "avoiding-d3il": [
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.1
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.09
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        0.2
+       ],
+       "radius": 0.02
+      }
+     ]
+    },
+    "bounds": {
+     "avoiding-d3il": [
+      {
+       "type": "lower",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        -0.012,
+        0
+       ]
+      },
+      {
+       "type": "upper",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        0.012,
+        0.012
+       ]
+      }
+     ]
+    },
+    "plot_how_many": 10,
+    "ax_limits": {
+     "avoiding-d3il": [
+      [
+       0.2,
+       0.8
+      ],
+      [
+       -0.3,
+       0.4
+      ]
+     ]
+    }
+   }
+  },
+  "mi_safediffuser-res_top-right-hard_seed0_steps": {
+   "case": {
+    "planner": "safediffuser-res",
+    "scenario": "top-right-hard",
+    "seed": 0,
+    "u_steps": null,
+    "lineage": "mi"
+   },
+   "legacy_variant": "invariance-ReS-dpcc-c",
+   "legacy_base_config": "config/SafeDiffuser_configs/avoiding_top-right-hard__seed_0.yaml",
+   "n_policy_calls": 3,
+   "per_trial": null,
+   "time_s": 10.8,
+   "npz_md5": "a749b78e28a38e4b85958092f426cf10",
+   "legacy_config": {
+    "write_to_file": true,
+    "exps": [
+     "avoiding-d3il"
+    ],
+    "seeds": [
+     0
+    ],
+    "avoiding_halfspace_variants": [
+     "top-right-hard"
+    ],
+    "n_trials": 1,
+    "dt": {
+     "avoiding": 1
+    },
+    "observation_indices": {
+     "avoiding": {
+      "x_des": 0,
+      "y_des": 1,
+      "x": 2,
+      "y": 3
+     }
+    },
+    "action_indices": {
+     "avoiding": {
+      "vx": 0,
+      "vy": 1
+     }
+    },
+    "diffusion_timestep_threshold": 1.0,
+    "projection_variants": [
+     "invariance-ReS-dpcc-c"
+    ],
+    "projection_cost": "pos_vel",
+    "constraint_types": [
+     "halfspace",
+     "obstacles",
+     "dynamics"
+    ],
+    "init_end_eff_pos": [
+     0.525,
+     -0.28,
+     0.12
+    ],
+    "enlarge_constraints": {
+     "avoiding": 0.025
+    },
+    "enlarge_constraints_ndgs": {
+     "avoiding": 0.012
+    },
+    "halfspace_constraints": {
+     "avoiding-d3il": [
+      [
+       [
+        0.8,
+        -0.5
+       ],
+       [
+        0.4,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.5
+       ],
+       [
+        0.6,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.8,
+        -0.3
+       ],
+       [
+        0.575,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.3
+       ],
+       [
+        0.425,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.58,
+        -0.3
+       ],
+       [
+        0.57,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.42,
+        -0.3
+       ],
+       [
+        0.43,
+        0.5
+       ],
+       "below"
+      ]
+     ]
+    },
+    "obstacle_constraints": {
+     "avoiding-d3il": [
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.1
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.09
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        0.2
+       ],
+       "radius": 0.02
+      }
+     ]
+    },
+    "bounds": {
+     "avoiding-d3il": [
+      {
+       "type": "lower",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        -0.012,
+        0
+       ]
+      },
+      {
+       "type": "upper",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        0.012,
+        0.012
+       ]
+      }
+     ]
+    },
+    "plot_how_many": 10,
+    "ax_limits": {
+     "avoiding-d3il": [
+      [
+       0.2,
+       0.8
+      ],
+      [
+       -0.3,
+       0.4
+      ]
+     ]
+    }
+   }
+  },
+  "mi_safediffuser-res_both-hard_seed0_steps": {
+   "case": {
+    "planner": "safediffuser-res",
+    "scenario": "both-hard",
+    "seed": 0,
+    "u_steps": null,
+    "lineage": "mi"
+   },
+   "legacy_variant": "invariance-ReS-dpcc-c",
+   "legacy_base_config": "config/SafeDiffuser_configs/avoiding_both-hard__seed_0.yaml",
+   "n_policy_calls": 3,
+   "per_trial": null,
+   "time_s": 13.0,
+   "npz_md5": "eca57a8826328555d2a073da4794cc62",
+   "legacy_config": {
+    "write_to_file": true,
+    "exps": [
+     "avoiding-d3il"
+    ],
+    "seeds": [
+     0
+    ],
+    "avoiding_halfspace_variants": [
+     "both-hard"
+    ],
+    "n_trials": 1,
+    "dt": {
+     "avoiding": 1
+    },
+    "observation_indices": {
+     "avoiding": {
+      "x_des": 0,
+      "y_des": 1,
+      "x": 2,
+      "y": 3
+     }
+    },
+    "action_indices": {
+     "avoiding": {
+      "vx": 0,
+      "vy": 1
+     }
+    },
+    "diffusion_timestep_threshold": 1.0,
+    "projection_variants": [
+     "invariance-ReS-dpcc-c"
+    ],
+    "projection_cost": "pos_vel",
+    "constraint_types": [
+     "halfspace",
+     "obstacles",
+     "dynamics"
+    ],
+    "init_end_eff_pos": [
+     0.525,
+     -0.28,
+     0.12
+    ],
+    "enlarge_constraints": {
+     "avoiding": 0.025
+    },
+    "enlarge_constraints_ndgs": {
+     "avoiding": 0.012
+    },
+    "halfspace_constraints": {
+     "avoiding-d3il": [
+      [
+       [
+        0.8,
+        -0.5
+       ],
+       [
+        0.4,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.5
+       ],
+       [
+        0.6,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.8,
+        -0.3
+       ],
+       [
+        0.575,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.3
+       ],
+       [
+        0.425,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.58,
+        -0.3
+       ],
+       [
+        0.57,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.42,
+        -0.3
+       ],
+       [
+        0.43,
+        0.5
+       ],
+       "below"
+      ]
+     ]
+    },
+    "obstacle_constraints": {
+     "avoiding-d3il": [
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.1
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.09
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        0.2
+       ],
+       "radius": 0.02
+      }
+     ]
+    },
+    "bounds": {
+     "avoiding-d3il": [
+      {
+       "type": "lower",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        -0.012,
+        0
+       ]
+      },
+      {
+       "type": "upper",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        0.012,
+        0.012
+       ]
+      }
+     ]
+    },
+    "plot_how_many": 10,
+    "ax_limits": {
+     "avoiding-d3il": [
+      [
+       0.2,
+       0.8
+      ],
+      [
+       -0.3,
+       0.4
+      ]
+     ]
+    }
+   }
+  },
+  "mi_safediffuser-res_cluttered_seed0_steps": {
+   "case": {
+    "planner": "safediffuser-res",
+    "scenario": "cluttered",
+    "seed": 0,
+    "u_steps": null,
+    "lineage": "mi"
+   },
+   "legacy_variant": "invariance-ReS-dpcc-c",
+   "legacy_base_config": "config/SafeDiffuser_configs/avoiding_cluttered__seed_0.yaml",
+   "n_policy_calls": 3,
+   "per_trial": null,
+   "time_s": 13.8,
+   "npz_md5": "6bb05d4f3e2f2ef76f7bd421a24e1a12",
+   "legacy_config": {
+    "write_to_file": true,
+    "exps": [
+     "avoiding-d3il"
+    ],
+    "seeds": [
+     0
+    ],
+    "avoiding_halfspace_variants": [
+     "cluttered"
+    ],
+    "n_trials": 1,
+    "dt": {
+     "avoiding": 1
+    },
+    "observation_indices": {
+     "avoiding": {
+      "x_des": 0,
+      "y_des": 1,
+      "x": 2,
+      "y": 3
+     }
+    },
+    "action_indices": {
+     "avoiding": {
+      "vx": 0,
+      "vy": 1
+     }
+    },
+    "diffusion_timestep_threshold": 1.0,
+    "projection_variants": [
+     "invariance-ReS-dpcc-c"
+    ],
+    "projection_cost": "pos_vel",
+    "constraint_types": [
+     "halfspace",
+     "obstacles",
+     "dynamics"
+    ],
+    "init_end_eff_pos": [
+     0.525,
+     -0.28,
+     0.12
+    ],
+    "enlarge_constraints": {
+     "avoiding": 0.025
+    },
+    "enlarge_constraints_ndgs": {
+     "avoiding": 0.012
+    },
+    "halfspace_constraints": {
+     "avoiding-d3il": [
+      [
+       [
+        0.8,
+        -0.5
+       ],
+       [
+        0.4,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.5
+       ],
+       [
+        0.6,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.8,
+        -0.3
+       ],
+       [
+        0.575,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.3
+       ],
+       [
+        0.425,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.58,
+        -0.3
+       ],
+       [
+        0.57,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.42,
+        -0.3
+       ],
+       [
+        0.43,
+        0.5
+       ],
+       "below"
+      ]
+     ]
+    },
+    "obstacle_constraints": {
+     "avoiding-d3il": [
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.1
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.09
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        0.2
+       ],
+       "radius": 0.02
+      }
+     ]
+    },
+    "bounds": {
+     "avoiding-d3il": [
+      {
+       "type": "lower",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        -0.012,
+        0
+       ]
+      },
+      {
+       "type": "upper",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        0.012,
+        0.012
+       ]
+      }
+     ]
+    },
+    "plot_how_many": 10,
+    "ax_limits": {
+     "avoiding-d3il": [
+      [
+       0.2,
+       0.8
+      ],
+      [
+       -0.3,
+       0.4
+      ]
+     ]
+    }
+   }
+  },
+  "mi_safediffuser-tvs_top-left-hard_seed0_steps": {
+   "case": {
+    "planner": "safediffuser-tvs",
+    "scenario": "top-left-hard",
+    "seed": 0,
+    "u_steps": null,
+    "lineage": "mi"
+   },
+   "legacy_variant": "invariance-TVS-dpcc-c",
+   "legacy_base_config": "config/SafeDiffuser_configs/avoiding_top-left-hard__seed_0.yaml",
+   "n_policy_calls": 3,
+   "per_trial": null,
+   "time_s": 8.8,
+   "npz_md5": "825b6a187392bf18b485ecb8b3c9f46b",
+   "legacy_config": {
+    "write_to_file": true,
+    "exps": [
+     "avoiding-d3il"
+    ],
+    "seeds": [
+     0
+    ],
+    "avoiding_halfspace_variants": [
+     "top-left-hard"
+    ],
+    "n_trials": 1,
+    "dt": {
+     "avoiding": 1
+    },
+    "observation_indices": {
+     "avoiding": {
+      "x_des": 0,
+      "y_des": 1,
+      "x": 2,
+      "y": 3
+     }
+    },
+    "action_indices": {
+     "avoiding": {
+      "vx": 0,
+      "vy": 1
+     }
+    },
+    "diffusion_timestep_threshold": 1.0,
+    "projection_variants": [
+     "invariance-TVS-dpcc-c"
+    ],
+    "projection_cost": "pos_vel",
+    "constraint_types": [
+     "halfspace",
+     "obstacles",
+     "dynamics"
+    ],
+    "init_end_eff_pos": [
+     0.525,
+     -0.28,
+     0.12
+    ],
+    "enlarge_constraints": {
+     "avoiding": 0.025
+    },
+    "enlarge_constraints_ndgs": {
+     "avoiding": 0.012
+    },
+    "halfspace_constraints": {
+     "avoiding-d3il": [
+      [
+       [
+        0.8,
+        -0.5
+       ],
+       [
+        0.4,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.5
+       ],
+       [
+        0.6,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.8,
+        -0.3
+       ],
+       [
+        0.575,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.3
+       ],
+       [
+        0.425,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.58,
+        -0.3
+       ],
+       [
+        0.57,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.42,
+        -0.3
+       ],
+       [
+        0.43,
+        0.5
+       ],
+       "below"
+      ]
+     ]
+    },
+    "obstacle_constraints": {
+     "avoiding-d3il": [
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.1
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.09
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        0.2
+       ],
+       "radius": 0.02
+      }
+     ]
+    },
+    "bounds": {
+     "avoiding-d3il": [
+      {
+       "type": "lower",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        -0.012,
+        0
+       ]
+      },
+      {
+       "type": "upper",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        0.012,
+        0.012
+       ]
+      }
+     ]
+    },
+    "plot_how_many": 10,
+    "ax_limits": {
+     "avoiding-d3il": [
+      [
+       0.2,
+       0.8
+      ],
+      [
+       -0.3,
+       0.4
+      ]
+     ]
+    }
+   }
+  },
+  "mi_safediffuser-tvs_top-right-hard_seed0_steps": {
+   "case": {
+    "planner": "safediffuser-tvs",
+    "scenario": "top-right-hard",
+    "seed": 0,
+    "u_steps": null,
+    "lineage": "mi"
+   },
+   "legacy_variant": "invariance-TVS-dpcc-c",
+   "legacy_base_config": "config/SafeDiffuser_configs/avoiding_top-right-hard__seed_0.yaml",
+   "n_policy_calls": 3,
+   "per_trial": null,
+   "time_s": 10.3,
+   "npz_md5": "da410bcfd1a786593e4e55653ef4469a",
+   "legacy_config": {
+    "write_to_file": true,
+    "exps": [
+     "avoiding-d3il"
+    ],
+    "seeds": [
+     0
+    ],
+    "avoiding_halfspace_variants": [
+     "top-right-hard"
+    ],
+    "n_trials": 1,
+    "dt": {
+     "avoiding": 1
+    },
+    "observation_indices": {
+     "avoiding": {
+      "x_des": 0,
+      "y_des": 1,
+      "x": 2,
+      "y": 3
+     }
+    },
+    "action_indices": {
+     "avoiding": {
+      "vx": 0,
+      "vy": 1
+     }
+    },
+    "diffusion_timestep_threshold": 1.0,
+    "projection_variants": [
+     "invariance-TVS-dpcc-c"
+    ],
+    "projection_cost": "pos_vel",
+    "constraint_types": [
+     "halfspace",
+     "obstacles",
+     "dynamics"
+    ],
+    "init_end_eff_pos": [
+     0.525,
+     -0.28,
+     0.12
+    ],
+    "enlarge_constraints": {
+     "avoiding": 0.025
+    },
+    "enlarge_constraints_ndgs": {
+     "avoiding": 0.012
+    },
+    "halfspace_constraints": {
+     "avoiding-d3il": [
+      [
+       [
+        0.8,
+        -0.5
+       ],
+       [
+        0.4,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.5
+       ],
+       [
+        0.6,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.8,
+        -0.3
+       ],
+       [
+        0.575,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.3
+       ],
+       [
+        0.425,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.58,
+        -0.3
+       ],
+       [
+        0.57,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.42,
+        -0.3
+       ],
+       [
+        0.43,
+        0.5
+       ],
+       "below"
+      ]
+     ]
+    },
+    "obstacle_constraints": {
+     "avoiding-d3il": [
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.1
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.09
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        0.2
+       ],
+       "radius": 0.02
+      }
+     ]
+    },
+    "bounds": {
+     "avoiding-d3il": [
+      {
+       "type": "lower",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        -0.012,
+        0
+       ]
+      },
+      {
+       "type": "upper",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        0.012,
+        0.012
+       ]
+      }
+     ]
+    },
+    "plot_how_many": 10,
+    "ax_limits": {
+     "avoiding-d3il": [
+      [
+       0.2,
+       0.8
+      ],
+      [
+       -0.3,
+       0.4
+      ]
+     ]
+    }
+   }
+  },
+  "mi_safediffuser-tvs_both-hard_seed0_steps": {
+   "case": {
+    "planner": "safediffuser-tvs",
+    "scenario": "both-hard",
+    "seed": 0,
+    "u_steps": null,
+    "lineage": "mi"
+   },
+   "legacy_variant": "invariance-TVS-dpcc-c",
+   "legacy_base_config": "config/SafeDiffuser_configs/avoiding_both-hard__seed_0.yaml",
+   "n_policy_calls": 3,
+   "per_trial": null,
+   "time_s": 7.5,
+   "npz_md5": "4443710aeb08551f12704a634abfbc57",
+   "legacy_config": {
+    "write_to_file": true,
+    "exps": [
+     "avoiding-d3il"
+    ],
+    "seeds": [
+     0
+    ],
+    "avoiding_halfspace_variants": [
+     "both-hard"
+    ],
+    "n_trials": 1,
+    "dt": {
+     "avoiding": 1
+    },
+    "observation_indices": {
+     "avoiding": {
+      "x_des": 0,
+      "y_des": 1,
+      "x": 2,
+      "y": 3
+     }
+    },
+    "action_indices": {
+     "avoiding": {
+      "vx": 0,
+      "vy": 1
+     }
+    },
+    "diffusion_timestep_threshold": 1.0,
+    "projection_variants": [
+     "invariance-TVS-dpcc-c"
+    ],
+    "projection_cost": "pos_vel",
+    "constraint_types": [
+     "halfspace",
+     "obstacles",
+     "dynamics"
+    ],
+    "init_end_eff_pos": [
+     0.525,
+     -0.28,
+     0.12
+    ],
+    "enlarge_constraints": {
+     "avoiding": 0.025
+    },
+    "enlarge_constraints_ndgs": {
+     "avoiding": 0.012
+    },
+    "halfspace_constraints": {
+     "avoiding-d3il": [
+      [
+       [
+        0.8,
+        -0.5
+       ],
+       [
+        0.4,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.5
+       ],
+       [
+        0.6,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.8,
+        -0.3
+       ],
+       [
+        0.575,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.3
+       ],
+       [
+        0.425,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.58,
+        -0.3
+       ],
+       [
+        0.57,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.42,
+        -0.3
+       ],
+       [
+        0.43,
+        0.5
+       ],
+       "below"
+      ]
+     ]
+    },
+    "obstacle_constraints": {
+     "avoiding-d3il": [
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.1
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.09
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        0.2
+       ],
+       "radius": 0.02
+      }
+     ]
+    },
+    "bounds": {
+     "avoiding-d3il": [
+      {
+       "type": "lower",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        -0.012,
+        0
+       ]
+      },
+      {
+       "type": "upper",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        0.012,
+        0.012
+       ]
+      }
+     ]
+    },
+    "plot_how_many": 10,
+    "ax_limits": {
+     "avoiding-d3il": [
+      [
+       0.2,
+       0.8
+      ],
+      [
+       -0.3,
+       0.4
+      ]
+     ]
+    }
+   }
+  },
+  "mi_safediffuser-tvs_cluttered_seed0_steps": {
+   "case": {
+    "planner": "safediffuser-tvs",
+    "scenario": "cluttered",
+    "seed": 0,
+    "u_steps": null,
+    "lineage": "mi"
+   },
+   "legacy_variant": "invariance-TVS-dpcc-c",
+   "legacy_base_config": "config/SafeDiffuser_configs/avoiding_cluttered__seed_0.yaml",
+   "n_policy_calls": 3,
+   "per_trial": null,
+   "time_s": 10.6,
+   "npz_md5": "b3d16fe27b90d7a44afa29da9ecca5ed",
+   "legacy_config": {
+    "write_to_file": true,
+    "exps": [
+     "avoiding-d3il"
+    ],
+    "seeds": [
+     0
+    ],
+    "avoiding_halfspace_variants": [
+     "cluttered"
+    ],
+    "n_trials": 1,
+    "dt": {
+     "avoiding": 1
+    },
+    "observation_indices": {
+     "avoiding": {
+      "x_des": 0,
+      "y_des": 1,
+      "x": 2,
+      "y": 3
+     }
+    },
+    "action_indices": {
+     "avoiding": {
+      "vx": 0,
+      "vy": 1
+     }
+    },
+    "diffusion_timestep_threshold": 1.0,
+    "projection_variants": [
+     "invariance-TVS-dpcc-c"
+    ],
+    "projection_cost": "pos_vel",
+    "constraint_types": [
+     "halfspace",
+     "obstacles",
+     "dynamics"
+    ],
+    "init_end_eff_pos": [
+     0.525,
+     -0.28,
+     0.12
+    ],
+    "enlarge_constraints": {
+     "avoiding": 0.025
+    },
+    "enlarge_constraints_ndgs": {
+     "avoiding": 0.012
+    },
+    "halfspace_constraints": {
+     "avoiding-d3il": [
+      [
+       [
+        0.8,
+        -0.5
+       ],
+       [
+        0.4,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.5
+       ],
+       [
+        0.6,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.8,
+        -0.3
+       ],
+       [
+        0.575,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.3
+       ],
+       [
+        0.425,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.58,
+        -0.3
+       ],
+       [
+        0.57,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.42,
+        -0.3
+       ],
+       [
+        0.43,
+        0.5
+       ],
+       "below"
+      ]
+     ]
+    },
+    "obstacle_constraints": {
+     "avoiding-d3il": [
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.1
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.09
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        0.2
+       ],
+       "radius": 0.02
+      }
+     ]
+    },
+    "bounds": {
+     "avoiding-d3il": [
+      {
+       "type": "lower",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        -0.012,
+        0
+       ]
+      },
+      {
+       "type": "upper",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        0.012,
+        0.012
+       ]
+      }
+     ]
+    },
+    "plot_how_many": 10,
+    "ax_limits": {
+     "avoiding-d3il": [
+      [
+       0.2,
+       0.8
+      ],
+      [
+       -0.3,
+       0.4
+      ]
+     ]
+    }
+   }
+  },
+  "mi_mpd_top-left-hard_seed0_steps": {
+   "case": {
+    "planner": "mpd",
+    "scenario": "top-left-hard",
+    "seed": 0,
+    "u_steps": null,
+    "lineage": "mi"
+   },
+   "legacy_variant": "mpd-gradient",
+   "legacy_base_config": "config/SafeDiffuser_configs/avoiding_top-left-hard__seed_0.yaml",
+   "n_policy_calls": 3,
+   "per_trial": null,
+   "time_s": 4.8,
+   "npz_md5": "9e19067faa34d6e26a2a4fb73f7874ce",
+   "legacy_config": {
+    "write_to_file": true,
+    "exps": [
+     "avoiding-d3il"
+    ],
+    "seeds": [
+     0
+    ],
+    "avoiding_halfspace_variants": [
+     "top-left-hard"
+    ],
+    "n_trials": 1,
+    "dt": {
+     "avoiding": 1
+    },
+    "observation_indices": {
+     "avoiding": {
+      "x_des": 0,
+      "y_des": 1,
+      "x": 2,
+      "y": 3
+     }
+    },
+    "action_indices": {
+     "avoiding": {
+      "vx": 0,
+      "vy": 1
+     }
+    },
+    "diffusion_timestep_threshold": 1.0,
+    "projection_variants": [
+     "mpd-gradient"
+    ],
+    "projection_cost": "pos_vel",
+    "constraint_types": [
+     "halfspace",
+     "obstacles",
+     "dynamics"
+    ],
+    "init_end_eff_pos": [
+     0.525,
+     -0.28,
+     0.12
+    ],
+    "enlarge_constraints": {
+     "avoiding": 0.025
+    },
+    "enlarge_constraints_ndgs": {
+     "avoiding": 0.012
+    },
+    "halfspace_constraints": {
+     "avoiding-d3il": [
+      [
+       [
+        0.8,
+        -0.5
+       ],
+       [
+        0.4,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.5
+       ],
+       [
+        0.6,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.8,
+        -0.3
+       ],
+       [
+        0.575,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.3
+       ],
+       [
+        0.425,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.58,
+        -0.3
+       ],
+       [
+        0.57,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.42,
+        -0.3
+       ],
+       [
+        0.43,
+        0.5
+       ],
+       "below"
+      ]
+     ]
+    },
+    "obstacle_constraints": {
+     "avoiding-d3il": [
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.1
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.09
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        0.2
+       ],
+       "radius": 0.02
+      }
+     ]
+    },
+    "bounds": {
+     "avoiding-d3il": [
+      {
+       "type": "lower",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        -0.012,
+        0
+       ]
+      },
+      {
+       "type": "upper",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        0.012,
+        0.012
+       ]
+      }
+     ]
+    },
+    "plot_how_many": 10,
+    "ax_limits": {
+     "avoiding-d3il": [
+      [
+       0.2,
+       0.8
+      ],
+      [
+       -0.3,
+       0.4
+      ]
+     ]
+    }
+   }
+  },
+  "mi_mpd_top-right-hard_seed0_steps": {
+   "case": {
+    "planner": "mpd",
+    "scenario": "top-right-hard",
+    "seed": 0,
+    "u_steps": null,
+    "lineage": "mi"
+   },
+   "legacy_variant": "mpd-gradient",
+   "legacy_base_config": "config/SafeDiffuser_configs/avoiding_top-right-hard__seed_0.yaml",
+   "n_policy_calls": 3,
+   "per_trial": null,
+   "time_s": 4.9,
+   "npz_md5": "b7619834b9ca0008aa99feb3c6554b55",
+   "legacy_config": {
+    "write_to_file": true,
+    "exps": [
+     "avoiding-d3il"
+    ],
+    "seeds": [
+     0
+    ],
+    "avoiding_halfspace_variants": [
+     "top-right-hard"
+    ],
+    "n_trials": 1,
+    "dt": {
+     "avoiding": 1
+    },
+    "observation_indices": {
+     "avoiding": {
+      "x_des": 0,
+      "y_des": 1,
+      "x": 2,
+      "y": 3
+     }
+    },
+    "action_indices": {
+     "avoiding": {
+      "vx": 0,
+      "vy": 1
+     }
+    },
+    "diffusion_timestep_threshold": 1.0,
+    "projection_variants": [
+     "mpd-gradient"
+    ],
+    "projection_cost": "pos_vel",
+    "constraint_types": [
+     "halfspace",
+     "obstacles",
+     "dynamics"
+    ],
+    "init_end_eff_pos": [
+     0.525,
+     -0.28,
+     0.12
+    ],
+    "enlarge_constraints": {
+     "avoiding": 0.025
+    },
+    "enlarge_constraints_ndgs": {
+     "avoiding": 0.012
+    },
+    "halfspace_constraints": {
+     "avoiding-d3il": [
+      [
+       [
+        0.8,
+        -0.5
+       ],
+       [
+        0.4,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.5
+       ],
+       [
+        0.6,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.8,
+        -0.3
+       ],
+       [
+        0.575,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.3
+       ],
+       [
+        0.425,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.58,
+        -0.3
+       ],
+       [
+        0.57,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.42,
+        -0.3
+       ],
+       [
+        0.43,
+        0.5
+       ],
+       "below"
+      ]
+     ]
+    },
+    "obstacle_constraints": {
+     "avoiding-d3il": [
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.1
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.09
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        0.2
+       ],
+       "radius": 0.02
+      }
+     ]
+    },
+    "bounds": {
+     "avoiding-d3il": [
+      {
+       "type": "lower",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        -0.012,
+        0
+       ]
+      },
+      {
+       "type": "upper",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        0.012,
+        0.012
+       ]
+      }
+     ]
+    },
+    "plot_how_many": 10,
+    "ax_limits": {
+     "avoiding-d3il": [
+      [
+       0.2,
+       0.8
+      ],
+      [
+       -0.3,
+       0.4
+      ]
+     ]
+    }
+   }
+  },
+  "mi_mpd_both-hard_seed0_steps": {
+   "case": {
+    "planner": "mpd",
+    "scenario": "both-hard",
+    "seed": 0,
+    "u_steps": null,
+    "lineage": "mi"
+   },
+   "legacy_variant": "mpd-gradient",
+   "legacy_base_config": "config/SafeDiffuser_configs/avoiding_both-hard__seed_0.yaml",
+   "n_policy_calls": 3,
+   "per_trial": null,
+   "time_s": 4.7,
+   "npz_md5": "b1ac923c32c54543cd2525732f269feb",
+   "legacy_config": {
+    "write_to_file": true,
+    "exps": [
+     "avoiding-d3il"
+    ],
+    "seeds": [
+     0
+    ],
+    "avoiding_halfspace_variants": [
+     "both-hard"
+    ],
+    "n_trials": 1,
+    "dt": {
+     "avoiding": 1
+    },
+    "observation_indices": {
+     "avoiding": {
+      "x_des": 0,
+      "y_des": 1,
+      "x": 2,
+      "y": 3
+     }
+    },
+    "action_indices": {
+     "avoiding": {
+      "vx": 0,
+      "vy": 1
+     }
+    },
+    "diffusion_timestep_threshold": 1.0,
+    "projection_variants": [
+     "mpd-gradient"
+    ],
+    "projection_cost": "pos_vel",
+    "constraint_types": [
+     "halfspace",
+     "obstacles",
+     "dynamics"
+    ],
+    "init_end_eff_pos": [
+     0.525,
+     -0.28,
+     0.12
+    ],
+    "enlarge_constraints": {
+     "avoiding": 0.025
+    },
+    "enlarge_constraints_ndgs": {
+     "avoiding": 0.012
+    },
+    "halfspace_constraints": {
+     "avoiding-d3il": [
+      [
+       [
+        0.8,
+        -0.5
+       ],
+       [
+        0.4,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.5
+       ],
+       [
+        0.6,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.8,
+        -0.3
+       ],
+       [
+        0.575,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.3
+       ],
+       [
+        0.425,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.58,
+        -0.3
+       ],
+       [
+        0.57,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.42,
+        -0.3
+       ],
+       [
+        0.43,
+        0.5
+       ],
+       "below"
+      ]
+     ]
+    },
+    "obstacle_constraints": {
+     "avoiding-d3il": [
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.1
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.09
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        0.2
+       ],
+       "radius": 0.02
+      }
+     ]
+    },
+    "bounds": {
+     "avoiding-d3il": [
+      {
+       "type": "lower",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        -0.012,
+        0
+       ]
+      },
+      {
+       "type": "upper",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        0.012,
+        0.012
+       ]
+      }
+     ]
+    },
+    "plot_how_many": 10,
+    "ax_limits": {
+     "avoiding-d3il": [
+      [
+       0.2,
+       0.8
+      ],
+      [
+       -0.3,
+       0.4
+      ]
+     ]
+    }
+   }
+  },
+  "mi_mpd_cluttered_seed0_steps": {
+   "case": {
+    "planner": "mpd",
+    "scenario": "cluttered",
+    "seed": 0,
+    "u_steps": null,
+    "lineage": "mi"
+   },
+   "legacy_variant": "mpd-gradient",
+   "legacy_base_config": "config/SafeDiffuser_configs/avoiding_cluttered__seed_0.yaml",
+   "n_policy_calls": 3,
+   "per_trial": null,
+   "time_s": 10.9,
+   "npz_md5": "59a09ec8726110b88b7d4c644337b224",
+   "legacy_config": {
+    "write_to_file": true,
+    "exps": [
+     "avoiding-d3il"
+    ],
+    "seeds": [
+     0
+    ],
+    "avoiding_halfspace_variants": [
+     "cluttered"
+    ],
+    "n_trials": 1,
+    "dt": {
+     "avoiding": 1
+    },
+    "observation_indices": {
+     "avoiding": {
+      "x_des": 0,
+      "y_des": 1,
+      "x": 2,
+      "y": 3
+     }
+    },
+    "action_indices": {
+     "avoiding": {
+      "vx": 0,
+      "vy": 1
+     }
+    },
+    "diffusion_timestep_threshold": 1.0,
+    "projection_variants": [
+     "mpd-gradient"
+    ],
+    "projection_cost": "pos_vel",
+    "constraint_types": [
+     "halfspace",
+     "obstacles",
+     "dynamics"
+    ],
+    "init_end_eff_pos": [
+     0.525,
+     -0.28,
+     0.12
+    ],
+    "enlarge_constraints": {
+     "avoiding": 0.025
+    },
+    "enlarge_constraints_ndgs": {
+     "avoiding": 0.012
+    },
+    "halfspace_constraints": {
+     "avoiding-d3il": [
+      [
+       [
+        0.8,
+        -0.5
+       ],
+       [
+        0.4,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.5
+       ],
+       [
+        0.6,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.8,
+        -0.3
+       ],
+       [
+        0.575,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.2,
+        -0.3
+       ],
+       [
+        0.425,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.58,
+        -0.3
+       ],
+       [
+        0.57,
+        0.5
+       ],
+       "below"
+      ],
+      [
+       [
+        0.42,
+        -0.3
+       ],
+       [
+        0.43,
+        0.5
+       ],
+       "below"
+      ]
+     ]
+    },
+    "obstacle_constraints": {
+     "avoiding-d3il": [
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.1
+       ],
+       "radius": 0.06
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.4,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.6,
+        0.08
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        -0.09
+       ],
+       "radius": 0.08
+      },
+      {
+       "type": "sphere_outside",
+       "dimensions": [
+        "x",
+        "y"
+       ],
+       "center": [
+        0.5,
+        0.2
+       ],
+       "radius": 0.02
+      }
+     ]
+    },
+    "bounds": {
+     "avoiding-d3il": [
+      {
+       "type": "lower",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        -0.012,
+        0
+       ]
+      },
+      {
+       "type": "upper",
+       "dimensions": [
+        "vx",
+        "vy"
+       ],
+       "values": [
+        0.012,
+        0.012
+       ]
+      }
+     ]
+    },
+    "plot_how_many": 10,
+    "ax_limits": {
+     "avoiding-d3il": [
+      [
+       0.2,
+       0.8
+      ],
+      [
+       -0.3,
+       0.4
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "checkpoints": {
+  "0": "8446a72feebe0e9b1839bc5cb48f448e",
+  "1": "c09dd9a85fcf435201d8e61835d053f0",
+  "2": "4c55388894fdf2ebeb22206678125ac3",
+  "3": "7d219c1b2df29557297bde3ab561b784",
+  "4": "7238d20b674872da4a8d88e8469a5a3b"
+ }
+}

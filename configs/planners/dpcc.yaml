@@ -1,0 +1,11 @@
+# DPCC (Römer et al.): project every denoising step onto the padded constraint set (scipy SLSQP), execute the plan of
+# the batch with the smallest summed projection cost.
+# Legacy: SafeRobomimic@origin/um_dpcc (a71ff97a), variant 'dpcc-c-tightened' (scripts/eval_dev.py) -- the runner
+# behind the stored Table 2 DPCC numbers (replaces the origin/mpd-improved implementation).
+planner: dpcc
+legacy_variant: dpcc-c-tightened
+batch_size: 4                       # origin/um_dpcc config/avoiding-d3il.py plan.batch_size
+constraint_padding: 0.025           # um_dpcc config generator: enlarge_constraints = 0.025 for non-model_based variants
+dynamics_constraints: true          # the um_dpcc runner builds constraints with action_dim = 2 (dynamics rows included)
+trajectory_selection: minimum_projection_cost   # active: costs = Projector.project costs of every denoising step
+diffusion_timestep_threshold: 1.0   # constrain all denoising steps

@@ -1,0 +1,221 @@
+{
+ "source": "arXiv 2509.08775v2 (CoRL 2025), Table 2 and Table 3, page 12-13",
+ "protocol": "5 seeds (independently trained planners) x 100 trials; episode <= 200 steps; Diffuser planner H = 8. ssucc = safe success rate (mean +- std over seeds), n_vio = mean number of constraint-violating time steps.",
+ "scenarios": {
+  "top_left": "TopLeft",
+  "top_right": "TopRight",
+  "both": "Both",
+  "cluttered": "Cluttered"
+ },
+ "rows_table2": {
+  "dpcc": "DPCC",
+  "safediffuser": "SafeDiffuser",
+  "mpd": "MPD",
+  "jm2d": "Ours"
+ },
+ "printed_decimals": {
+  "table3_u_steps.10.top_left.n_vio": 1
+ },
+ "table2": {
+  "dpcc": {
+   "top_left": {
+    "ssucc": 0.87,
+    "ssucc_std": 0.04,
+    "n_vio": 0.02
+   },
+   "top_right": {
+    "ssucc": 0.72,
+    "ssucc_std": 0.06,
+    "n_vio": 0.77
+   },
+   "both": {
+    "ssucc": 0.66,
+    "ssucc_std": 0.15,
+    "n_vio": 1.46
+   },
+   "cluttered": {
+    "ssucc": 0.0,
+    "ssucc_std": 0.0,
+    "n_vio": 6.52
+   }
+  },
+  "safediffuser": {
+   "top_left": {
+    "ssucc": 0.15,
+    "ssucc_std": 0.12,
+    "n_vio": 13.18
+   },
+   "top_right": {
+    "ssucc": 0.07,
+    "ssucc_std": 0.02,
+    "n_vio": 18.27
+   },
+   "both": {
+    "ssucc": 0.01,
+    "ssucc_std": 0.01,
+    "n_vio": 11.66
+   },
+   "cluttered": {
+    "ssucc": 0.01,
+    "ssucc_std": 0.01,
+    "n_vio": 22.92
+   }
+  },
+  "mpd": {
+   "top_left": {
+    "ssucc": 0.13,
+    "ssucc_std": 0.13,
+    "n_vio": 11.97
+   },
+   "top_right": {
+    "ssucc": 0.08,
+    "ssucc_std": 0.06,
+    "n_vio": 14.85
+   },
+   "both": {
+    "ssucc": 0.03,
+    "ssucc_std": 0.03,
+    "n_vio": 10.8
+   },
+   "cluttered": {
+    "ssucc": 0.02,
+    "ssucc_std": 0.02,
+    "n_vio": 12.71
+   }
+  },
+  "jm2d": {
+   "top_left": {
+    "ssucc": 0.77,
+    "ssucc_std": 0.1,
+    "n_vio": 1.13
+   },
+   "top_right": {
+    "ssucc": 0.83,
+    "ssucc_std": 0.15,
+    "n_vio": 0.29
+   },
+   "both": {
+    "ssucc": 0.84,
+    "ssucc_std": 0.1,
+    "n_vio": 0.37
+   },
+   "cluttered": {
+    "ssucc": 0.75,
+    "ssucc_std": 0.01,
+    "n_vio": 0.32
+   }
+  }
+ },
+ "table3_u_steps": {
+  "0": {
+   "top_left": {
+    "ssucc": 0.13,
+    "ssucc_std": 0.15,
+    "n_vio": 12.92
+   },
+   "top_right": {
+    "ssucc": 0.06,
+    "ssucc_std": 0.07,
+    "n_vio": 18.34
+   },
+   "both": {
+    "ssucc": 0.0,
+    "ssucc_std": 0.02,
+    "n_vio": 12.98
+   },
+   "cluttered": {
+    "ssucc": 0.01,
+    "ssucc_std": 0.02,
+    "n_vio": 23.19
+   }
+  },
+  "1": {
+   "top_left": {
+    "ssucc": 0.47,
+    "ssucc_std": 0.24,
+    "n_vio": 3.54
+   },
+   "top_right": {
+    "ssucc": 0.33,
+    "ssucc_std": 0.23,
+    "n_vio": 5.24
+   },
+   "both": {
+    "ssucc": 0.32,
+    "ssucc_std": 0.18,
+    "n_vio": 5.76
+   },
+   "cluttered": {
+    "ssucc": 0.34,
+    "ssucc_std": 0.12,
+    "n_vio": 1.35
+   }
+  },
+  "2": {
+   "top_left": {
+    "ssucc": 0.5,
+    "ssucc_std": 0.3,
+    "n_vio": 3.14
+   },
+   "top_right": {
+    "ssucc": 0.45,
+    "ssucc_std": 0.17,
+    "n_vio": 2.8
+   },
+   "both": {
+    "ssucc": 0.5,
+    "ssucc_std": 0.16,
+    "n_vio": 3.48
+   },
+   "cluttered": {
+    "ssucc": 0.39,
+    "ssucc_std": 0.15,
+    "n_vio": 1.11
+   }
+  },
+  "5": {
+   "top_left": {
+    "ssucc": 0.68,
+    "ssucc_std": 0.23,
+    "n_vio": 1.83
+   },
+   "top_right": {
+    "ssucc": 0.65,
+    "ssucc_std": 0.19,
+    "n_vio": 1.15
+   },
+   "both": {
+    "ssucc": 0.82,
+    "ssucc_std": 0.09,
+    "n_vio": 0.59
+   },
+   "cluttered": {
+    "ssucc": 0.63,
+    "ssucc_std": 0.12,
+    "n_vio": 0.65
+   }
+  },
+  "10": {
+   "top_left": {
+    "ssucc": 0.7,
+    "ssucc_std": 0.22,
+    "n_vio": 1.6
+   },
+   "top_right": {
+    "ssucc": 0.81,
+    "ssucc_std": 0.19,
+    "n_vio": 0.41
+   },
+   "both": {
+    "ssucc": 0.84,
+    "ssucc_std": 0.07,
+    "n_vio": 0.38
+   },
+   "cluttered": {
+    "ssucc": 0.73,
+    "ssucc_std": 0.09,
+    "n_vio": 0.49
+   }
+  }
+ }
+}

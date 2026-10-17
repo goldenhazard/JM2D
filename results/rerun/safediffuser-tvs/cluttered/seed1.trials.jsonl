@@ -1,0 +1,17 @@
+{"trial": 0, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 58.0, "n_violations": 31.0, "total_violations": 194.98128769174517, "avg_time": 28.07216312145365, "collision_free_completed": 0.0}
+{"trial": 1, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 69.0, "n_violations": 37.0, "total_violations": 214.98773714963693, "avg_time": 27.01783870268559, "collision_free_completed": 0.0}
+{"trial": 2, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 66.0, "n_violations": 34.0, "total_violations": 196.61947825213252, "avg_time": 26.700778368747596, "collision_free_completed": 0.0}
+{"trial": 3, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 77.0, "n_violations": 38.0, "total_violations": 194.5848886220794, "avg_time": 26.755100305978353, "collision_free_completed": 0.0}
+{"trial": 4, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 103.0, "n_violations": 15.0, "total_violations": 12.777654656178305, "avg_time": 26.25511585855947, "collision_free_completed": 0.0}
+{"trial": 5, "n_success": 0.0, "n_success_and_constraints": 0.0, "n_steps": 54.0, "n_violations": 9.0, "total_violations": 36.29936533272257, "avg_time": 26.803318836070872, "collision_free_completed": 0.0}
+{"trial": 6, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 70.0, "n_violations": 16.0, "total_violations": 38.1514122277498, "avg_time": 26.57931342806135, "collision_free_completed": 0.0}
+{"trial": 7, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 66.0, "n_violations": 34.0, "total_violations": 211.7791622130758, "avg_time": 26.532548586527508, "collision_free_completed": 0.0}
+{"trial": 8, "n_success": 0.0, "n_success_and_constraints": 0.0, "n_steps": 39.0, "n_violations": 4.0, "total_violations": 0.1875048962966407, "avg_time": 27.096706262001625, "collision_free_completed": 0.0}
+{"trial": 9, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 87.0, "n_violations": 23.0, "total_violations": 167.63109087184665, "avg_time": 26.210085759217712, "collision_free_completed": 0.0}
+{"trial": 10, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 62.0, "n_violations": 32.0, "total_violations": 194.73166613753224, "avg_time": 23.517297917796718, "collision_free_completed": 0.0}
+{"trial": 11, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 75.0, "n_violations": 37.0, "total_violations": 194.14930799294774, "avg_time": 23.170009447733563, "collision_free_completed": 0.0}
+{"trial": 12, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 64.0, "n_violations": 3.0, "total_violations": 0.831422340869878, "avg_time": 23.133167516440153, "collision_free_completed": 0.0}
+{"trial": 13, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 92.0, "n_violations": 49.0, "total_violations": 215.3431837876422, "avg_time": 22.902385571728583, "collision_free_completed": 0.0}
+{"trial": 14, "n_success": 0.0, "n_success_and_constraints": 0.0, "n_steps": 39.0, "n_violations": 9.0, "total_violations": 20.51412202848672, "avg_time": 23.456187847333076, "collision_free_completed": 0.0}
+{"trial": 15, "n_success": 0.0, "n_success_and_constraints": 0.0, "n_steps": 31.0, "n_violations": 8.0, "total_violations": 0.05859180075251573, "avg_time": 23.311218930828957, "collision_free_completed": 0.0}
+{"trial": 16, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 82.0, "n_violations": 29.0, "total_violations": 191.32079084742102, "avg_time": 22.676000333413846, "collision_free_completed": 0.0}

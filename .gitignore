@@ -1,0 +1,24 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+# local installs and data (see README)
+.pydeps/
+.pydeps_test/
+third_party/d3il/
+checkpoints/
+logs/
+# run outputs. Kept: results/paper/, results/throughput/, results/rerun/queue.json, results/rerun/README.md and the
+# finished per-job summaries results/rerun/<label>/<scenario>/seed<k>.json. Ignored: in-progress trial files, logs,
+# the STOP / pid files of the sweep and temporary files of the atomic summary writes.
+results/runs/
+results/rerun/**/*.trials.jsonl
+# SafeDiffuser / MPD trial files are tracked: the shipped Table 2 SafeDiffuser / MPD rows are built from them
+!results/rerun/safediffuser-res/**/*.trials.jsonl
+!results/rerun/safediffuser-tvs/**/*.trials.jsonl
+!results/rerun/mpd/**/*.trials.jsonl
+results/rerun/**/*.json.tmp
+results/rerun/logs/
+results/rerun/STOP
+results/rerun/sweep_master.pid
+MUJOCO_LOG.TXT

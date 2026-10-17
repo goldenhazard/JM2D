@@ -1,0 +1,6 @@
+{"trial": 0, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 63.0, "n_violations": 15.0, "total_violations": 0.5061879521215958, "avg_time": 31.44241862069993, "collision_free_completed": 0.0}
+{"trial": 1, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 68.0, "n_violations": 38.0, "total_violations": 12.236545383930206, "avg_time": 32.34867821020239, "collision_free_completed": 0.0}
+{"trial": 2, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 63.0, "n_violations": 15.0, "total_violations": 0.3512933068857313, "avg_time": 30.81283203760783, "collision_free_completed": 0.0}
+{"trial": 3, "n_success": 1.0, "n_success_and_constraints": 0.0, "n_steps": 65.0, "n_violations": 27.0, "total_violations": 10.035306081175804, "avg_time": 31.855171331992516, "collision_free_completed": 0.0}
+{"trial": 4, "n_success": 0.0, "n_success_and_constraints": 0.0, "n_steps": 47.0, "n_violations": 25.0, "total_violations": 4.799367822706699, "avg_time": 31.932786084235982, "collision_free_completed": 0.0}
+{"trial": 5, "n_success": 0.0, "n_success_and_constraints": 0.0, "n_steps": 28.0, "n_violations": 0.0, "total_violations": 0.0, "avg_time": 31.022719630173274, "collision_free_completed": 0.0}
