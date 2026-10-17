@@ -1,0 +1,839 @@
+{
+  "cases": {
+    "dp_pad000_hq": {
+      "planner": "dp",
+      "pad": 0.0,
+      "backup": "hq",
+      "seeds": [
+        0,
+        1
+      ],
+      "horizon": 50,
+      "legacy_root": "maze",
+      "legacy_policy_mode": "diffusion",
+      "legacy_backup_policy_type": "simple2d",
+      "legacy_maze_name": "large",
+      "legacy_config": "config_ws.json",
+      "legacy_config_md5": "4e0aca492b81d4926323b0d1f3c089b3",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4
+      ],
+      "mean_replan_time_s": 0.18259328603744507,
+      "wall_time_s": 1.7,
+      "pool_workers": null,
+      "modules": {
+        "robomimic": "<legacy rail_release export>/robomimic/__init__.py",
+        "safediffusion": "<legacy rail_release export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy rail_release export>/safediffusion_d4rl/pointmaze/utils.py"
+      }
+    },
+    "dp_pad025_hq": {
+      "planner": "dp",
+      "pad": 0.25,
+      "backup": "hq",
+      "seeds": [
+        0,
+        1
+      ],
+      "horizon": 50,
+      "legacy_root": "maze",
+      "legacy_policy_mode": "diffusion",
+      "legacy_backup_policy_type": "simple2d",
+      "legacy_maze_name": "large_pad025",
+      "legacy_config": "config_ws.json",
+      "legacy_config_md5": "4e0aca492b81d4926323b0d1f3c089b3",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4
+      ],
+      "mean_replan_time_s": 0.2633150815963745,
+      "wall_time_s": 2.3,
+      "pool_workers": null,
+      "modules": {
+        "robomimic": "<legacy rail_release export>/robomimic/__init__.py",
+        "safediffusion": "<legacy rail_release export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy rail_release export>/safediffusion_d4rl/pointmaze/utils.py"
+      }
+    },
+    "rail_pad000_hq": {
+      "planner": "rail",
+      "pad": 0.0,
+      "backup": "hq",
+      "seeds": [
+        0,
+        1
+      ],
+      "horizon": 50,
+      "legacy_root": "maze",
+      "legacy_policy_mode": "rail",
+      "legacy_backup_policy_type": "simple2d",
+      "legacy_maze_name": "large",
+      "legacy_config": "config_ws.json",
+      "legacy_config_md5": "4e0aca492b81d4926323b0d1f3c089b3",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 4,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4
+      ],
+      "mean_replan_time_s": 0.7968775033950806,
+      "wall_time_s": 6.6,
+      "pool_workers": null,
+      "modules": {
+        "robomimic": "<legacy rail_release export>/robomimic/__init__.py",
+        "safediffusion": "<legacy rail_release export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy rail_release export>/safediffusion_d4rl/pointmaze/utils.py"
+      }
+    },
+    "rail_pad025_hq": {
+      "planner": "rail",
+      "pad": 0.25,
+      "backup": "hq",
+      "seeds": [
+        0,
+        1
+      ],
+      "horizon": 50,
+      "legacy_root": "maze",
+      "legacy_policy_mode": "rail",
+      "legacy_backup_policy_type": "simple2d",
+      "legacy_maze_name": "large_pad025",
+      "legacy_config": "config_ws.json",
+      "legacy_config_md5": "4e0aca492b81d4926323b0d1f3c089b3",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 4,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 3,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4
+      ],
+      "mean_replan_time_s": 1.225681632757187,
+      "wall_time_s": 10.0,
+      "pool_workers": null,
+      "modules": {
+        "robomimic": "<legacy rail_release export>/robomimic/__init__.py",
+        "safediffusion": "<legacy rail_release export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy rail_release export>/safediffusion_d4rl/pointmaze/utils.py"
+      }
+    },
+    "jm2d_pad000_hq": {
+      "planner": "jm2d",
+      "pad": 0.0,
+      "backup": "hq",
+      "seeds": [
+        0,
+        1
+      ],
+      "horizon": 50,
+      "legacy_root": "maze",
+      "legacy_policy_mode": "rail_aligned",
+      "legacy_backup_policy_type": "simple2d",
+      "legacy_maze_name": "large",
+      "legacy_config": "config_ws.json",
+      "legacy_config_md5": "4e0aca492b81d4926323b0d1f3c089b3",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4
+      ],
+      "mean_replan_time_s": 6.23564150929451,
+      "wall_time_s": 50.1,
+      "pool_workers": 8,
+      "modules": {
+        "robomimic": "<legacy rail_release export>/robomimic/__init__.py",
+        "safediffusion": "<legacy rail_release export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy rail_release export>/safediffusion_d4rl/pointmaze/utils.py"
+      }
+    },
+    "jm2d_pad025_hq": {
+      "planner": "jm2d",
+      "pad": 0.25,
+      "backup": "hq",
+      "seeds": [
+        0,
+        1
+      ],
+      "horizon": 50,
+      "legacy_root": "maze",
+      "legacy_policy_mode": "rail_aligned",
+      "legacy_backup_policy_type": "simple2d",
+      "legacy_maze_name": "large_pad025",
+      "legacy_config": "config_ws.json",
+      "legacy_config_md5": "4e0aca492b81d4926323b0d1f3c089b3",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4
+      ],
+      "mean_replan_time_s": 6.4725096225738525,
+      "wall_time_s": 52.1,
+      "pool_workers": 8,
+      "modules": {
+        "robomimic": "<legacy rail_release export>/robomimic/__init__.py",
+        "safediffusion": "<legacy rail_release export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy rail_release export>/safediffusion_d4rl/pointmaze/utils.py"
+      }
+    },
+    "rail_pad020_xpyp": {
+      "planner": "rail",
+      "pad": 0.2,
+      "backup": "xpyp",
+      "seeds": [
+        0,
+        1
+      ],
+      "horizon": 50,
+      "legacy_root": "maze",
+      "legacy_policy_mode": "rail",
+      "legacy_backup_policy_type": "simple2d_xpyp",
+      "legacy_maze_name": "large_pad020",
+      "legacy_config": "config_ws.json",
+      "legacy_config_md5": "4e0aca492b81d4926323b0d1f3c089b3",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 4,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 3,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4
+      ],
+      "mean_replan_time_s": 1.1073841750621796,
+      "wall_time_s": 9.1,
+      "pool_workers": null,
+      "modules": {
+        "robomimic": "<legacy rail_release export>/robomimic/__init__.py",
+        "safediffusion": "<legacy rail_release export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy rail_release export>/safediffusion_d4rl/pointmaze/utils.py"
+      }
+    },
+    "jm2d_pad020_xpyp": {
+      "planner": "jm2d",
+      "pad": 0.2,
+      "backup": "xpyp",
+      "seeds": [
+        0,
+        1
+      ],
+      "horizon": 50,
+      "legacy_root": "maze",
+      "legacy_policy_mode": "rail_aligned",
+      "legacy_backup_policy_type": "simple2d_xpyp",
+      "legacy_maze_name": "large_pad020",
+      "legacy_config": "config_ws.json",
+      "legacy_config_md5": "4e0aca492b81d4926323b0d1f3c089b3",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 4,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4
+      ],
+      "mean_replan_time_s": 6.225053578615189,
+      "wall_time_s": 50.0,
+      "pool_workers": 8,
+      "modules": {
+        "robomimic": "<legacy rail_release export>/robomimic/__init__.py",
+        "safediffusion": "<legacy rail_release export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy rail_release export>/safediffusion_d4rl/pointmaze/utils.py"
+      }
+    },
+    "gibbs_pad000_hq": {
+      "planner": "gibbs",
+      "pad": 0.0,
+      "backup": "hq",
+      "seeds": [
+        0,
+        1
+      ],
+      "horizon": 50,
+      "legacy_root": "gibbs",
+      "legacy_policy_mode": "rail_aligned",
+      "legacy_backup_policy_type": "simple2d",
+      "legacy_maze_name": "large",
+      "legacy_config": "config_ws_gibbs.json",
+      "legacy_config_md5": "a83d2413dec32f50487bdd431a33e348",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4
+      ],
+      "mean_replan_time_s": 10.83654510974884,
+      "wall_time_s": 86.8,
+      "pool_workers": 8,
+      "modules": {
+        "robomimic": "<legacy paper/gibbs export>/robomimic/__init__.py",
+        "safediffusion": "<legacy paper/gibbs export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy paper/gibbs export>/safediffusion_d4rl/pointmaze/utils.py"
+      }
+    },
+    "gibbs_pad025_hq": {
+      "planner": "gibbs",
+      "pad": 0.25,
+      "backup": "hq",
+      "seeds": [
+        0,
+        1
+      ],
+      "horizon": 50,
+      "legacy_root": "gibbs",
+      "legacy_policy_mode": "rail_aligned",
+      "legacy_backup_policy_type": "simple2d",
+      "legacy_maze_name": "large_pad025",
+      "legacy_config": "config_ws_gibbs.json",
+      "legacy_config_md5": "a83d2413dec32f50487bdd431a33e348",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 1,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4
+      ],
+      "mean_replan_time_s": 10.437665522098541,
+      "wall_time_s": 83.6,
+      "pool_workers": 8,
+      "modules": {
+        "robomimic": "<legacy paper/gibbs export>/robomimic/__init__.py",
+        "safediffusion": "<legacy paper/gibbs export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy paper/gibbs export>/safediffusion_d4rl/pointmaze/utils.py"
+      }
+    },
+    "rail_pad020_xmym": {
+      "planner": "rail",
+      "pad": 0.2,
+      "backup": "xmym",
+      "seeds": [
+        0,
+        1
+      ],
+      "horizon": 50,
+      "legacy_root": "maze",
+      "legacy_policy_mode": "rail",
+      "legacy_backup_policy_type": "simple2d_xmym",
+      "legacy_maze_name": "large_pad020",
+      "legacy_config": "config_ws.json",
+      "legacy_config_md5": "4e0aca492b81d4926323b0d1f3c089b3",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 3,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 2,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4
+      ],
+      "mean_replan_time_s": 1.1052880585193634,
+      "wall_time_s": 9.2,
+      "pool_workers": null,
+      "modules": {
+        "robomimic": "<legacy rail_release export>/robomimic/__init__.py",
+        "safediffusion": "<legacy rail_release export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy rail_release export>/safediffusion_d4rl/pointmaze/utils.py"
+      },
+      "added": "2026-10-16 (review): captured twice (A, B) from the legacy export, bitwise identical"
+    },
+    "jm2d_pad020_xmym": {
+      "planner": "jm2d",
+      "pad": 0.2,
+      "backup": "xmym",
+      "seeds": [
+        0,
+        1
+      ],
+      "horizon": 50,
+      "legacy_root": "maze",
+      "legacy_policy_mode": "rail_aligned",
+      "legacy_backup_policy_type": "simple2d_xmym",
+      "legacy_maze_name": "large_pad020",
+      "legacy_config": "config_ws.json",
+      "legacy_config_md5": "4e0aca492b81d4926323b0d1f3c089b3",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 1,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4
+      ],
+      "mean_replan_time_s": 13.401451647281647,
+      "wall_time_s": 107.5,
+      "pool_workers": 8,
+      "modules": {
+        "robomimic": "<legacy rail_release export>/robomimic/__init__.py",
+        "safediffusion": "<legacy rail_release export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy rail_release export>/safediffusion_d4rl/pointmaze/utils.py"
+      },
+      "added": "2026-10-16 (review): captured twice (A, B) from the legacy export, bitwise identical"
+    },
+    "jm2d_pad025_hq_intervene": {
+      "planner": "jm2d",
+      "pad": 0.25,
+      "backup": "hq",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "horizon": 50,
+      "legacy_root": "maze",
+      "legacy_policy_mode": "rail_aligned",
+      "legacy_backup_policy_type": "simple2d",
+      "legacy_maze_name": "large_pad025",
+      "legacy_config": "config_ws.json",
+      "legacy_config_md5": "4e0aca492b81d4926323b0d1f3c089b3",
+      "stats": {
+        "0": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "1": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 0,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        },
+        "2": {
+          "Success": false,
+          "Horizon": 50,
+          "Unsafe": 0,
+          "Intervention": 2,
+          "Plan": 4,
+          "Stuck": false,
+          "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+          }
+        }
+      },
+      "n_steps": [
+        50,
+        50,
+        50
+      ],
+      "n_replans": [
+        4,
+        4,
+        4
+      ],
+      "mean_replan_time_s": 14.107683817545572,
+      "wall_time_s": 169.8,
+      "pool_workers": 8,
+      "modules": {
+        "robomimic": "<legacy rail_release export>/robomimic/__init__.py",
+        "safediffusion": "<legacy rail_release export>/safediffusion/algo/safe_diffusion_policy.py",
+        "d4rl": "<goldenhazard/D4RL@a0b30c4 checkout>/d4rl/__init__.py",
+        "maze_utils": "<legacy rail_release export>/safediffusion_d4rl/pointmaze/utils.py"
+      },
+      "added": "2026-10-16 (review): captured twice (A, B) from the legacy export, bitwise identical"
+    }
+  },
+  "legacy_repo": "SafeRobomimic (goldenhazard/SafeMimic)",
+  "legacy_refs": {
+    "maze": {
+      "ref": "robomimic (= origin/rail_release)",
+      "commit": "8b2371d25525aca3554c5fd7d3d2c6b563b2c317"
+    },
+    "gibbs": {
+      "ref": "paper/gibbs",
+      "commit": "be46370b7c9a546f02870765e199e7fbf47f96b3"
+    }
+  },
+  "checkpoint": {
+    "file": "checkpoints/maze2d_large_ep1900.pth",
+    "md5": "a756af86fe2070c2e77358ca380ccc44",
+    "source": "SafeRobomimic/diffusion_policy_trained_models/maze2d_large/model_epoch_1900.pth"
+  },
+  "protocol": "set_random_seed(42) -> policy_and_env_from_checkpoint_and_config -> for seed in seeds: set_random_seed(seed, deterministic_torch=False) -> env.reset -> legacy rollout(horizon); video writer and env.render replaced by no-ops",
+  "seed_gym_spaces": "unseeded gym spaces seeded with 0 (MujocoEnv.__init__ random step)",
+  "deterministic_gpu": "legacy flags (non-deterministic cuDNN)",
+  "recorded": {
+    "per_step": [
+      "state",
+      "action",
+      "intervened",
+      "action_idx",
+      "k_backup"
+    ],
+    "per_replan": [
+      "replan_step",
+      "nominal_actions",
+      "nominal_plan_x",
+      "objective"
+    ],
+    "note": "ep<i>_* arrays, i = index into seeds; actions/states/k stored as float64 (lossless)"
+  },
+  "environment": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "pool_workers": 8,
+    "python": "3.8.18",
+    "torch": "2.1.2",
+    "cuda": "11.8",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "conda_env": "safemimic (python 3.8.18, torch 2.1.2+cu118)"
+  },
+  "determinism": "two full captures in separate processes (3 cases concurrently, pool of 8) were bitwise identical; a capture with a pool of 16 workers was bitwise identical to the 8-worker capture (jm2d_pad025_hq, gibbs_pad025_hq, jm2d_pad020_xpyp). Without seeding the gym spaces, two captures differed by up to 1e-4 in the first DP action (and diverged later). Review additions (rail_pad020_xmym, jm2d_pad020_xmym, jm2d_pad025_hq_intervene): two captures bitwise identical.",
+  "legacy_configs": {
+    "config_ws.json": "4e0aca492b81d4926323b0d1f3c089b3",
+    "config_ws_gibbs.json": "a83d2413dec32f50487bdd431a33e348",
+    "note": "md5 of the untracked SafeRobomimic/diffusion_policy_trained_models/maze2d_large files; copies with output_dir redacted are in tests/golden/legacy_configs/"
+  }
+}

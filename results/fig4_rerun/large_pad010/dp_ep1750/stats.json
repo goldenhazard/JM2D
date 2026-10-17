@@ -1,0 +1,1310 @@
+{
+    "0": {
+        "Success": true,
+        "Horizon": 229,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 15,
+        "Stuck": false,
+        "Time": 0.09185514450073243,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "1": {
+        "Success": true,
+        "Horizon": 408,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 26,
+        "Stuck": false,
+        "Time": 0.07759896608499381,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "2": {
+        "Success": true,
+        "Horizon": 88,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 6,
+        "Stuck": false,
+        "Time": 0.09051096439361572,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "3": {
+        "Success": true,
+        "Horizon": 305,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 20,
+        "Stuck": false,
+        "Time": 0.10523945093154907,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "4": {
+        "Success": true,
+        "Horizon": 237,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 15,
+        "Stuck": false,
+        "Time": 0.07334787050882975,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "5": {
+        "Success": true,
+        "Horizon": 62,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 4,
+        "Stuck": false,
+        "Time": 0.21314293146133423,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "6": {
+        "Success": true,
+        "Horizon": 159,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 10,
+        "Stuck": false,
+        "Time": 0.07791705131530761,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "7": {
+        "Success": true,
+        "Horizon": 1,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 1,
+        "Stuck": false,
+        "Time": 0.29668378829956055,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "8": {
+        "Success": true,
+        "Horizon": 146,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 10,
+        "Stuck": false,
+        "Time": 0.07323660850524902,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "9": {
+        "Success": true,
+        "Horizon": 76,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 5,
+        "Stuck": false,
+        "Time": 0.09371495246887207,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "10": {
+        "Success": true,
+        "Horizon": 120,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 8,
+        "Stuck": false,
+        "Time": 0.08796820044517517,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "11": {
+        "Success": true,
+        "Horizon": 209,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 14,
+        "Stuck": false,
+        "Time": 0.22969789164406912,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "12": {
+        "Success": true,
+        "Horizon": 146,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 10,
+        "Stuck": false,
+        "Time": 0.07657139301300049,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "13": {
+        "Success": true,
+        "Horizon": 240,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 15,
+        "Stuck": false,
+        "Time": 0.18138421376546224,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "14": {
+        "Success": true,
+        "Horizon": 114,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 8,
+        "Stuck": false,
+        "Time": 0.396460622549057,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "15": {
+        "Success": true,
+        "Horizon": 148,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 10,
+        "Stuck": false,
+        "Time": 0.07664268016815186,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "16": {
+        "Success": true,
+        "Horizon": 260,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 17,
+        "Stuck": false,
+        "Time": 0.0770728027119356,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "17": {
+        "Success": true,
+        "Horizon": 61,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 4,
+        "Stuck": false,
+        "Time": 0.09021192789077759,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "18": {
+        "Success": true,
+        "Horizon": 32,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 2,
+        "Stuck": false,
+        "Time": 0.1559385061264038,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "19": {
+        "Success": true,
+        "Horizon": 57,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 4,
+        "Stuck": false,
+        "Time": 0.3036305904388428,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "20": {
+        "Success": true,
+        "Horizon": 119,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 8,
+        "Stuck": false,
+        "Time": 0.1201285719871521,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "21": {
+        "Success": true,
+        "Horizon": 408,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 26,
+        "Stuck": false,
+        "Time": 0.06790737005380484,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "22": {
+        "Success": true,
+        "Horizon": 231,
+        "Unsafe": 23,
+        "Intervention": 0,
+        "Plan": 15,
+        "Stuck": false,
+        "Time": 0.07286702791849772,
+        "SafetyDetail": {
+            "HeadPlan": 23,
+            "BackupPlan": 0
+        }
+    },
+    "23": {
+        "Success": true,
+        "Horizon": 265,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 17,
+        "Stuck": false,
+        "Time": 0.07471498321084415,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "24": {
+        "Success": true,
+        "Horizon": 31,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 2,
+        "Stuck": false,
+        "Time": 0.1128619909286499,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "25": {
+        "Success": true,
+        "Horizon": 499,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 32,
+        "Stuck": false,
+        "Time": 0.07047653943300247,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "26": {
+        "Success": true,
+        "Horizon": 367,
+        "Unsafe": 4,
+        "Intervention": 0,
+        "Plan": 23,
+        "Stuck": false,
+        "Time": 0.08673638882844345,
+        "SafetyDetail": {
+            "HeadPlan": 4,
+            "BackupPlan": 0
+        }
+    },
+    "27": {
+        "Success": true,
+        "Horizon": 257,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 17,
+        "Stuck": false,
+        "Time": 0.09558973592870376,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "28": {
+        "Success": true,
+        "Horizon": 472,
+        "Unsafe": 6,
+        "Intervention": 0,
+        "Plan": 30,
+        "Stuck": false,
+        "Time": 0.0749134381612142,
+        "SafetyDetail": {
+            "HeadPlan": 6,
+            "BackupPlan": 0
+        }
+    },
+    "29": {
+        "Success": true,
+        "Horizon": 132,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 9,
+        "Stuck": false,
+        "Time": 0.2391868167453342,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "30": {
+        "Success": true,
+        "Horizon": 198,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 13,
+        "Stuck": false,
+        "Time": 0.14334942744328424,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "31": {
+        "Success": true,
+        "Horizon": 69,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 5,
+        "Stuck": false,
+        "Time": 0.08622965812683106,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "32": {
+        "Success": true,
+        "Horizon": 472,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 30,
+        "Stuck": false,
+        "Time": 0.11914947032928466,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "33": {
+        "Success": true,
+        "Horizon": 150,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 10,
+        "Stuck": false,
+        "Time": 0.14158158302307128,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "34": {
+        "Success": true,
+        "Horizon": 197,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 13,
+        "Stuck": false,
+        "Time": 0.27377915382385254,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "35": {
+        "Success": true,
+        "Horizon": 378,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 24,
+        "Stuck": false,
+        "Time": 0.14682898918787637,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "36": {
+        "Success": true,
+        "Horizon": 386,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 25,
+        "Stuck": false,
+        "Time": 0.1284128952026367,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "37": {
+        "Success": true,
+        "Horizon": 272,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 17,
+        "Stuck": false,
+        "Time": 0.16377521963680491,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "38": {
+        "Success": true,
+        "Horizon": 163,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 11,
+        "Stuck": false,
+        "Time": 0.13186567479913885,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "39": {
+        "Success": true,
+        "Horizon": 210,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 14,
+        "Stuck": false,
+        "Time": 0.1817394154412406,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "40": {
+        "Success": true,
+        "Horizon": 315,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 20,
+        "Stuck": false,
+        "Time": 0.17931780815124512,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "41": {
+        "Success": true,
+        "Horizon": 228,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 15,
+        "Stuck": false,
+        "Time": 0.3333202679951986,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "42": {
+        "Success": true,
+        "Horizon": 232,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 15,
+        "Stuck": false,
+        "Time": 0.22442390124003092,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "43": {
+        "Success": true,
+        "Horizon": 404,
+        "Unsafe": 4,
+        "Intervention": 0,
+        "Plan": 26,
+        "Stuck": false,
+        "Time": 0.1360624019916241,
+        "SafetyDetail": {
+            "HeadPlan": 4,
+            "BackupPlan": 0
+        }
+    },
+    "44": {
+        "Success": true,
+        "Horizon": 192,
+        "Unsafe": 9,
+        "Intervention": 0,
+        "Plan": 12,
+        "Stuck": false,
+        "Time": 0.14995354413986206,
+        "SafetyDetail": {
+            "HeadPlan": 9,
+            "BackupPlan": 0
+        }
+    },
+    "45": {
+        "Success": true,
+        "Horizon": 478,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 30,
+        "Stuck": false,
+        "Time": 0.20499144395192465,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "46": {
+        "Success": true,
+        "Horizon": 1,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 1,
+        "Stuck": false,
+        "Time": 1.0048377513885498,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "47": {
+        "Success": true,
+        "Horizon": 274,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 18,
+        "Stuck": false,
+        "Time": 0.201439725028144,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "48": {
+        "Success": true,
+        "Horizon": 85,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 6,
+        "Stuck": false,
+        "Time": 0.18144845962524414,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "49": {
+        "Success": true,
+        "Horizon": 93,
+        "Unsafe": 4,
+        "Intervention": 0,
+        "Plan": 6,
+        "Stuck": false,
+        "Time": 0.41833988825480145,
+        "SafetyDetail": {
+            "HeadPlan": 4,
+            "BackupPlan": 0
+        }
+    },
+    "50": {
+        "Success": true,
+        "Horizon": 250,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 16,
+        "Stuck": false,
+        "Time": 0.13441143929958344,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "51": {
+        "Success": true,
+        "Horizon": 313,
+        "Unsafe": 3,
+        "Intervention": 0,
+        "Plan": 20,
+        "Stuck": false,
+        "Time": 0.16469962596893312,
+        "SafetyDetail": {
+            "HeadPlan": 3,
+            "BackupPlan": 0
+        }
+    },
+    "52": {
+        "Success": true,
+        "Horizon": 85,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 6,
+        "Stuck": false,
+        "Time": 0.24848759174346924,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "53": {
+        "Success": true,
+        "Horizon": 152,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 10,
+        "Stuck": false,
+        "Time": 0.19090549945831298,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "54": {
+        "Success": true,
+        "Horizon": 227,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 15,
+        "Stuck": false,
+        "Time": 0.13528219858805338,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "55": {
+        "Success": true,
+        "Horizon": 474,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 30,
+        "Stuck": false,
+        "Time": 0.1788148005803426,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "56": {
+        "Success": true,
+        "Horizon": 234,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 15,
+        "Stuck": false,
+        "Time": 0.14581101735432941,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "57": {
+        "Success": true,
+        "Horizon": 304,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 19,
+        "Stuck": false,
+        "Time": 0.13100129679629677,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "58": {
+        "Success": true,
+        "Horizon": 256,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 16,
+        "Stuck": false,
+        "Time": 0.13393846154212952,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "59": {
+        "Success": true,
+        "Horizon": 263,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 17,
+        "Stuck": false,
+        "Time": 0.2781818474040312,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "60": {
+        "Success": true,
+        "Horizon": 221,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 14,
+        "Stuck": false,
+        "Time": 0.22787068571363175,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "61": {
+        "Success": true,
+        "Horizon": 396,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 25,
+        "Stuck": false,
+        "Time": 0.1504802131652832,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "62": {
+        "Success": true,
+        "Horizon": 315,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 20,
+        "Stuck": false,
+        "Time": 0.13861991167068483,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "63": {
+        "Success": true,
+        "Horizon": 64,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 4,
+        "Stuck": false,
+        "Time": 0.24835360050201416,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "64": {
+        "Success": true,
+        "Horizon": 213,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 14,
+        "Stuck": false,
+        "Time": 0.13500498022351945,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "65": {
+        "Success": true,
+        "Horizon": 114,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 8,
+        "Stuck": false,
+        "Time": 0.14452216029167175,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "66": {
+        "Success": true,
+        "Horizon": 353,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 23,
+        "Stuck": false,
+        "Time": 0.12958025932312012,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "67": {
+        "Success": true,
+        "Horizon": 191,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 12,
+        "Stuck": false,
+        "Time": 0.1365918517112732,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "68": {
+        "Success": true,
+        "Horizon": 198,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 13,
+        "Stuck": false,
+        "Time": 0.13000150827261117,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "69": {
+        "Success": true,
+        "Horizon": 164,
+        "Unsafe": 4,
+        "Intervention": 0,
+        "Plan": 11,
+        "Stuck": false,
+        "Time": 0.18558382987976074,
+        "SafetyDetail": {
+            "HeadPlan": 4,
+            "BackupPlan": 0
+        }
+    },
+    "70": {
+        "Success": true,
+        "Horizon": 311,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 20,
+        "Stuck": false,
+        "Time": 0.13206883668899536,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "71": {
+        "Success": true,
+        "Horizon": 304,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 19,
+        "Stuck": false,
+        "Time": 0.12881420788012052,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "72": {
+        "Success": true,
+        "Horizon": 421,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 27,
+        "Stuck": false,
+        "Time": 0.1411086011815954,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "73": {
+        "Success": true,
+        "Horizon": 362,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 23,
+        "Stuck": false,
+        "Time": 0.13149395196334177,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "74": {
+        "Success": true,
+        "Horizon": 246,
+        "Unsafe": 1,
+        "Intervention": 0,
+        "Plan": 16,
+        "Stuck": false,
+        "Time": 0.15982617437839508,
+        "SafetyDetail": {
+            "HeadPlan": 1,
+            "BackupPlan": 0
+        }
+    },
+    "75": {
+        "Success": true,
+        "Horizon": 454,
+        "Unsafe": 2,
+        "Intervention": 0,
+        "Plan": 29,
+        "Stuck": false,
+        "Time": 0.1341383621610444,
+        "SafetyDetail": {
+            "HeadPlan": 2,
+            "BackupPlan": 0
+        }
+    },
+    "76": {
+        "Success": true,
+        "Horizon": 1252,
+        "Unsafe": 729,
+        "Intervention": 0,
+        "Plan": 79,
+        "Stuck": false,
+        "Time": 0.12153065657313866,
+        "SafetyDetail": {
+            "HeadPlan": 729,
+            "BackupPlan": 0
+        }
+    },
+    "77": {
+        "Success": true,
+        "Horizon": 272,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 17,
+        "Stuck": false,
+        "Time": 0.15175387438605814,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "78": {
+        "Success": true,
+        "Horizon": 278,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 18,
+        "Stuck": false,
+        "Time": 0.23149482409159342,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "79": {
+        "Success": true,
+        "Horizon": 94,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 6,
+        "Stuck": false,
+        "Time": 0.30286208788553876,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "80": {
+        "Success": true,
+        "Horizon": 231,
+        "Unsafe": 2,
+        "Intervention": 0,
+        "Plan": 15,
+        "Stuck": false,
+        "Time": 0.2975893179575602,
+        "SafetyDetail": {
+            "HeadPlan": 2,
+            "BackupPlan": 0
+        }
+    },
+    "81": {
+        "Success": true,
+        "Horizon": 185,
+        "Unsafe": 7,
+        "Intervention": 0,
+        "Plan": 12,
+        "Stuck": false,
+        "Time": 0.18346269925435385,
+        "SafetyDetail": {
+            "HeadPlan": 7,
+            "BackupPlan": 0
+        }
+    },
+    "82": {
+        "Success": true,
+        "Horizon": 1,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 1,
+        "Stuck": false,
+        "Time": 0.3660104274749756,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "83": {
+        "Success": true,
+        "Horizon": 1,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 1,
+        "Stuck": false,
+        "Time": 2.9043526649475098,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "84": {
+        "Success": true,
+        "Horizon": 119,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 8,
+        "Stuck": false,
+        "Time": 0.151228129863739,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "85": {
+        "Success": true,
+        "Horizon": 283,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 18,
+        "Stuck": false,
+        "Time": 0.1369759506649441,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "86": {
+        "Success": true,
+        "Horizon": 326,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 21,
+        "Stuck": false,
+        "Time": 0.3470467385791597,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "87": {
+        "Success": false,
+        "Horizon": 2000,
+        "Unsafe": 1497,
+        "Intervention": 0,
+        "Plan": 125,
+        "Stuck": false,
+        "Time": 0.157582088470459,
+        "SafetyDetail": {
+            "HeadPlan": 1497,
+            "BackupPlan": 0
+        }
+    },
+    "88": {
+        "Success": true,
+        "Horizon": 602,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 38,
+        "Stuck": false,
+        "Time": 0.14916906231328061,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "89": {
+        "Success": true,
+        "Horizon": 443,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 28,
+        "Stuck": false,
+        "Time": 0.18042357478822982,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "90": {
+        "Success": true,
+        "Horizon": 183,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 12,
+        "Stuck": false,
+        "Time": 0.21492916345596313,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "91": {
+        "Success": true,
+        "Horizon": 141,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 9,
+        "Stuck": false,
+        "Time": 0.16001004642910427,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "92": {
+        "Success": true,
+        "Horizon": 229,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 15,
+        "Stuck": false,
+        "Time": 0.19289876619974772,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "93": {
+        "Success": true,
+        "Horizon": 239,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 15,
+        "Stuck": false,
+        "Time": 0.1491732915242513,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "94": {
+        "Success": true,
+        "Horizon": 237,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 15,
+        "Stuck": false,
+        "Time": 0.2222020467122396,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "95": {
+        "Success": true,
+        "Horizon": 152,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 10,
+        "Stuck": false,
+        "Time": 0.15690841674804687,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "96": {
+        "Success": true,
+        "Horizon": 97,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 7,
+        "Stuck": false,
+        "Time": 0.21640498297555105,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "97": {
+        "Success": true,
+        "Horizon": 248,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 16,
+        "Stuck": false,
+        "Time": 0.18661001324653625,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "98": {
+        "Success": true,
+        "Horizon": 201,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 13,
+        "Stuck": false,
+        "Time": 0.14118475180405837,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "99": {
+        "Success": true,
+        "Horizon": 367,
+        "Unsafe": 0,
+        "Intervention": 0,
+        "Plan": 23,
+        "Stuck": false,
+        "Time": 0.26163907673047937,
+        "SafetyDetail": {
+            "HeadPlan": 0,
+            "BackupPlan": 0
+        }
+    },
+    "success_rate": 0.99,
+    "unsafe_rate": 0.08915391189495765,
+    "intervention_rate": 0.0,
+    "total_runs": 100,
+    "average_horizon": 257.42,
+    "success_and_safe_rate": 0.86,
+    "total_plan_length": 1658,
+    "total_intervention": 0
+}

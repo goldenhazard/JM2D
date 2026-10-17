@@ -1,0 +1,1676 @@
+{
+ "source": "SafeRobomimic/safediffusion_d4rl/pointmaze/results/large (research-code runs)",
+ "renamed": "JM2D run folders: research-code prefix 'rail_aligned' -> 'jm2d' (legacy_path = original)",
+ "runs": [
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "2025-04-12/13 run (inferred)",
+   "path": "large_pad000/jm2d_2025_04_13_08_26_iter0",
+   "legacy_path": "large_pad000/rail_aligned_2025_04_13_08_26_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad000/jm2d_2025_04_23_22_52_iter0",
+   "legacy_path": "large_pad000/rail_aligned_2025_04_23_22_52_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad000/jm2d_2025_04_24_02_01_iter0",
+   "legacy_path": "large_pad000/rail_aligned_2025_04_24_02_01_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad000/jm2d_2025_04_24_05_30_iter0",
+   "legacy_path": "large_pad000/rail_aligned_2025_04_24_05_30_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad000/jm2d_2025_04_24_08_24_iter0",
+   "legacy_path": "large_pad000/rail_aligned_2025_04_24_08_24_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "2025-04-12/13 run (inferred)",
+   "path": "large_pad000/rail_2025_04_13_08_26_iter0",
+   "legacy_path": "large_pad000/rail_2025_04_13_08_26_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad000/rail_2025_04_22_22_28_iter0",
+   "legacy_path": "large_pad000/rail_2025_04_22_22_28_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad000/rail_2025_04_22_23_02_iter0",
+   "legacy_path": "large_pad000/rail_2025_04_22_23_02_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad000/rail_2025_04_22_23_36_iter0",
+   "legacy_path": "large_pad000/rail_2025_04_22_23_36_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad000/rail_2025_04_23_00_12_iter0",
+   "legacy_path": "large_pad000/rail_2025_04_23_00_12_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "folder name",
+   "path": "large_pad000/gibbs_1250",
+   "legacy_path": "large_pad000/gibbs_1250",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "folder name",
+   "path": "large_pad000/gibbs_1500",
+   "legacy_path": "large_pad000/gibbs_1500",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "folder name",
+   "path": "large_pad000/gibbs_1750",
+   "legacy_path": "large_pad000/gibbs_1750",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "folder name",
+   "path": "large_pad000/gibbs_2000",
+   "legacy_path": "large_pad000/gibbs_2000",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad000/diffusion_2025_04_22_22_28_iter0",
+   "legacy_path": "large_pad000/diffusion_2025_04_22_22_28_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad000/diffusion_2025_04_22_22_31_iter0",
+   "legacy_path": "large_pad000/diffusion_2025_04_22_22_31_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad000/diffusion_2025_04_22_22_34_iter0",
+   "legacy_path": "large_pad000/diffusion_2025_04_22_22_34_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad000/diffusion_2025_04_22_22_37_iter0",
+   "legacy_path": "large_pad000/diffusion_2025_04_22_22_37_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.0,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "undated *_iter0 run (inferred)",
+   "path": "large_pad000/diffusion_iter0",
+   "legacy_path": "large_pad000/diffusion_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "2025-04-12/13 run (inferred)",
+   "path": "large_pad005/jm2d_2025_04_13_11_08_iter0",
+   "legacy_path": "large_pad005/rail_aligned_2025_04_13_11_08_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad005/jm2d_2025_04_22_01_38_iter0",
+   "legacy_path": "large_pad005/rail_aligned_2025_04_22_01_38_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad005/jm2d_2025_04_22_04_31_iter0",
+   "legacy_path": "large_pad005/rail_aligned_2025_04_22_04_31_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad005/jm2d_2025_04_22_07_19_iter0",
+   "legacy_path": "large_pad005/rail_aligned_2025_04_22_07_19_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad005/jm2d_2025_04_22_09_50_iter0",
+   "legacy_path": "large_pad005/rail_aligned_2025_04_22_09_50_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "2025-04-12/13 run (inferred)",
+   "path": "large_pad005/rail_2025_04_13_10_44_iter0",
+   "legacy_path": "large_pad005/rail_2025_04_13_10_44_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad005/rail_2025_04_22_01_35_iter0",
+   "legacy_path": "large_pad005/rail_2025_04_22_01_35_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad005/rail_2025_04_22_02_09_iter0",
+   "legacy_path": "large_pad005/rail_2025_04_22_02_09_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad005/rail_2025_04_22_02_46_iter0",
+   "legacy_path": "large_pad005/rail_2025_04_22_02_46_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad005/rail_2025_04_22_03_22_iter0",
+   "legacy_path": "large_pad005/rail_2025_04_22_03_22_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "folder name",
+   "path": "large_pad005/gibbs_1250",
+   "legacy_path": "large_pad005/gibbs_1250",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "folder name",
+   "path": "large_pad005/gibbs_1500",
+   "legacy_path": "large_pad005/gibbs_1500",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "folder name",
+   "path": "large_pad005/gibbs_1750",
+   "legacy_path": "large_pad005/gibbs_1750",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "folder name",
+   "path": "large_pad005/gibbs_2000",
+   "legacy_path": "large_pad005/gibbs_2000",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad005/diffusion_2025_04_22_01_37_iter0",
+   "legacy_path": "large_pad005/diffusion_2025_04_22_01_37_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad005/diffusion_2025_04_22_01_40_iter0",
+   "legacy_path": "large_pad005/diffusion_2025_04_22_01_40_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad005/diffusion_2025_04_22_01_42_iter0",
+   "legacy_path": "large_pad005/diffusion_2025_04_22_01_42_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad005/diffusion_2025_04_22_01_45_iter0",
+   "legacy_path": "large_pad005/diffusion_2025_04_22_01_45_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.05,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "undated *_iter0 run (inferred)",
+   "path": "large_pad005/diffusion_iter0",
+   "legacy_path": "large_pad005/diffusion_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "2025-04-12/13 run (inferred)",
+   "path": "large_pad010/jm2d_2025_04_12_22_42_iter0",
+   "legacy_path": "large_pad010/rail_aligned_2025_04_12_22_42_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad010/jm2d_2025_04_22_12_26_iter0",
+   "legacy_path": "large_pad010/rail_aligned_2025_04_22_12_26_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad010/jm2d_2025_04_22_15_19_iter0",
+   "legacy_path": "large_pad010/rail_aligned_2025_04_22_15_19_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad010/jm2d_2025_04_22_17_59_iter0",
+   "legacy_path": "large_pad010/rail_aligned_2025_04_22_17_59_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad010/jm2d_2025_04_22_20_18_iter0",
+   "legacy_path": "large_pad010/rail_aligned_2025_04_22_20_18_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "2025-04-12/13 run (inferred)",
+   "path": "large_pad010/rail_2025_04_12_21_41_iter0",
+   "legacy_path": "large_pad010/rail_2025_04_12_21_41_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad010/rail_2025_04_22_03_57_iter0",
+   "legacy_path": "large_pad010/rail_2025_04_22_03_57_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad010/rail_2025_04_22_04_32_iter0",
+   "legacy_path": "large_pad010/rail_2025_04_22_04_32_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad010/rail_2025_04_22_05_07_iter0",
+   "legacy_path": "large_pad010/rail_2025_04_22_05_07_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad010/rail_2025_04_22_05_42_iter0",
+   "legacy_path": "large_pad010/rail_2025_04_22_05_42_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "folder name",
+   "path": "large_pad010/gibbs_1250",
+   "legacy_path": "large_pad010/gibbs_1250",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "folder name",
+   "path": "large_pad010/gibbs_1500",
+   "legacy_path": "large_pad010/gibbs_1500",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "folder name",
+   "path": "large_pad010/gibbs_1750",
+   "legacy_path": "large_pad010/gibbs_1750",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "folder name",
+   "path": "large_pad010/gibbs_2000",
+   "legacy_path": "large_pad010/gibbs_2000",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad010/diffusion_2025_04_22_01_48_iter0",
+   "legacy_path": "large_pad010/diffusion_2025_04_22_01_48_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad010/diffusion_2025_04_22_01_51_iter0",
+   "legacy_path": "large_pad010/diffusion_2025_04_22_01_51_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad010/diffusion_2025_04_22_01_53_iter0",
+   "legacy_path": "large_pad010/diffusion_2025_04_22_01_53_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad010/diffusion_2025_04_22_01_56_iter0",
+   "legacy_path": "large_pad010/diffusion_2025_04_22_01_56_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.1,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "undated *_iter0 run (inferred)",
+   "path": "large_pad010/diffusion_iter0",
+   "legacy_path": "large_pad010/diffusion_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "2025-04-12/13 run (inferred)",
+   "path": "large_pad015/jm2d_2025_04_13_01_15_iter0",
+   "legacy_path": "large_pad015/rail_aligned_2025_04_13_01_15_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad015/jm2d_2025_04_22_23_12_iter0",
+   "legacy_path": "large_pad015/rail_aligned_2025_04_22_23_12_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad015/jm2d_2025_04_23_02_04_iter0",
+   "legacy_path": "large_pad015/rail_aligned_2025_04_23_02_04_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad015/jm2d_2025_04_23_04_58_iter0",
+   "legacy_path": "large_pad015/rail_aligned_2025_04_23_04_58_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad015/jm2d_2025_04_23_07_38_iter0",
+   "legacy_path": "large_pad015/rail_aligned_2025_04_23_07_38_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "2025-04-12/13 run (inferred)",
+   "path": "large_pad015/rail_2025_04_12_22_18_iter0",
+   "legacy_path": "large_pad015/rail_2025_04_12_22_18_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad015/rail_2025_04_22_06_22_iter0",
+   "legacy_path": "large_pad015/rail_2025_04_22_06_22_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad015/rail_2025_04_22_06_59_iter0",
+   "legacy_path": "large_pad015/rail_2025_04_22_06_59_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad015/rail_2025_04_22_07_35_iter0",
+   "legacy_path": "large_pad015/rail_2025_04_22_07_35_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad015/rail_2025_04_22_08_18_iter0",
+   "legacy_path": "large_pad015/rail_2025_04_22_08_18_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "folder name",
+   "path": "large_pad015/gibbs_1250",
+   "legacy_path": "large_pad015/gibbs_1250",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "folder name",
+   "path": "large_pad015/gibbs_1500",
+   "legacy_path": "large_pad015/gibbs_1500",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "folder name",
+   "path": "large_pad015/gibbs_1750",
+   "legacy_path": "large_pad015/gibbs_1750",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "folder name",
+   "path": "large_pad015/gibbs_2000",
+   "legacy_path": "large_pad015/gibbs_2000",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad015/diffusion_2025_04_22_01_59_iter0",
+   "legacy_path": "large_pad015/diffusion_2025_04_22_01_59_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad015/diffusion_2025_04_22_02_01_iter0",
+   "legacy_path": "large_pad015/diffusion_2025_04_22_02_01_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad015/diffusion_2025_04_22_02_04_iter0",
+   "legacy_path": "large_pad015/diffusion_2025_04_22_02_04_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad015/diffusion_2025_04_22_02_07_iter0",
+   "legacy_path": "large_pad015/diffusion_2025_04_22_02_07_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.15,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "undated *_iter0 run (inferred)",
+   "path": "large_pad015/diffusion_iter0",
+   "legacy_path": "large_pad015/diffusion_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad020/jm2d_2025_04_23_10_25_iter0",
+   "legacy_path": "large_pad020/rail_aligned_2025_04_23_10_25_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad020/jm2d_2025_04_23_14_07_iter0",
+   "legacy_path": "large_pad020/rail_aligned_2025_04_23_14_07_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad020/jm2d_2025_04_23_17_47_iter0",
+   "legacy_path": "large_pad020/rail_aligned_2025_04_23_17_47_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad020/jm2d_2025_04_23_20_45_iter0",
+   "legacy_path": "large_pad020/rail_aligned_2025_04_23_20_45_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "undated *_iter0 run (inferred)",
+   "path": "large_pad020/jm2d_2025_iter0",
+   "legacy_path": "large_pad020/rail_aligned_2025_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad020/rail_2025_04_22_09_01_iter0",
+   "legacy_path": "large_pad020/rail_2025_04_22_09_01_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad020/rail_2025_04_22_09_46_iter0",
+   "legacy_path": "large_pad020/rail_2025_04_22_09_46_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad020/rail_2025_04_22_10_34_iter0",
+   "legacy_path": "large_pad020/rail_2025_04_22_10_34_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad020/rail_2025_04_22_11_20_iter0",
+   "legacy_path": "large_pad020/rail_2025_04_22_11_20_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "undated *_iter0 run (inferred)",
+   "path": "large_pad020/rail_2025_iter0",
+   "legacy_path": "large_pad020/rail_2025_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "folder name",
+   "path": "large_pad020/gibbs_1250",
+   "legacy_path": "large_pad020/gibbs_1250",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "folder name",
+   "path": "large_pad020/gibbs_1500",
+   "legacy_path": "large_pad020/gibbs_1500",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "folder name",
+   "path": "large_pad020/gibbs_1750",
+   "legacy_path": "large_pad020/gibbs_1750",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "folder name",
+   "path": "large_pad020/gibbs_2000",
+   "legacy_path": "large_pad020/gibbs_2000",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad020/diffusion_2025_04_22_02_10_iter0",
+   "legacy_path": "large_pad020/diffusion_2025_04_22_02_10_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad020/diffusion_2025_04_22_02_12_iter0",
+   "legacy_path": "large_pad020/diffusion_2025_04_22_02_12_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad020/diffusion_2025_04_22_02_15_iter0",
+   "legacy_path": "large_pad020/diffusion_2025_04_22_02_15_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad020/diffusion_2025_04_22_02_18_iter0",
+   "legacy_path": "large_pad020/diffusion_2025_04_22_02_18_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "undated *_iter0 run (inferred)",
+   "path": "large_pad020/diffusion_iter0",
+   "legacy_path": "large_pad020/diffusion_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "undated *_iter0 run (inferred)",
+   "path": "large_pad020/diffusion_iter1",
+   "legacy_path": "large_pad020/diffusion_iter1",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "2025-04-12/13 run (inferred)",
+   "path": "large_pad025/jm2d_2025_04_13_03_53_iter0",
+   "legacy_path": "large_pad025/rail_aligned_2025_04_13_03_53_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad025/jm2d_2025_04_24_00_08_iter0",
+   "legacy_path": "large_pad025/rail_aligned_2025_04_24_00_08_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad025/jm2d_2025_04_24_05_18_iter0",
+   "legacy_path": "large_pad025/rail_aligned_2025_04_24_05_18_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad025/jm2d_2025_04_24_10_10_iter0",
+   "legacy_path": "large_pad025/rail_aligned_2025_04_24_10_10_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "jm2d",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad025/jm2d_2025_04_24_14_01_iter0",
+   "legacy_path": "large_pad025/rail_aligned_2025_04_24_14_01_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "2025-04-12/13 run (inferred)",
+   "path": "large_pad025/rail_2025_04_12_22_56_iter0",
+   "legacy_path": "large_pad025/rail_2025_04_12_22_56_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad025/rail_2025_04_22_12_07_iter0",
+   "legacy_path": "large_pad025/rail_2025_04_22_12_07_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad025/rail_2025_04_22_13_18_iter0",
+   "legacy_path": "large_pad025/rail_2025_04_22_13_18_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad025/rail_2025_04_22_14_22_iter0",
+   "legacy_path": "large_pad025/rail_2025_04_22_14_22_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "rail",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad025/rail_2025_04_22_15_29_iter0",
+   "legacy_path": "large_pad025/rail_2025_04_22_15_29_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "folder name",
+   "path": "large_pad025/gibbs_1250",
+   "legacy_path": "large_pad025/gibbs_1250",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "folder name",
+   "path": "large_pad025/gibbs_1500",
+   "legacy_path": "large_pad025/gibbs_1500",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "folder name",
+   "path": "large_pad025/gibbs_1750",
+   "legacy_path": "large_pad025/gibbs_1750",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "gibbs",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "folder name",
+   "path": "large_pad025/gibbs_2000",
+   "legacy_path": "large_pad025/gibbs_2000",
+   "files": [
+    "stats.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1250",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad025/diffusion_2025_04_22_02_21_iter0",
+   "legacy_path": "large_pad025/diffusion_2025_04_22_02_21_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1500",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad025/diffusion_2025_04_22_02_24_iter0",
+   "legacy_path": "large_pad025/diffusion_2025_04_22_02_24_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1750",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad025/diffusion_2025_04_22_02_27_iter0",
+   "legacy_path": "large_pad025/diffusion_2025_04_22_02_27_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "timestamp rank among the 04-21..24 runs (inferred)",
+   "path": "large_pad025/diffusion_2025_04_22_02_30_iter0",
+   "legacy_path": "large_pad025/diffusion_2025_04_22_02_30_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "fig4",
+   "planner": "dp",
+   "pad": 0.25,
+   "backup": "hq",
+   "ckpt": "ep1900",
+   "ckpt_source": "undated *_iter0 run (inferred)",
+   "path": "large_pad025/diffusion_iter0",
+   "legacy_path": "large_pad025/diffusion_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "table1",
+   "planner": "rail",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "run_rail_v2_biased_backup.sh (inferred)",
+   "path": "large_pad020/rail_simple2d_2025_04_28_15_02_iter0",
+   "legacy_path": "large_pad020/rail_simple2d_2025_04_28_15_02_iter0",
+   "files": [
+    "config.json",
+    "seed<k>/stats.json (50 seeds)"
+   ]
+  },
+  {
+   "figure": "table1",
+   "planner": "rail",
+   "pad": 0.2,
+   "backup": "xpyp",
+   "ckpt": "ep2000",
+   "ckpt_source": "run_rail_v2_biased_backup.sh (inferred)",
+   "path": "large_pad020/rail_simple2d_xpyp_2025_04_28_15_55_iter0",
+   "legacy_path": "large_pad020/rail_simple2d_xpyp_2025_04_28_15_55_iter0",
+   "files": [
+    "config.json",
+    "seed<k>/stats.json (50 seeds)"
+   ]
+  },
+  {
+   "figure": "table1",
+   "planner": "rail",
+   "pad": 0.2,
+   "backup": "xmym",
+   "ckpt": "ep2000",
+   "ckpt_source": "run_rail_v2_biased_backup.sh (inferred)",
+   "path": "large_pad020/rail_simple2d_xmym_2025_04_28_16_46_iter0",
+   "legacy_path": "large_pad020/rail_simple2d_xmym_2025_04_28_16_46_iter0",
+   "files": [
+    "config.json",
+    "seed<k>/stats.json (50 seeds)"
+   ]
+  },
+  {
+   "figure": "table1",
+   "planner": "jm2d",
+   "pad": 0.2,
+   "backup": "hq",
+   "ckpt": "ep2000",
+   "ckpt_source": "run_rail_v2_biased_backup.sh (inferred)",
+   "path": "large_pad020/jm2d_simple2d_2025_04_28_15_02_iter0",
+   "legacy_path": "large_pad020/rail_aligned_simple2d_2025_04_28_15_02_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "table1",
+   "planner": "jm2d",
+   "pad": 0.2,
+   "backup": "xpyp",
+   "ckpt": "ep2000",
+   "ckpt_source": "run_rail_v2_biased_backup.sh (inferred)",
+   "path": "large_pad020/jm2d_simple2d_xpyp_2025_04_28_16_38_iter0",
+   "legacy_path": "large_pad020/rail_aligned_simple2d_xpyp_2025_04_28_16_38_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  },
+  {
+   "figure": "table1",
+   "planner": "jm2d",
+   "pad": 0.2,
+   "backup": "xmym",
+   "ckpt": "ep2000",
+   "ckpt_source": "run_rail_v2_biased_backup.sh (inferred)",
+   "path": "large_pad020/jm2d_simple2d_xmym_2025_04_28_18_29_iter0",
+   "legacy_path": "large_pad020/rail_aligned_simple2d_xmym_2025_04_28_18_29_iter0",
+   "files": [
+    "stats.json",
+    "config.json"
+   ]
+  }
+ ]
+}

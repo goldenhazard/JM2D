@@ -1,0 +1,501 @@
+{
+ "created": "2026-10-15T23:03:10",
+ "decision": "D4b",
+ "protocol": "set_random_seed(42) -> build_planner -> env seeds 0..n-1 in order, HQ backup, configs/maze2d_large.json",
+ "cost": {
+  "dp": {
+   "s_per_replan": 0.07,
+   "s_per_step": 0.0,
+   "gpu_mib": 1550,
+   "gpu_peak_mib": 3000
+  },
+  "rail": {
+   "s_per_replan": 0.62,
+   "s_per_step": 0.0,
+   "gpu_mib": 1550,
+   "gpu_peak_mib": 3000
+  }
+ },
+ "jobs": [
+  {
+   "planner": "rail",
+   "ckpt": "ep2000",
+   "pad": 0.25,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 3271.1
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1900",
+   "pad": 0.25,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 3180.0
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1250",
+   "pad": 0.25,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 3167.6
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1750",
+   "pad": 0.25,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 3073.3
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1500",
+   "pad": 0.25,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 2974.1
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1900",
+   "pad": 0.2,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 2361.0
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1500",
+   "pad": 0.2,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 2267.3
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep2000",
+   "pad": 0.2,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 2232.0
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1250",
+   "pad": 0.2,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 2188.0
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1750",
+   "pad": 0.2,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 2178.7
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1900",
+   "pad": 0.15,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 2119.2
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep2000",
+   "pad": 0.15,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 2115.4
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1750",
+   "pad": 0.15,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 2052.8
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep2000",
+   "pad": 0.1,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 2034.2
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1900",
+   "pad": 0.1,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1951.8
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1250",
+   "pad": 0.15,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1863.1
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1750",
+   "pad": 0.05,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1820.3
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1900",
+   "pad": 0.05,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1808.5
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1500",
+   "pad": 0.05,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1803.0
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1500",
+   "pad": 0.1,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1799.2
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep2000",
+   "pad": 0.05,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1781.3
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1500",
+   "pad": 0.15,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1773.2
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1250",
+   "pad": 0.1,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1737.2
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1750",
+   "pad": 0.1,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1736.0
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1900",
+   "pad": 0.0,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1724.8
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1500",
+   "pad": 0.0,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1703.8
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1250",
+   "pad": 0.05,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1666.6
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1750",
+   "pad": 0.0,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1638.0
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep1250",
+   "pad": 0.0,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1583.5
+  },
+  {
+   "planner": "rail",
+   "ckpt": "ep2000",
+   "pad": 0.0,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 1525.8
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1900",
+   "pad": 0.05,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 117.0
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1500",
+   "pad": 0.25,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 116.6
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1250",
+   "pad": 0.05,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 116.4
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1750",
+   "pad": 0.25,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 114.3
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1250",
+   "pad": 0.1,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 114.2
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1750",
+   "pad": 0.2,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 114.2
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1500",
+   "pad": 0.1,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 114.0
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1750",
+   "pad": 0.15,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 113.9
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1750",
+   "pad": 0.05,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 113.5
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1500",
+   "pad": 0.0,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 113.3
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1750",
+   "pad": 0.1,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 113.1
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1900",
+   "pad": 0.2,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 111.2
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1250",
+   "pad": 0.0,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 110.7
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1500",
+   "pad": 0.15,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 110.0
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1250",
+   "pad": 0.15,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 109.9
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1250",
+   "pad": 0.25,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 109.1
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1250",
+   "pad": 0.2,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 108.7
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1500",
+   "pad": 0.2,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 108.2
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1500",
+   "pad": 0.05,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 107.5
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1750",
+   "pad": 0.0,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 107.2
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep2000",
+   "pad": 0.2,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 106.8
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep2000",
+   "pad": 0.15,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 106.5
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep2000",
+   "pad": 0.25,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 106.3
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep2000",
+   "pad": 0.1,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 105.8
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1900",
+   "pad": 0.25,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 105.7
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1900",
+   "pad": 0.0,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 105.5
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep2000",
+   "pad": 0.05,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 105.5
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1900",
+   "pad": 0.1,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 105.4
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep1900",
+   "pad": 0.15,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 105.3
+  },
+  {
+   "planner": "dp",
+   "ckpt": "ep2000",
+   "pad": 0.0,
+   "n_seeds": 100,
+   "horizon": 2000,
+   "est_s": 105.3
+  }
+ ]
+}

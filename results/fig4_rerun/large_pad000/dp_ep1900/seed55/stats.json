@@ -1,0 +1,13 @@
+{
+    "Success": true,
+    "Horizon": 493,
+    "Unsafe": 0,
+    "Intervention": 0,
+    "Plan": 31,
+    "Stuck": false,
+    "Time": 0.17770189623678884,
+    "SafetyDetail": {
+        "HeadPlan": 0,
+        "BackupPlan": 0
+    }
+}

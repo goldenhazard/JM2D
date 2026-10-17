@@ -1,0 +1,29 @@
+{
+ "figure": "fig4",
+ "decision": "D4b",
+ "planner": "rail",
+ "pad": 0.1,
+ "backup": "hq",
+ "ckpt": "ep1500",
+ "ckpt_file": "maze2d_large_ep1500.pth",
+ "ckpt_md5": "08ddbfd964b987e6f1435bbcef52b50a",
+ "n_seeds": 100,
+ "horizon": 2000,
+ "protocol": "set_random_seed(42) -> build_planner -> env seeds 0..n-1 in order (set_random_seed(seed) each)",
+ "seed_gym_spaces": true,
+ "versions": {
+  "python": "3.8.18",
+  "torch": "2.1.2",
+  "cuda": "11.8",
+  "numpy": "1.24.4"
+ },
+ "torch_threads": 1,
+ "attempts": [
+  {
+   "start": "2026-10-16T03:03:48",
+   "resume_from_seed": 0,
+   "host_threads": 1,
+   "end": "2026-10-16T03:43:45"
+  }
+ ]
+}

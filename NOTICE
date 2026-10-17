@@ -1,0 +1,37 @@
+Third-party code and dependencies of this branch
+================================================
+
+The JM2D code in this repository (jm2d_maze/, safediffusion/ except safediffusion/armtdpy/, configs/, paper/,
+scripts/, tests/) is released under the MIT License in LICENSE. The following parts come from, or are derived
+from, other projects and keep their own terms.
+
+robomimic/  (vendored, trimmed and modified)
+  robomimic, https://github.com/ARISE-Initiative/robomimic, MIT License,
+  Copyright (c) 2021 Stanford Vision and Learning Lab. The original license text is in robomimic/LICENSE.
+  Modifications for this project: the diffusion-policy algorithm (robomimic/algo/diffusion_policy.py, whose
+  conditional 1-D UNet follows Diffusion Policy, Chi et al., https://github.com/real-stanford/diffusion_policy, MIT
+  License), the safediffusion config registration, and the removal of unused algorithms, environments and scripts.
+
+safediffusion/armtdpy/reachability/conSet/  (vendored, unmodified)
+  Zonotope and polynomial-zonotope set representations from the Python implementation of ARMTD
+  (Autonomous Reachability-based Manipulator Trajectory Design; Holmes, Kousik et al.), authored by Yongseok Kwon,
+  ROAHM Lab, University of Michigan (file headers credit the author).
+  OPEN ITEM before public release: confirm the license of this code with its authors / ROAHM Lab.
+
+zonopy  (optional dependency, not redistributed)
+  https://github.com/roahmlab/zonopy. Only used when USE_ZONOPY=true; the default is the vendored conSet above.
+
+d4rl  (dependency, not redistributed)
+  The padded mazes require the fork goldenhazard/D4RL@a0b30c4e27c24a4ec9600b211a1b549b13c867b6 of D4RL
+  (https://github.com/Farama-Foundation/D4RL, Apache License 2.0), installed from requirements.txt.
+
+diffusers  (dependency, not redistributed)
+  https://github.com/huggingface/diffusers, Apache License 2.0. JM2DPolicy.get_noise
+  (safediffusion/algo/jm2d_policy.py) inverts the forward-noising formula of diffusers' DDPMScheduler.add_noise.
+
+jm2d_maze/reachability/  (this work)
+  Forward-reachable-set tensor of the HQ backup planner and the MATLAB scripts that generate it with the CORA
+  toolbox (https://tumcps.github.io/CORA/, not redistributed).
+
+Other dependencies (PyTorch, MuJoCo / mujoco-py, gym, cyipopt / IPOPT, NumPy, SciPy, ...) are installed separately
+and are not redistributed here.

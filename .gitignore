@@ -1,0 +1,18 @@
+checkpoints/
+results/runs/
+results/figures/
+datasets/
+trained_models/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+*.log
+*_videos/
+MUJOCO_LOG.TXT
+# Fig. 4 re-run sweep (scripts/sweep_fig4.py): keep queue.json and, per finished job, stats.json, seed<k>/stats.json,
+# config.json, meta.json, episodes.jsonl; ignore control files, logs and in-progress temporaries.
+# Commit only after `scripts/sweep_fig4.py status` reports every job done (a job directory without stats.json is partial).
+results/fig4_rerun/sweep_master.pid
+results/fig4_rerun/STOP
+results/fig4_rerun/logs/
+*.tmp
