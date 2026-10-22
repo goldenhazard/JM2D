@@ -93,7 +93,7 @@ def main():
             reruns = load_rerun_runs(args.rerun_dir, allow_partial=args.allow_partial) if os.path.isdir(args.rerun_dir) else []
             runs, sources = select_fig4_runs(stored, reruns, dp_rail_source=args.dp_rail_source,
                                              allow_partial=args.allow_partial)
-            source = "paper" if args.dp_rail_source == "stored" else "paper_d4b"
+            source = "paper_stored" if args.dp_rail_source == "stored" else "paper"
             title = ("Fig. 4: DP/RAIL " + ("re-run (released code)" if args.dp_rail_source == "rerun" else "stored")
                      + ", JM2D/Gibbs stored; crosses = paper")
         else:

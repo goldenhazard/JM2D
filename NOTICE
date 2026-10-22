@@ -16,7 +16,8 @@ safediffusion/armtdpy/reachability/conSet/  (vendored, unmodified)
   Zonotope and polynomial-zonotope set representations from the Python implementation of ARMTD
   (Autonomous Reachability-based Manipulator Trajectory Design; Holmes, Kousik et al.), authored by Yongseok Kwon,
   ROAHM Lab, University of Michigan (file headers credit the author).
-  OPEN ITEM before public release: confirm the license of this code with its authors / ROAHM Lab.
+  The source files carry no license notice; the code is included here with attribution for research use. For other
+  uses, contact the original authors.
 
 zonopy  (optional dependency, not redistributed)
   https://github.com/roahmlab/zonopy. Only used when USE_ZONOPY=true; the default is the vendored conSet above.

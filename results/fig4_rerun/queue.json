@@ -1,6 +1,6 @@
 {
  "created": "2026-10-15T23:03:10",
- "decision": "D4b",
+ "purpose": "Fig. 4 DP/RAIL re-run with the released code",
  "protocol": "set_random_seed(42) -> build_planner -> env seeds 0..n-1 in order, HQ backup, configs/maze2d_large.json",
  "cost": {
   "dp": {

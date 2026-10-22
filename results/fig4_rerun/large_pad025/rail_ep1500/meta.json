@@ -1,6 +1,6 @@
 {
  "figure": "fig4",
- "decision": "D4b",
+ "purpose": "Fig. 4 DP/RAIL re-run with the released code",
  "planner": "rail",
  "pad": 0.25,
  "backup": "hq",

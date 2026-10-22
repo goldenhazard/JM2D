@@ -51,6 +51,7 @@ CKPTS = {  # tag -> file in checkpoints/ (scripts/download_checkpoints.py)
 PADS = [0.25, 0.20, 0.15, 0.10, 0.05, 0.0]
 N_SEEDS = 100
 HORIZON = 2000
+PURPOSE = "Fig. 4 DP/RAIL re-run with the released code"  # recorded in queue.json and meta.json
 # Cost model, measured in the smoke test (RTX 4090 shared with a D3IL sweep at ~99 % GPU utilisation, 3 jobs at
 # a time, OMP/MKL threads = 1): wall seconds per replanning cycle including the 15 other control steps of the cycle;
 # GPU memory per job process (nvidia-smi): steady state after the build (torch.cuda.empty_cache) and the transient
@@ -140,7 +141,7 @@ def cmd_plan(args):
     for j in jobs:
         j["est_s"] = round(estimate_job_s(j, COST), 1)
     jobs.sort(key=lambda j: -j["est_s"])  # longest first (shorter tail)
-    queue = dict(created=datetime.datetime.now().isoformat(timespec="seconds"), decision="D4b",
+    queue = dict(created=datetime.datetime.now().isoformat(timespec="seconds"), purpose=PURPOSE,
                  protocol="set_random_seed(42) -> build_planner -> env seeds 0..n-1 in order, HQ backup, "
                           "configs/maze2d_large.json", cost=COST, jobs=jobs)
     path = os.path.join(args.out, "queue.json")
@@ -179,7 +180,7 @@ def cmd_job(args):
         f.write(config.dump())
     meta_path = os.path.join(run_dir, "meta.json")
     meta = _load_json(meta_path) or dict(
-        figure="fig4", decision="D4b", planner=args.planner, pad=job["pad"], backup="hq", ckpt=args.ckpt,
+        figure="fig4", purpose=PURPOSE, planner=args.planner, pad=job["pad"], backup="hq", ckpt=args.ckpt,
         ckpt_file=CKPTS[args.ckpt], ckpt_md5=md5(ckpt_path), n_seeds=args.n_seeds, horizon=args.horizon,
         protocol="set_random_seed(42) -> build_planner -> env seeds 0..n-1 in order (set_random_seed(seed) each)",
         seed_gym_spaces=True, versions=versions(), torch_threads=torch.get_num_threads(), attempts=[])
