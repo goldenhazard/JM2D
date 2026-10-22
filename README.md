@@ -37,12 +37,25 @@ quality at w = 0.20).
 conda create -n jm2d_maze python=3.8 -y
 conda activate jm2d_maze
 conda install -c conda-forge cyipopt=1.4.1 -y          # IPOPT, used by RAIL
-pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cu118
+conda install pytorch==2.1.2 torchvision==0.16.2 pytorch-cuda=11.8 -c pytorch -c nvidia -y
 pip install -r requirements.txt
 pip install -e .
 ```
 
-mujoco-py needs [MuJoCo 2.1.0](https://github.com/deepmind/mujoco/releases/tag/2.1.0) in `~/.mujoco/mujoco210`.
+Install PyTorch from conda as above, not the pip wheel: JM2D and Gibbs evaluate the DP candidates in a forked
+`multiprocessing` pool, and the pip wheel's GNU OpenMP deadlocks in forked workers (the run hangs at the first
+JM2D step). The conda build (LLVM OpenMP, MKL) is the tested setup of the golden tests and the reported numbers.
+
+mujoco-py needs [MuJoCo 2.1.0](https://github.com/deepmind/mujoco/releases/tag/2.1.0) in `~/.mujoco/mujoco210` and
+its `bin/` on `LD_LIBRARY_PATH` (plus `/usr/lib/nvidia` if that directory exists; mujoco-py refuses to import
+otherwise). Add the `export` line to `~/.bashrc`; the first `import mujoco_py` compiles it (~20 s):
+
+```bash
+mkdir -p ~/.mujoco && wget -qO- https://github.com/deepmind/mujoco/releases/download/2.1.0/mujoco210-linux-x86_64.tar.gz | tar -xz -C ~/.mujoco
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco210/bin:/usr/lib/nvidia
+python -c "import mujoco_py"   # if the build fails: sudo apt install libosmesa6-dev libgl1-mesa-dev libglew-dev patchelf
+```
+
 `requirements.txt` installs the D4RL fork
 [goldenhazard/D4RL@a0b30c4](https://github.com/goldenhazard/D4RL/tree/a0b30c4e27c24a4ec9600b211a1b549b13c867b6), which
 adds the padded mazes (stock D4RL does not work). A CUDA GPU is required.
@@ -106,7 +119,9 @@ python robomimic/scripts/conversion/convert_d4rl.py --env maze2d-large-dense-v1 
 
 Checkpoints are saved every 250 epochs and at each new best rollout success rate to
 `robomimic/trained_models/maze2d_large_DP/<time>/models/` (robomimic resolves a relative `--output` inside
-`robomimic/`); the log is `.../<time>/logs/log.txt`. Use a checkpoint with `scripts/run.py --ckpt`.
+`robomimic/`); the log is `.../<time>/logs/log.txt`. Use a checkpoint with `scripts/run.py --ckpt` (add `--tag
+ep<k>` for the best-rollout files `model_epoch_<k>_..._success_<s>.pth`, whose default run name would be parsed
+from `<s>`).
 
 | Argument | Default | Description |
 |---|---|---|
@@ -234,11 +249,12 @@ No environment variable is needed: mujoco-py renders offscreen with EGL on the N
 ## Citation
 
 ```bibtex
-@inproceedings{jung2025jm2d,
+@inproceedings{jung2025joint,
   title={Joint Model-based Model-free Diffusion for Planning with Constraints},
-  author={Jung, Wonsuhk and Mishra, Utkarsh A. and Ranawaka Arachchige, Nadun and Chen, Yongxin and Xu, Danfei and Kousik, Shreyas},
-  booktitle={Conference on Robot Learning (CoRL)},
-  year={2025}
+  author={Wonsuhk Jung and Utkarsh Aashu Mishra and Nadun Ranawaka Arachchige and Yongxin Chen and Danfei Xu and Shreyas Kousik},
+  booktitle={9th Annual Conference on Robot Learning},
+  year={2025},
+  url={https://openreview.net/forum?id=E9t1ekt6W9}
 }
 ```
 
