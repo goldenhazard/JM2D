@@ -16,5 +16,11 @@ mpmath                 # needed by sympy (torch._dynamo import chain)
 # D3IL-Avoiding environment (third_party/d3il, see README): mujoco 2.3.7, gym 0.26.2, pinocchio (conda-forge)
 mujoco==2.3.7
 gym==0.26.2
+# imported unconditionally by the D3IL simulator package (d3il_sim/sims, d3il_sim/core/Camera.py, the mj_beta
+# renderer), although only the MuJoCo (mj_beta) simulator is used
+gin-config==0.5.0
+pybullet==3.2.6
+opencv-python==4.10.0.84
+imageio==2.34.1
 # tests
 pytest==8.3.4

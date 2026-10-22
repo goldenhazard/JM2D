@@ -328,6 +328,10 @@ def main():
     s.add_argument("--no-observed", dest="use_observed", action="store_false",
                    help="ETA from the queue cost table only (ignore the timings of finished trials)")
     args = ap.parse_args()
+    # the run.py jobs start in <out>/logs (cmd_work): relative paths would resolve there
+    args.out = os.path.abspath(args.out)
+    if getattr(args, "ckpt_dir", None):
+        args.ckpt_dir = os.path.abspath(args.ckpt_dir)
     {"plan": cmd_plan, "work": cmd_work, "status": cmd_status}[args.cmd](args)
 
 

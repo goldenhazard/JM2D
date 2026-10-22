@@ -22,3 +22,6 @@ results/rerun/logs/
 results/rerun/STOP
 results/rerun/sweep_master.pid
 MUJOCO_LOG.TXT
+
+# written by scripts/train.py (diffuser Parser.save)
+/args.json

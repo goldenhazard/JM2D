@@ -51,6 +51,10 @@ The patch rewrites the D3IL imports to the package path `d3il.environments...` a
 given position (`third_party/README.md`). A CUDA GPU is required. Run all commands from the repository root, with
 `PYTHONNOUSERSITE=1` if packages in `~/.local` shadow the environment.
 
+`pytest -q tests` checks the first planning step of every golden case (`tests/golden/`) against the original code,
+within 1e-4 (planned positions: 1e-3). The full bitwise episode check (`JM2D_GOLDEN_BITWISE=1 pytest -q tests`) needs
+the original numeric stack: the cuDNN 8.9.7 of CUDA 11.8 on `LD_LIBRARY_PATH` and OpenBLAS 0.3.29 (conda-forge).
+
 ---
 
 ## Project Structure
@@ -235,11 +239,12 @@ python scripts/plot_trajectories.py --results results/runs --label jm2d --scenar
 ## Citation
 
 ```bibtex
-@inproceedings{jung2025jm2d,
+@inproceedings{jung2025joint,
   title={Joint Model-based Model-free Diffusion for Planning with Constraints},
-  author={Jung, Wonsuhk and Mishra, Utkarsh A. and Ranawaka Arachchige, Nadun and Chen, Yongxin and Xu, Danfei and Kousik, Shreyas},
-  booktitle={Conference on Robot Learning (CoRL)},
-  year={2025}
+  author={Wonsuhk Jung and Utkarsh Aashu Mishra and Nadun Ranawaka Arachchige and Yongxin Chen and Danfei Xu and Shreyas Kousik},
+  booktitle={9th Annual Conference on Robot Learning},
+  year={2025},
+  url={https://openreview.net/forum?id=E9t1ekt6W9}
 }
 ```
 
