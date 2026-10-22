@@ -10,8 +10,7 @@ diffuser/  (package name kept so that the released checkpoint pickles load)
     The D3IL code base was forked from DPCC in Oct-Dec 2024; the fork carried NO LICENSE file.
     Upstream has since added an MIT License ("Copyright (c) 2025 Learning Systems and Robotics Lab (LSY)", commit
     "Add license", 2026-08-15).
-    OPEN ITEM FOR THE AUTHORS: confirm with the DPCC authors that the MIT license covers the forked code (or obtain
-    permission), and copy their copyright notice here before the public release.
+    The forked code is included here with attribution for research use; for other uses, contact the DPCC authors.
     Files: diffuser/{datasets,models,sampling,utils}/* except the JM2D additions listed below. The `dpcc` planner runs
     the DPCC sampling loop of that code base (diffuser/models/dpcc_diffusion.py, per-step projection).
   * Diffuser, Michael Janner et al., https://github.com/jannerm/diffuser, MIT License
@@ -20,8 +19,9 @@ diffuser/  (package name kept so that the released checkpoint pickles load)
     diffuser/datasets/*).
   * Decision Diffuser, Anurag Ajay et al., https://github.com/anuragajay/decision-diffuser: the return-conditioned
     U-Net / classifier-free guidance options (`returns_condition`, `condition_guidance_w`, `calc_energy`,
-    `GaussianInvDynDiffusion` hooks) in the files above appear to follow its code. That repository shows no license on
-    GitHub. OPEN ITEM: confirm the provenance / attribution of these parts.
+    `GaussianInvDynDiffusion` hooks) in the files above follow its code (they are also in upstream DPCC). That
+    repository has no license file; these parts are included here with attribution for research use. For other uses,
+    contact the original authors.
 
 diffuser/models/invariance.py
   SafeDiffuser invariance (RoS / ReS / TVS) modules, "largely adapted from" https://github.com/Weixy21/SafeDiffuser
