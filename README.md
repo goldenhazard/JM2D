@@ -45,6 +45,8 @@ pip install -e .
 ```
 
 A CUDA GPU is required. The trained models are included in `checkpoints/`, so there is nothing to download.
+Run all commands below from the repository root. To check the installation: `pytest -q tests` (about 3 min on an
+RTX 4090; without a GPU the GPU cases are skipped).
 
 ---
 
@@ -63,7 +65,7 @@ A CUDA GPU is required. The trained models are included in `checkpoints/`, so th
 │   ├── train.py            # train a denoiser
 │   ├── run.py              # sample on a task, save results
 │   └── compare.py          # table + figure from saved results
-└── notebooks/toy.ipynb     # the same steps through the Python API
+└── notebooks/toy.ipynb     # the same steps through the Python API (pip install notebook; jupyter notebook)
 ```
 
 ---
@@ -77,8 +79,8 @@ python scripts/train.py --dataset donut_constrained --out trained_models/donut_c
 python scripts/train.py --dataset donut_joint       --out trained_models/donut_joint         # x in R^4
 ```
 
-Checkpoints are written to `<out>/model/model_step<k>e4.pth` every 10k steps. The shipped checkpoints are the
-90k-step models.
+Checkpoints are written to `<out>/model/model_step<k>e4.pth` every 10k steps and to `<out>/model/model.pth` at the
+end. The shipped checkpoints are the 90k-step models.
 
 | Argument | Default | Description |
 |---|---|---|
@@ -169,11 +171,12 @@ fig.savefig("samples.png")
 ## Citation
 
 ```bibtex
-@inproceedings{jung2025jm2d,
+@inproceedings{jung2025joint,
   title={Joint Model-based Model-free Diffusion for Planning with Constraints},
-  author={Jung, Wonsuhk and Mishra, Utkarsh A. and Ranawaka Arachchige, Nadun and Chen, Yongxin and Xu, Danfei and Kousik, Shreyas},
-  booktitle={Conference on Robot Learning (CoRL)},
-  year={2025}
+  author={Wonsuhk Jung and Utkarsh Aashu Mishra and Nadun Ranawaka Arachchige and Yongxin Chen and Danfei Xu and Shreyas Kousik},
+  booktitle={9th Annual Conference on Robot Learning},
+  year={2025},
+  url={https://openreview.net/forum?id=E9t1ekt6W9}
 }
 ```
 

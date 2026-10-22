@@ -4,6 +4,9 @@ The golden files were written by ``tests/golden/capture_legacy.py`` from SafeRob
 (b649add0). Each case is re-run here through the public API with the same protocol:
 build problem -> Sampler.sample(seed) [seed_everything -> build sampler -> reverse diffusion].
 Two legacy captures in separate processes were bitwise identical, so the tolerance is exact equality.
+Exception: the ``projection`` case runs scipy ``trust-constr`` on the CPU, whose last bits depend on the
+numpy/scipy BLAS build (MKL in the capture env, OpenBLAS in the pip wheels of requirements.txt; max |diff|
+~2e-4 after 100 projected steps). Its samples are compared with ``CPU_SOLVER_ATOL``; the counts stay exact.
 Golden cases need a CUDA GPU (marker ``gpu``); set ``JM2D_REQUIRE_GOLDEN=1`` to fail instead of skip.
 """
 import os
@@ -30,6 +33,8 @@ NEW_NAME = {"sequential": "sequential", "gibbs_exact": "gibbs", "yongxin": "jm2d
 # legacy hyper-parameter -> new keyword
 NEW_KEY = {"N_sample_action": "num_mc_samples", "N_sample_param": "num_param_samples", "temp_mppi": "temperature",
            "max_iter": "max_iter", "tol": "tol", "solver": "solver"}
+# projection golden: CPU solver, BLAS-build dependent (see module docstring)
+CPU_SOLVER_ATOL = 1e-3
 
 @pytest.fixture(scope="module", autouse=True)
 def _determinism():
@@ -81,7 +86,10 @@ def test_golden_equivalence(case):
     sampler = samplers.from_config(task, NEW_NAME[info["legacy_section"]])
     res = sampler.sample(problem, n=info["n"], seed=info["seed"], return_history=info["return_histories"])
 
-    assert_bitwise(res.x, golden["x"], f"{case}: x")
+    if info["legacy_section"] == "projection":
+        np.testing.assert_allclose(res.x, golden["x"], rtol=0, atol=CPU_SOLVER_ATOL, err_msg=f"{case}: x")
+    else:
+        assert_bitwise(res.x, golden["x"], f"{case}: x")
     if "k" in golden.files:
         assert_bitwise(res.k, golden["k"], f"{case}: k")
     for key in golden.files:
